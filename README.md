@@ -1,6 +1,5 @@
-# DesignDocument
-the R program can be used to add error bars to barchar (lattice package and ggplot)
+#Scripts and modified code -- Yan Cong, 2017-present
 
-the Python program is to do inference and to evaluate neural language models' performance
+This folder contains various scripts and modified code (Python, R, javascript, Matlab, html) written and/or modified by Yan Cong starting in 2017 at MSU.
 
-In this experiment we are looking at 3 linguistic phenomena.
+There are three subfolders, each representing a different study. Each subfolder contains its own Readme file with a summary of the contents of that folder.
