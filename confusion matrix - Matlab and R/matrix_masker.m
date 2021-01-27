@@ -1,4 +1,4 @@
-% author: Devin McAuley, Toni Smith, Yan Cong
+% authors: Devin McAuley, Toni Smith, Yan Cong
 
 % Change the folder name if data to be analyzed is in a different folder
 % (folder must contain only participant data files)
