@@ -1,8 +1,8 @@
 Summary:
-Javascript and R script for pragmatic reasoning project 
+Javascript and R script for the pragmatic reasoning project (characterize ambiguity using a pragmatic account)
 
 Project description:
-We designed a testing paradigm for artificial language learning. Results are analyzed and visulized using R.
+We designed a testing paradigm for artificial language learning. We defined customized controllers. Results are analyzed and visualized using R.
 
 Folder includes:
 R script
