@@ -1,5 +1,6 @@
+# author: Yan Cong
 #####################################################################################
-load("/Volumes/CORIANDER/02 side projects/00 transformers/09 data analysis/analysis_t5.R")
+load("...")
 
 install.packages("plyr") # you don't need to install pkg every single time
 install.packages("dplyr") # you need to type Yes into the console
