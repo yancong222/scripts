@@ -173,9 +173,7 @@ with open ('MannerImplicature1023.csv', newline = '') as f:
 print('tpretty-q: ', r/34)   
                 
 ##############################################3
-####################################
-
-
+################################
 #######################################
 
 # mean rank
@@ -201,11 +199,7 @@ with open ('PrespSurprise1023.csv', newline='') as f:
     reader = csv.DictReader(f)
     for line in reader:
         target = 'No'
-        #doc = str(line['context'])+ str(line['period1']) + str(line['NPI']) + str(line['period2']) + str(line['iquestion']) + str(' ') + str('<mask>') + ' .'
-        #doc = str(line['context'])+ str(line['period1']) + str(line['NPI']) + str(line['period2']) + str(line['iquestion']) + str(' ') + str('<mask>') + '.'    
         doc = str(line['NPI']) + str(line['period2']) + str(line['iquestion']) + str(' ') + str('<mask>') + '.'    
-        #doc = str(line['iquestion']) + str(' ') + str('<mask>') + ' .'    
-        #print(doc)
         predicted_indexes_list, predicted_logits_list = generate_possible_words_for_mask(doc)
         rank, logit = find_rank_and_logit(target,predicted_indexes_list,predicted_logits_list)
         print(rank,logit)
