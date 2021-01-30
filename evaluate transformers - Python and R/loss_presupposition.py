@@ -3,7 +3,7 @@
 """
 Created on Tue Jan 12 22:25:48 2021
 
-@author: yancong
+@author: Yan Cong and Phillip Wolff
 """
 
 import torch
