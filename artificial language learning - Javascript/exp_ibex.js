@@ -129,14 +129,6 @@ var completionMessage = "The results were successfully sent to the server. Thank
     
     
 var defaults = [
-    //"Separator", {
-        //transfer: 1000,
-        //normalMessage: "Which one do you believe the word is referring to?",
-        //normalMessage: "Please wait for the next one.",
-        //normalMessage: "Correct!",
-        //normalMessage: "Press any key to continue.",
-        //errorMessage: "Incorrect!" //Message to display (in red) if the previous item was not completed normally (e.g. timeout, incorrect answer).
-    //},
     
     "Form", {
         continueOnReturn: true,
@@ -195,9 +187,6 @@ var items = [
                           hasCorrect: "A"},
      "SeparatorBis", {normalTransfer: 2000, errorTransfer: 4000}],
                               
-    //["practice", "Boxes", {html: {include: "practice4.html"},
-    //                      hasCorrect: "A"},
-    //"SeparatorBis", {normalTransfer: 2000, errorTransfer: 4000}],
     
   
     //
@@ -218,15 +207,6 @@ var items = [
     ["real-l-simple", "Boxes", {html: {include: "item3.html"},
                           hasCorrect: "C"}, "SeparatorBis", {normalTransfer: 2000, errorTransfer: 4000}],
                               
-                             
-    //["real-l-simple", "Boxes", {html: {include: "item5.html"},
-                          //hasCorrect: "B"}, "SeparatorBis", {normalTransfer: 2000, errorTransfer: 4000}],
-                              
-    //["real-l-simple", "Boxes", {html: {include: "item6.html"},
-                          //hasCorrect: "C"}, "SeparatorBis", {normalTransfer: 2000, errorTransfer: 4000}],
-                              
-    //["real-l-simple", "Boxes", {html: {include: "item7.html"},
-                          //hasCorrect: "A"}, "SeparatorBis", {normalTransfer: 2000, errorTransfer: 4000}],
                                                                                          
                               
                              
@@ -337,11 +317,7 @@ var items = [
    
     
     ["real-t", "Boxes", {html: {include: "item22.html"},
-                          hasCorrect: "B", ignoreFailure: true}],
-    
-
-    //["real-t", "Boxes", {html: {include: "item23.html"},
-    //                      hasCorrect: "A", ignoreFailure: true}],                            
+                          hasCorrect: "B", ignoreFailure: true}],                         
     
     //
     // The real trials. critical testing
