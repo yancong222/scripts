@@ -14,7 +14,6 @@ DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 t5_tokenizer = T5Tokenizer.from_pretrained(T5_PATH)
 t5_config = T5Config.from_pretrained(T5_PATH)
-#t5_mlm = T5ForConditionalGeneration.from_pretrained("C:\\Users\\Administrator\\Desktop\\t5-3b-pytorch_model.bin", config=t5_config, local_files_only=True).to(DEVICE)
 t5_mlm = T5ForConditionalGeneration.from_pretrained(T5_PATH, config=t5_config).to(DEVICE)
 
 #%%
@@ -64,24 +63,7 @@ with open ('MannerImplicature1102.csv', newline='') as f:
             # prob distribution
             print('p_in_all: ', p_in_all) 
 
-#%%
-'''
-# p_in_all = torch.nn.functional.softmax(torch.Tensor(scores_all), dim=0) #tensor
-# p_in_all = torch.nn.functional.softmax(torch.Tensor(scores_all), dim=0).tolist()[rank_in_all]
 
-print(result_all)
-print(scores_all)
-
-print('rank_in_all: ', rank_in_all) # 14
-print('logits_in_all: ', logits_in_all) # -1.58004363377889
-            
-# prob distribution
-print('p_in_all: ', p_in_all) #tensor([1.6723e-03, 1.6085e-03, 1.5772e-03,  
-                    #..., 1.7735e-06, 1.7735e-06,
-                    #1.7734e-06]) 
-                    # tolist: 0.0007268478511832654
-'''
-#%%
 
 
 
