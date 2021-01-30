@@ -49,70 +49,38 @@ var items = [
     [["must.no.nocomma",1], "AcceptabilityJudgment", {s: "Although Emily patiently dressed the baby wasn't amusing for her."}],
     [["must.sc.comma",1], "AcceptabilityJudgment", {s: "Although Emily patiently dressed, the baby must have not been amusing for her."}],
     [["must.sc.nocomma",1], "AcceptabilityJudgment", {s: "Although Emily patiently dressed the baby must have not been amusing for her."}],
-    // [["must.fc.comma",3], "DashedSentence", {s: "Although I don't know whether Emily babysits, the baby must be amusing for her."},
-    //                       "Question",       {q: "Do I have any knowledge about whether Emily has babysat the baby?", hasCorrect: "No"}],
-    //
-    // [["must.fc.nocomma",3], "DashedSentence", {s: "Although I don't know whether Emily babysits the baby must be amusing for her."},
-    //                         "Question",       {q: "Is it possible that the baby was amusing for Emily?", hasCorrect: "Yes"}],
-
+   
 
 
     [["must.no.comma",2], "AcceptabilityJudgment", {s: "Although Carrie skillfully cooked, the omelet wasn't easy for her."}],
     [["must.no.nocomma",2], "AcceptabilityJudgment", {s: "Although Carrie skillfully cooked the omelet wasn't easy for her."}],
     [["must.sc.comma",2], "AcceptabilityJudgment", {s: "Although Carrie skillfully cooked, the omelet must have not been easy for her."}],
     [["must.sc.nocomma",2], "AcceptabilityJudgment", {s: "Although Carrie skillfully cooked the omelet must have not been easy for her."}],
-    // [["must.fc.comma",4], "DashedSentence", {s: "Although I don't know whether Carrie cooks, the omelet must be easy for her."},
-    //                       "Question",       {q: "Is it possible that the omelet is easy for Carrie?", hasCorrect: "Yes"}],
-    //
-    // [["must.fc.nocomma",4], "DashedSentence", {s: "Although I don't know whether Carrie cooks the omelet must be easy for her."},
-    //                         "Question",       {q: "Do I have any knowledge about whether Carrie has cooked the omelet?", hasCorrect: "No"}],
-    //
-
+  
 
     [["must.no.comma",3], "AcceptabilityJudgment", {s: "Although Dean Wong anxiously telephoned, the secretary wasn't responsive to him."}],
     [["must.no.nocomma",3], "AcceptabilityJudgment", {s: "Although Dean Wong anxiously telephoned the secretary wasn't responsive to him."}],
     [["must.sc.comma",3], "AcceptabilityJudgment", {s: "Although Dean Wong anxiously telephoned, the secretary must have not been responsive to him."}],
     [["must.sc.nocomma",3], "AcceptabilityJudgment", {s: "Although Dean Wong anxiously telephoned the secretary must have not been responsive to him."}],
-    // [["must.fc.comma",5], "DashedSentence", {s: "Although I don't know whether Dean Wong telephones, the secretary must be responsive to him."},
-    //                       "Question",       {q: "Do I have any knowledge about whether Dean Wong has telephoned the secretary?", hasCorrect: "No"}],
-    //
-    // [["must.fc.nocomma",5], "DashedSentence", {s: "Although I don't know whether Dean Wong telephones the secretary must be responsive to him."},
-    //                         "Question",       {q: "Is it possible that the secretary is responsive to Dean Wong?", hasCorrect: "Yes"}],
 
 
     [["must.no.comma",4], "AcceptabilityJudgment", {s: "Although Ivan gladly played, the cello wasn't fun for him."}],
     [["must.no.nocomma",4], "AcceptabilityJudgment", {s: "Although Ivan gladly played the cello wasn't fun for him."}],
     [["must.sc.comma",4], "AcceptabilityJudgment", {s: "Although Ivan gladly played, the cello must have not been fun for him."}],
     [["must.sc.nocomma",4], "AcceptabilityJudgment", {s: "Although Ivan gladly played the cello must have not been fun for him."}],
-    // [["must.fc.comma",6], "DashedSentence", {s: "Although I don’t know whether Ivan and Jean play, the game must be fun for them."},
-    //                       "Question",       {q: "Is it possible that the game is fun for Ivan and Jean?", hasCorrect: "Yes"}],
-    //
-    // [["must.fc.nocomma",6], "DashedSentence", {s: "Although I don’t know whether Ivan and Jean play the game must be fun for them."},
-    //                         "Question",       {q: "Do I have any knowledge about whether Ivan and Jean have played the game?", hasCorrect: "No"}],
-    //
-
+  
 
     [["must.no.comma",5], "AcceptabilityJudgment", {s: "Although Owen clumsily hunted, the deer wasn't cautious for him."}],
     [["must.no.nocomma",5], "AcceptabilityJudgment", {s: "Although Owen clumsily hunted the deer wasn't cautious for him."}],
     [["must.sc.comma",5], "AcceptabilityJudgment", {s: "Although Owen clumsily hunted, the deer must have not been cautious for him."}],
     [["must.sc.nocomma",5], "AcceptabilityJudgment", {s: "Although Owen clumsily hunted the deer must have not been cautious for him."}],
-    // [["must.fc.comma",7], "DashedSentence", {s: "Although I don't know whether Owen hunts, the deer must be languid for him."},
-    //                       "Question",       {q: "Is it possible that the deer is languid for Owen?", hasCorrect: "Yes"}],
-    //
-    // [["must.fc.nocomma",7], "DashedSentence", {s: "Although I don't know whether Owen hunts the deer must be languid for him."},
-    //                         "Question",       {q: "Do I have any knowledge about whether Owen has hunted the deer?", hasCorrect: "No"}],
-
+  
 
 
     [["must.no.comma",6], "AcceptabilityJudgment", {s: "Although Mark friendly photographed, the astronaut wasn't easygoing for him."}],
     [["must.no.nocomma",6], "AcceptabilityJudgment", {s: "Although Mark friendly photographed the astronaut wasn't easygoing for him."}],
     [["must.sc.comma",6], "AcceptabilityJudgment", {s: "Although Mark friendly photographed, the astronaut must have not been easygoing for him."}],
     [["must.sc.nocomma",6], "AcceptabilityJudgment", {s: "Although Mark friendly photographed the astronaut must have not been easygoing for him."}],
-    // [["must.fc.comma",8], "DashedSentence", {s: "Although I don't know whether Floyd and Clyde meet, the man from Florida must be easygoing for them."},
-    //                         "Question",       {q: "Do I have any knowledge about whether Floyd and Clyde have met the man from Florida?", hasCorrect: "No"}],
-    //
-    // [["must.fc.nocomma",8], "DashedSentence", {s: "Although I don't know whether Floyd and Clyde meet the man from Florida must be easygoing for them."},
-    //                         "Question",       {q: "Is it possible that the man from Florida is easygoing for Floyd and Clyde?", hasCorrect: "Yes"}],
 
 
     [["must.no.comma",7], "AcceptabilityJudgment", {s: "Although the professor enthusiastically lectured, these students weren't hardworking to her."}],
@@ -120,23 +88,13 @@ var items = [
     [["must.sc.comma",7], "AcceptabilityJudgment", {s: "Although the professor enthusiastically lectured, these students must have not been hardworking to her."}],
     [["must.sc.nocomma",7], "AcceptabilityJudgment", {s: "Although the professor enthusiastically lectured these students must have not been hardworking to her."}],
 
-    // [["must.fc.comma",9], "DashedSentence", {s: "Although I don't know whether the professor teaches, these students must be hardworking to her."},
-    //                         "Question",       {q: "Do I have any knowledge about whether the professor has taught these students?", hasCorrect: "No"}],
-    //
-    // [["must.fc.nocomma",9], "DashedSentence", {s: "Although I don't know whether the professor teaches these students must be hardworking to her."},
-    //                         "Question",       {q: "Is it possible that these students are hardworking to the professor?", hasCorrect: "Yes"}],
-    //
 
 
     [["must.no.comma",8], "AcceptabilityJudgment", {s: "Although Jared repeatedly called, his girlfriend wasn't obedient to him."}],
     [["must.no.nocomma",8], "AcceptabilityJudgment", {s: "Although Jared repeatedly called his girlfriend wasn't obedient to him."}],
     [["must.sc.comma",8], "AcceptabilityJudgment", {s: "Although Jared repeatedly called, his girlfriend must have not been obedient to him."}],
     [["must.sc.nocomma",8], "AcceptabilityJudgment", {s: "Although Jared repeatedly called his girlfriend must have not been obedient to him."}],
-    // [["must.fc.comma",10], "DashedSentence", {s: "Although I don't know whether Jared calls, his girlfriend must be obedient to him."},
-    //                         "Question",       {q: "Is it possible that Jared's girlfriend is obedient to Jared?", hasCorrect: "Yes"}],
-    //
-    // [["must.fc.nocomma",10], "DashedSentence", {s: "Although I don't know whether Jared calls his girlfriend must be obedient to him."},
-    //                         "Question",       {q: "Do I have any knowledge about whether Jared has called his girlfriend?", hasCorrect: "No"}],
+
 
 
 
@@ -144,11 +102,7 @@ var items = [
     [["must.no.nocomma",9], "AcceptabilityJudgment", {s: "Although the police carefully investigated the shooter wasn't detectable for them."}],
     [["must.sc.comma",9], "AcceptabilityJudgment", {s: "Although the police carefully investigated, the shooter must have not been detectable for them."}],
     [["must.sc.nocomma",9], "AcceptabilityJudgment", {s: "Although the police carefully investigated the shooter must have not been detectable for them."}],
-    // [["must.fc.comma",11], "DashedSentence", {s: "Although I don't know whether the police stop, the killer must be detectable for them."},
-    //                          "Question",       {q: "Is it possible that the killer is detectable for the police?", hasCorrect: "Yes"}],
-    //
-    // [["must.fc.nocomma",11], "DashedSentence", {s: "Although I don't know whether the police stop the killer must be detectable for them."},
-    //                          "Question",       {q: "Do I have any knowledge about whether the police have stopped the killer?", hasCorrect: "No"}],
+
 
 
 
@@ -157,25 +111,13 @@ var items = [
     [["must.sc.comma",10], "AcceptabilityJudgment", {s: "Although Luigi meticulously studied, this psychology paper must have not been interesting to him."}],
     [["must.sc.nocomma",10], "AcceptabilityJudgment", {s: "Although Luigi meticulously studied this psychology paper must have not been interesting to him."}],
 
-    // [["must.fc.comma",12], "DashedSentence", {s: "Although I don't know whether Luigi reads, this psychology paper must be interesting to him."},
-    //                       "Question",       {q: "Is it possible that the psychology paper is interesting to Luigi?", hasCorrect: "Yes"}],
-    //
-    // [["must.fc.nocomma",12], "DashedSentence", {s: "Although I don't know whether Luigi reads this psychology paper must be interesting to him."},
-    //                         "Question",       {q: "Do I have any knowledge about whether Luigi has read the psychology paper?", hasCorrect: "No"}],
-    //
-    //                         "Question",       {q: "Do I have any knowledge about whether the police have stopped the killer?", hasCorrect: "No"}],
-    //
+
 
 
    [["must.no.comma",11], "AcceptabilityJudgment", {s: "Although Jane laboriously entertained, the guests weren't manageable for her."}],
    [["must.no.nocomma",11], "AcceptabilityJudgment", {s: "Although Jane laboriously entertained the guests weren't manageable for her."}],
    [["must.sc.comma",11], "AcceptabilityJudgment", {s: "Although Jane laboriously entertained, the guests must have not been manageable for her."}],
    [["must.sc.nocomma",11], "AcceptabilityJudgment", {s: "Although Jane laboriously entertained the guests must have not been manageable for her."}],
-   // [["must.fc.comma",13], "DashedSentence", {s: "Although I don't know whether Jane entertains, the guests must be manageable for her."},
-   //                       "Question",       {q: "Is it possible that the guests are manageable for Jane?", hasCorrect: "Yes"}],
-   //
-   // [["must.fc.nocomma",13], "DashedSentence", {s: "Although I don't know whether Jane entertains the guests must be manageable for her."},
-   //                         "Question",       {q: "Do I have any knowledge about whether Jane has entertained the guests?", hasCorrect: "No"}],
 
 
 
@@ -184,12 +126,7 @@ var items = [
   [["must.no.nocomma",12], "AcceptabilityJudgment", {s: "Although Bruce often smoked those cigarettes weren't enticing to him."}],
   [["must.sc.comma",12], "AcceptabilityJudgment", {s: "Although Bruce often smoked, those cigarettes must have not been enticing to him."}],
   [["must.sc.nocomma",12], "AcceptabilityJudgment", {s: "Although Bruce often smoked those cigarettes must have not been enticing to him."}],
-  // [["must.fc.comma",14], "DashedSentence", {s: "Although I don't know whether Bruce smokes, those cigarettes must be enticing to him."},
-  //                       "Question",       {q: "Is it possible that those cigarettes are enticing to Bruce?", hasCorrect: "Yes"}],
-  //
-  // [["must.fc.nocomma",14], "DashedSentence", {s: "Although I don't know whether Bruce smokes those cigarettes must be enticing to him."},
-  //                         "Question",       {q: "Do I have any knowledge about whether Bruce has smoked those cigarettes?", hasCorrect: "No"}],
-  //
+
 
 
 
@@ -197,11 +134,7 @@ var items = [
   [["must.no.nocomma",13], "AcceptabilityJudgment", {s: "Although Evelyn repetitively cleaned the kitchen wasn't livable to her."}],
   [["must.sc.comma",13], "AcceptabilityJudgment", {s: "Although Evelyn repetitively cleaned, the kitchen must have not been livable to her."}],
   [["must.sc.nocomma",13], "AcceptabilityJudgment", {s: "Although Evelyn repetitively cleaned the kitchen must have not been livable to her."}],
-  // [["must.fc.comma",15], "DashedSentence", {s: "Although I don't know whether Evelyn cleans, the kitchen must be livable to her."},
-  //                       "Question",       {q: "Is it possible that the kitchen is livable to Evelyn?", hasCorrect: "Yes"}],
-  //
-  // [["must.fc.nocomma",15], "DashedSentence", {s: "Although I don't know whether Evelyn cleans the kitchen must be livable to her."},
-  //                         "Question",       {q: "Do I have any knowledge about whether Evelyn has cleaned the kitchen?", hasCorrect: "No"}],
+
 
 
 
@@ -210,11 +143,7 @@ var items = [
   [["must.sc.comma",14], "AcceptabilityJudgment", {s: "Although Albert continuously practiced, the tuba must have not been straightforward to him."}],
   [["must.sc.nocomma",14], "AcceptabilityJudgment", {s: "Although Albert continuously practiced the tuba must have not been straightforward to him."}],
 
-  // [["must.fc.comma",16], "DashedSentence", {s: "Although I don't know whether Albert practices, the tuba must be straightforward to him."},
-  //                       "Question",       {q: "Is it possible that the the tuba is straightforward to Albert?", hasCorrect: "Yes"}],
-  //
-  // [["must.fc.nocomma",16], "DashedSentence", {s: "Although I don't know whether Albert practices the tuba must be straightforward to him."},
-  //                         "Question",       {q: "Do I have any knowledge about whether Albert has practiced the tuba?", hasCorrect: "No"}],
+
 
 
 
@@ -223,11 +152,7 @@ var items = [
   [["must.no.nocomma",15], "AcceptabilityJudgment", {s: "Although Suzy engagingly wrote the lyrics wasn't beautiful to her"}],
   [["must.sc.comma",15], "AcceptabilityJudgment", {s: "Although Suzy engagingly wrote, the lyrics must have not been beautiful to her."}],
   [["must.sc.nocomma",15], "AcceptabilityJudgment", {s: "Although Suzy engagingly wrote the lyrics must have not been beautiful to her."}],
-  // [["must.fc.comma",17], "DashedSentence", {s: "Although I don't know whether Suzy writes, the lyrics must be beautiful to her."},
-  //                      "Question",       {q: "Is it possible that the lyrics is beautiful to Suzy?", hasCorrect: "Yes"}],
-  //
-  // [["must.fc.nocomma",17], "DashedSentence", {s: "Although I don't know whether Suzy writes the lyrics must be beautiful to her."},
-  //                        "Question",       {q: "Do I have any knowledge about whether Suzy has written the lyrics?", hasCorrect: "No"}],
+
 
 
 
@@ -237,12 +162,6 @@ var items = [
   [["must.sc.comma",16], "AcceptabilityJudgment", {s: "Although Franklin confidently answered, the question must have not been obvious to him."}],
   [["must.sc.nocomma",16], "AcceptabilityJudgment", {s: "Although Franklin confidently answered the question must have not been obvious to him."}],
 
-  // [["must.fc.comma",18], "DashedSentence", {s: "Although I don't know whether Franklin answers, the question must be obvious to him."},
-  //                     "Question",       {q: "Is it possible that the question is obvious to Franklin?", hasCorrect: "Yes"}],
-  //
-  // [["must.fc.nocomma",18], "DashedSentence", {s: "Although I don't know whether Franklin answers the question must be obvious to him."},
-  //                       "Question",       {q: "Do I have any knowledge about whether Franklin has answered the question?", hasCorrect: "No"}],
-  //
 
     //// Fillers below here. Naming convention changed slightly from Excel spreadsheet ('F-' added to begining)
 
@@ -294,54 +213,7 @@ var items = [
     ["F-23F.02", "AcceptabilityJudgment", {s: "Isaac swim in the municipal swimming pool every day."}],
     ["F-24F.01", "AcceptabilityJudgment", {s: "The instant baying of hounds could be heard for miles."}],
     ["F-24F.02", "AcceptabilityJudgment", {s: "What the dentist did was pulled my bad tooth."}]
-    // ["F-25F.01", "AcceptabilityJudgment", {s: "Violet enjoyed the view from the hilltop."}],
-    // ["F-25F.02", "AcceptabilityJudgment", {s: "The money was stole from the bank."}],
-    // ["F-26F.01", "AcceptabilityJudgment", {s: "Harry had been reading biographies for many years."}],
-    // ["F-26F.02", "AcceptabilityJudgment", {s: "Carla and Veronica likes listening to Mozart."}],
-    // ["F-27F.01", "AcceptabilityJudgment", {s: "The clothing store was burned to the ground."}],
-    // ["F-27F.02", "AcceptabilityJudgment", {s: "Last year Eric take a trip to Arizona for the sun."}],
-    // ["F-28F.01", "AcceptabilityJudgment", {s: "The cheap restaurant was very popular in the town."}],
-    // ["F-28F.02", "AcceptabilityJudgment", {s: "Yesterday the chef bought a bottles of fine wine."}],
-    // ["F-29F.01", "AcceptabilityJudgment", {s: "The stone wall had been constructed with care."}],
-    // ["F-29F.02", "AcceptabilityJudgment", {s: "Fred had been bought a new car."}],
-    // ["F-30F.01", "AcceptabilityJudgment", {s: "The aging baritone could still sing beautifully."}],
-    // ["F-30F.02", "AcceptabilityJudgment", {s: "It is a fact that Rome did invaded Britannia."}],
-    // ["F-31F.01", "AcceptabilityJudgment", {s: "Jenna's gardening skills were obvious to her neighbors."}],
-    // ["F-31F.02", "AcceptabilityJudgment", {s: "This shirt was washing by the laundry service."}],
-    // ["F-32F.01", "AcceptabilityJudgment", {s: "Without his magic tricks Tommy would have been dull."}],
-    // ["F-32F.02", "AcceptabilityJudgment", {s: "The lazy worker should have tries harder."}]
-    // // ["F-33F.01", "AcceptabilityJudgment", {s: "The theme song was a major success."}],
-    // ["F-33F.02", "AcceptabilityJudgment", {s: "The book about football has boring me beyond tolerance."}],
-    // ["F-34F.01", "AcceptabilityJudgment", {s: "Gwen's flu meant she had to stay home."}],
-    // ["F-34F.02", "AcceptabilityJudgment", {s: "There is nothing Humphrey enjoy more than vindaloo curry for lunch."}],
-    // ["F-35F.01", "AcceptabilityJudgment", {s: "Bill's accountant send him some good news about his finances."}],
-    // ["F-35F.02", "AcceptabilityJudgment", {s: "Jasper planned to campaigned for a senate seat."}],
-    // ["F-36F.01", "AcceptabilityJudgment", {s: "Leo become famous as a TV news anchor."}],
-    // ["F-36F.02", "AcceptabilityJudgment", {s: "Albert was hoping he could driven in a Mercedes."}],
-    // ["F-37F.01", "AcceptabilityJudgment", {s: "Lisa’s phone is disconnected last month."}],
-    // ["F-37F.02", "AcceptabilityJudgment", {s: "Wendy’s muddy car was washed wearily yesterday afternoon."}],
-    // ["F-38F.01", "AcceptabilityJudgment", {s: "The library books had borrowed by the graduate student."}],
-    // ["F-38F.02", "AcceptabilityJudgment", {s: "The dark, underwater cave was explored by the divers."}],
-    // ["F-39F.01", "AcceptabilityJudgment", {s: "The unpleasant cough syrup was swallowing by the boy unwillingly."}],
-    // ["F-39F.02", "AcceptabilityJudgment", {s: "The pizza had been delivered by Antonio himself."}],
-    // ["F-40F.01", "AcceptabilityJudgment", {s: "Frank’s loan application are approved immediately when the documents were ready."}],
-    // ["F-40F.02", "AcceptabilityJudgment", {s: "The cheap products had been manufactured by a Belgian firm."}],
-    // ["F-41F.01", "AcceptabilityJudgment", {s: "Their secret conversation had been overheard by a surprised neighbor."}],
-    // ["F-41F.02", "AcceptabilityJudgment", {s: "The rough part of the wood was sanding by the carpenter."}],
-    // ["F-42F.01", "AcceptabilityJudgment", {s: "A package had received by the secretary in person."}],
-    // ["F-42F.02", "AcceptabilityJudgment", {s: "The club’s rules had been violated only twice."}],
-    // ["F-43F.01", "AcceptabilityJudgment", {s: "I didn't expect that a new medication is been prescribed by the physician."}],
-    // ["F-43F.02", "AcceptabilityJudgment", {s: "The wheat crops had been harvested after the rain."}],
-    // ["F-44F.01", "AcceptabilityJudgment", {s: "I guess the musical piece are composed in a dream."}],
-    // ["F-44F.02", "AcceptabilityJudgment", {s: "The old lady’s purse had been snatched with speed."}],
-    // ["F-45F.01", "AcceptabilityJudgment", {s: "Olson’s bulging suitcase had been packed for the trip."}],
-    // ["F-45F.02", "AcceptabilityJudgment", {s: "Several spelling errors noticed by the careful editor."}],
-    // ["F-46F.01", "AcceptabilityJudgment", {s: "An illegal weapon been smuggled only once."}],
-    // ["F-46F.02", "AcceptabilityJudgment", {s: "The leftover food was discarded wastefully."}],
-    // ["F-47F.01", "AcceptabilityJudgment", {s: "Thirty pounds of potatoes had peeled carefully."}],
-    // ["F-47F.02", "AcceptabilityJudgment", {s: "The grimy pots and pans had been scrubbed by the dishwashers."}],
-    // ["F-48F.01", "AcceptabilityJudgment", {s: "The roast lamb had been carving by a servant."}],
-    // ["F-48F.02", "AcceptabilityJudgment", {s: "Cleopatra’s beauty was admired always."}]
+ 
 
     ];
 
