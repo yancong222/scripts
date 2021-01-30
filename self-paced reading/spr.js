@@ -32,42 +32,6 @@ var items = [
     //// Item sets are grouped together
     //// Latin squaring is done automatically
 
-    // [["must.no.comma",1], "DashedSentence", {s: "Although David drinks, Jack-Daniels isn't tasty for him."},
-    //                       "Question",       {q: "Did the sentence explicitly say that David has drunk Jack-Daniels?", hasCorrect: "No"}],
-    //
-    // [["must.no.nocomma",1], "DashedSentence", {s: "Although David drinks Jack-Daniels isn't tasty for him."},
-    //                         "Question",      {q: "Did the sentence explicitly say that Jack-Daniels is tasty for David?", hasCorrect: "No"}],
-    //
-    // [["must.sc.comma",1], "DashedSentence", {s: "Although David doesn't drink, Jack-Daniels must be tasty to him."},
-    //                       "Question",       {q: "Did the sentence explicitly say that David has drunk Jack-Daniels?", hasCorrect: "No"}],
-    //
-    // [["must.sc.nocomma",1], "DashedSentence", {s: "Although David doesn't drink Jack-Daniels must be tasty to him."},
-    //                         "Question",      {q: "Is it possible that Jack-Daniels is tasty to David?", hasCorrect: "Yes"}],
-    //
-    // [["must.fc.comma",1], "DashedSentence", {s: "Although I don’t know whether David drinks, Jack-Daniels must be tasty to him."},
-    //                       "Question",       {q: "Do I have any knowledge about whether David has drunk Jack-Daniels?", hasCorrect: "No"}],
-    //
-    // [["must.fc.nocomma",1], "DashedSentence", {s: "Although I don’t know whether David drinks Jack-Daniels must be tasty to him."},
-    //                         "Question",      {q: "Is it possible that Jack-Daniels is tasty to David?", hasCorrect: "Yes"}],
-
-
-    // [["must.no.comma",2], "DashedSentence", {s: "Although the scholars hided, the artifice wasn't discernible for them."},
-    //                       "Question",       {q: "Did the scholars hide the artifice?", hasCorrect: "No"}],
-    //
-    // [["must.no.nocomma",2], "DashedSentence", {s: "Although the scholars hided the artifice wasn't discernible for them."},
-    //                         "Question",      {q: "Did the speaker think that the artifice was discernible for the scholars?", hasCorrect: "No"}],
-    //
-    // [["must.sc.comma",2], "DashedSentence", {s: "Although the scholars hided, the artifice must have not been discernible for them."},
-    //                       "Question",       {q: "Did the scholars hide the artifice?", hasCorrect: "No"}],
-    //
-    // [["must.sc.nocomma",2], "DashedSentence", {s: "Although the scholars hided the artifice must have not been discernible for them."},
-    //                         "Question",      {q: "Did the speaker think that the artifice was discernible for the scholars?", hasCorrect: "No"}],
-
-    // [["must.fc.comma",2], "DashedSentence", {s: "Although I don't know whether the scholars hide, the artifice must be discernible for them."},
-    //                       "Question",       {q: "Is it possible that the artifice is discernible for the scholars?", hasCorrect: "Yes"}],
-    //
-    // [["must.fc.nocomma",2], "DashedSentence", {s: "Although I don't know whether the scholars hide the artifice must be discernible for them."},
-    //                        "Question",      {q: "Do I have any knowledge about whether the scholars have hidden the artifice?", hasCorrect: "No"}],
 
 
 
@@ -83,11 +47,6 @@ var items = [
     [["must.sc.nocomma",1], "DashedSentence", {s: "Although Emily patiently dressed the baby must have not been amusing for her."},
                             "Question",       {q: "Did the speaker think that the baby was amusing for Emily?", hasCorrect: "No"}],
 
-    // [["must.fc.comma",3], "DashedSentence", {s: "Although I don't know whether Emily babysits, the baby must be amusing for her."},
-    //                       "Question",       {q: "Do I have any knowledge about whether Emily has babysat the baby?", hasCorrect: "No"}],
-    //
-    // [["must.fc.nocomma",3], "DashedSentence", {s: "Although I don't know whether Emily babysits the baby must be amusing for her."},
-    //                         "Question",       {q: "Is it possible that the baby was amusing for Emily?", hasCorrect: "Yes"}],
 
 
 
@@ -103,13 +62,7 @@ var items = [
     [["must.sc.nocomma",2], "DashedSentence", {s: "Although Carrie skillfully cooked the omelet must have not been easy for her."},
                          "Question",       {q: "Did Carrie skillfully cook the omelet?", hasCorrect: "No"}],
 
-    // [["must.fc.comma",4], "DashedSentence", {s: "Although I don't know whether Carrie cooks, the omelet must be easy for her."},
-    //                       "Question",       {q: "Is it possible that the omelet is easy for Carrie?", hasCorrect: "Yes"}],
-    //
-    // [["must.fc.nocomma",4], "DashedSentence", {s: "Although I don't know whether Carrie cooks the omelet must be easy for her."},
-    //                         "Question",       {q: "Do I have any knowledge about whether Carrie has cooked the omelet?", hasCorrect: "No"}],
-    //
-
+ 
 
     [["must.no.comma",3], "DashedSentence", {s: "Although Dean Wong anxiously telephoned, the secretary wasn't responsive to him."},
                           "Question",       {q: "Did Dean Wong anxiously telephone the secretary?", hasCorrect: "No"}],
@@ -123,12 +76,7 @@ var items = [
     [["must.sc.nocomma",3], "DashedSentence", {s: "Although Dean Wong anxiously telephoned the secretary must have not been responsive to him."},
                             "Question",       {q: "Did the speaker think that the secretary was responsive to Dean Wong?", hasCorrect: "No"}],
 
-    // [["must.fc.comma",5], "DashedSentence", {s: "Although I don't know whether Dean Wong telephones, the secretary must be responsive to him."},
-    //                       "Question",       {q: "Do I have any knowledge about whether Dean Wong has telephoned the secretary?", hasCorrect: "No"}],
-    //
-    // [["must.fc.nocomma",5], "DashedSentence", {s: "Although I don't know whether Dean Wong telephones the secretary must be responsive to him."},
-    //                         "Question",       {q: "Is it possible that the secretary is responsive to Dean Wong?", hasCorrect: "Yes"}],
-
+ 
 
 
     [["must.no.comma",4], "DashedSentence", {s: "Although Ivan gladly played, the cello wasn't fun for him."},
@@ -553,149 +501,7 @@ var items = [
     ["F-24F.02", "DashedSentence", {s: "It took Walter many years to learn Greek adequately."},
     "Question",       {q: "Did Walter pick up Greek in a few days?", hasCorrect: "No"}]
 
-    // ["F-25F.01", "DashedSentence", {s: "While the skipper sailed the ship the boat veered off course."},
-    // "Question",       {q: "Did the skipper sail the boat?", hasCorrect: "No"}],
-    //
-    // ["F-25F.02", "DashedSentence", {s: "While Jack ordered the pizza the fish that was silver and black cooked in a pot."},
-    // "Question",       {q: "Did Jack order the pizza?", hasCorrect: "Yes"}],
-    //
-    // ["F-26F.01", "DashedSentence", {s: "Jack cultivated orchids but not lavender in his basement."},
-    // "Question",       {q: "Did Jack cultivate lavender in his basement?", hasCorrect: "No"}],
-    //
-    // ["F-26F.02", "DashedSentence", {s: "Heated discussion was a feature of the talk show."},
-    // "Question",       {q: "Was the discussion heated in the talk show?", hasCorrect: "Yes"}],
-    //
-    // ["F-27F.01", "DashedSentence", {s: "Card tricks were hard to explain over the radio."},
-    // "Question",       {q: "Were card tricks easy to explain over the radio?", hasCorrect: "No"}],
-    //
-    // ["F-27F.02", "DashedSentence", {s: "The deep sea diver was afraid of the huge shark."},
-    // "Question",       {q: "Was the huge shark scary to the deep sea diver?", hasCorrect: "Yes"}],
-    //
-    // ["F-28F.01", "DashedSentence", {s: "The fisherman had caught an octopus in his net but that wasn't enough for his dinner."},
-    // "Question",       {q: "Was the octopus the fisherman caught enough for his dinner?", hasCorrect: "No"}],
-    //
-    // ["F-28F.02", "DashedSentence", {s: "I thought Leandra was not a fan of intellectual conversation."},
-    // "Question",       {q: "Does the speaker know whether Leandra liked intellectual conversation?", hasCorrect: "Yes"}],
-    //
-    // ["F-29F.01", "DashedSentence", {s: "The famous poet looked very dignified."},
-    // "Question",       {q: "Did the famous poet look very dignified?", hasCorrect: "Yes"}],
-    //
-    // ["F-29F.02", "DashedSentence", {s: "Given that I didn't have a backup, losing a cell phone can be so annoying."},
-    // "Question",       {q: "Did I have a backup?", hasCorrect: "No"}],
-    //
-    // ["F-30F.01", "DashedSentence", {s: "Hal's computer had a tendency to overheat."},
-    // "Question",       {q: "Did Hal's computer tend to overheat?", hasCorrect: "Yes"}],
-    //
-    // ["F-30F.02", "DashedSentence", {s: "Sleeping in a hammock was a strange experience for Frank since Frank had never slept in it before."},
-    // "Question",       {q: "Had Frank ever slept in a hammock before?", hasCorrect: "No"}],
-    //
-    // ["F-31F.01", "DashedSentence", {s: "Daniel's father wanted him to become a fireman."},
-    // "Question",       {q: "Was fireman what Danie's father wanted him to become?", hasCorrect: "Yes"}],
-    //
-    // ["F-31F.02", "DashedSentence", {s: "Joe's work in the factory was very repetitive."},
-    // "Question",       {q: "Was Joe's work very creative?", hasCorrect: "No"}],
-    //
-    // ["F-32F.01", "DashedSentence", {s: "The scenic route seemed longer than the normal route."},
-    // "Question",       {q: "Was the normal route shorter than the scenic route?", hasCorrect: "Yes"}],
-    //
-    // ["F-32F.02", "DashedSentence", {s: "While Scarlet bathed herself the baby cried."},
-    // "Question",       {q: "Did Scarlet bathe the baby?", hasCorrect: "No"}],
-    //
-    // ["F-33F.01", "DashedSentence", {s: "The weary traveler was overjoyed to finally see a familiar face."},
-    // "Question",       {q: "Were the travelers traveling without seeing any familiar faces?", hasCorrect: "No"}],
-    //
-    // ["F-33F.02", "DashedSentence", {s: "The murder had been witnessed in the dark."},
-    // "Question",       {q: "Had the murder been witnessed?", hasCorrect: "Yes"}],
-    //
-    // ["F-34F.01", "DashedSentence", {s: "Patty’s overgrown lawn was mowed only last week."},
-    // "Question",       {q: "Was Patty's overgrown lawn mowed this week?", hasCorrect: "No"}],
-    //
-    // ["F-34F.02", "DashedSentence", {s: "Three more martinis were ordered repeatedly."},
-    // "Question",       {q: "Were martinis ordered again and again?", hasCorrect: "Yes"}],
-    //
-    // ["F-35F.01", "DashedSentence", {s: "The quality of Karla’s work was evaluated frequently."},
-    // "Question",       {q: "Was Karla's work seldom evaluated?", hasCorrect: "No"}],
-    //
-    // ["F-35F.02", "DashedSentence", {s: "The legal contract had been signed by the family."},
-    // "Question",       {q: "Had the family signed the legal contrat?", hasCorrect: "Yes"}],
-    //
-    // ["F-36F.01", "DashedSentence", {s: "Although notoriously long, the vocabulary list was memorized well."},
-    // "Question",       {q: "Was the vocab list light and short?", hasCorrect: "No"}],
-    //
-    // ["F-36F.02", "DashedSentence", {s: "The firewood had been chopped by Jen’s grandfather."},
-    // "Question",       {q: "Had Jen's grandfather chopped the firewood?", hasCorrect: "Yes"}],
-    //
-    // ["F-37F.01", "DashedSentence", {s: "Lisa’s phone had been disconnected last month."},
-    // "Question",       {q: "Had Lisa's phone been disconnected last month?", hasCorrect: "Yes"}],
-    //
-    // ["F-37F.02", "DashedSentence", {s: "Wendy’s muddy car was washed wearily yesterday afternoon."},
-    // "Question",       {q: "Was Wendy's car clean yesterday afternoon?", hasCorrect: "No"}],
-    //
-    // ["F-38F.01", "DashedSentence", {s: "The library books had been borrowed by the graduate student."},
-    // "Question",       {q: "Had the graduate student checked out the lib books?", hasCorrect: "Yes"}],
-    //
-    // ["F-38F.02", "DashedSentence", {s: "The dark, underwater cave was explored by the divers."},
-    // "Question",       {q: "Was the cave still unexplored?", hasCorrect: "No"}],
-    //
-    // ["F-39F.01", "DashedSentence", {s: "The unpleasant cough syrup was swallowed by the boy unwillingly."},
-    // "Question",       {q: "Did the boy swallow the cough syrup?", hasCorrect: "Yes"}],
-    //
-    // ["F-39F.02", "DashedSentence", {s: "The pizza had been delivered by Antonio himself."},
-    // "Question",       {q: "Was the pizza delivered by somebody else?", hasCorrect: "No"}],
-    //
-    // ["F-40F.01", "DashedSentence", {s: "Frank’s loan application had been approved immediately when the documents were ready."},
-    // "Question",       {q: "Had Frank's loan application been approved?", hasCorrect: "Yes"}],
-    //
-    // ["F-40F.02", "DashedSentence", {s: "The cheap products had been manufactured by a Belgian firm."},
-    // "Question",       {q: "Were the products manufactured by the Belgian firm unaffordable?", hasCorrect: "No"}],
-    //
-    // ["F-41F.01", "DashedSentence", {s: "Their secret conversation had been overheard by a surprised neighbor."},
-    // "Question",       {q: "Had their secret conversation been kept to themselves?", hasCorrect: "No"}],
-    //
-    // ["F-41F.02", "DashedSentence", {s: "The rough part of the wood was sanded by the carpenter."},
-    // "Question",       {q: "Was the rough part of the wood sanded?", hasCorrect: "Yes"}],
-    //
-    // ["F-42F.01", "DashedSentence", {s: "A package had been received by the secretary in person."},
-    // "Question",       {q: "Was the package left at front door?", hasCorrect: "No"}],
-    //
-    // ["F-42F.02", "DashedSentence", {s: "The club’s rules had been violated only twice."},
-    // "Question",       {q: "Had the club's rules ever been violated?", hasCorrect: "Yes"}],
-    //
-    // ["F-43F.01", "DashedSentence", {s: "I didn't expect that a new medication had been prescribed by the physician."},
-    // "Question",       {q: "Did the speaker expect that a new medication had been prescribed?", hasCorrect: "No"}],
-    //
-    // ["F-43F.02", "DashedSentence", {s: "The wheat crops had been harvested after the rain."},
-    // "Question",       {q: "Had the wheat crops been harvested?", hasCorrect: "Yes"}],
-    //
-    // ["F-44F.01", "DashedSentence", {s: "I guess the musical piece was composed in a dream."},
-    // "Question",       {q: "Were the speaker certain that the musical piece was composed in a dream?", hasCorrect: "No"}],
-    //
-    // ["F-44F.02", "DashedSentence", {s: "The old lady’s purse had been snatched with speed."},
-    // "Question",       {q: "Had the old lady's purse been snatched quickly?", hasCorrect: "Yes"}],
-    //
-    // ["F-45F.01", "DashedSentence", {s: "Olson’s bulging suitcase had been packed for the trip."},
-    // "Question",       {q: "Was Olson's suitcase almost full?", hasCorrect: "Yes"}],
-    //
-    // ["F-45F.02", "DashedSentence", {s: "Several spelling errors were noticed by the careful editor."},
-    // "Question",       {q: "Was the editor careless?", hasCorrect: "No"}],
-    //
-    // ["F-46F.01", "DashedSentence", {s: "An illegal weapon had been smuggled only once."},
-    // "Question",       {q: "Had illegal weapons ever been smuggled before?", hasCorrect: "Yes"}],
-    //
-    // ["F-46F.02", "DashedSentence", {s: "The leftover food was discarded wastefully."},
-    // "Question",       {q: "Were the leftover food kept for future use?", hasCorrect: "No"}],
-    //
-    // ["F-47F.01", "DashedSentence", {s: "Thirty pounds of potatoes had been peeled carefully."},
-    // "Question",       {q: "Had the potatoes been peeled with care?", hasCorrect: "Yes"}],
-    //
-    // ["F-47F.02", "DashedSentence", {s: "The grimy pots and pans had been scrubbed by the dishwashers."},
-    // "Question",       {q: "Did the pots and pans still look brand new?", hasCorrect: "No"}],
-    //
-    // ["F-48F.01", "DashedSentence", {s: "The roast lamb had been carved by a servant."},
-    // "Question",       {q: "Had the servant already carved the roast lamb?", hasCorrect: "Yes"}],
-    //
-    // ["F-48F.02", "DashedSentence", {s: "Cleopatra’s beauty was admired always."},
-    // "Question",       {q: "Was Cleopatra's beauty unmemorable?", hasCorrect: "No"}]
+ 
 
 
   ];
