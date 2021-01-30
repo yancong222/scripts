@@ -1,6 +1,6 @@
 # author: Yan Cong
 #####################################################################################
-load("...")
+load("...") # add directory
 
 install.packages("plyr") # you don't need to install pkg every single time
 install.packages("dplyr") # you need to type Yes into the console
