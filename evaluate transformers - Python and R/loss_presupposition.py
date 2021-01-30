@@ -1,14 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Tue Jan 12 22:57:17 2021
-
-@author: yancong
-"""
-
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
 Created on Tue Jan 12 22:25:48 2021
 
 @author: yancong
@@ -88,14 +80,8 @@ with open('SepPresupLoss.csv', 'w', newline='') as file:
             writer.writerow([n, T5_PATH, i, j, q, 1])
         else:
             writer.writerow([n, T5_PATH, i, j, q, 0])
-            
-
-
-            
+                      
 #print('loss lst: ', loss_difference_lst)
 #print('bad loss: ', outputs_bad_loss)     
 #print('good loss: ', outputs_good_loss)      
-
-    
-
 #%%
