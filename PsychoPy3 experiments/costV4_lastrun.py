@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2021.1.3),
-    on Mon Apr  5 20:27:37 2021
+    on Tue Apr  6 15:39:30 2021
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -51,7 +51,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='/Users/yancong/Desktop/CB/05 psychopy/costV4_lastrun.py',
+    originPath='/Users/yancong/Desktop/cost-master/costV4_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -117,13 +117,408 @@ blank500ms = visual.TextStim(win=win, name='blank500ms',
     languageStyle='LTR',
     depth=0.0);
 
+# Initialize components for Routine "instruction"
+instructionClock = core.Clock()
+text_2 = visual.TextStim(win=win, name='text_2',
+    text='Suppose you are on Mars, and in order to communicte with aliens, you will learn their language. You will learn by feedback. You will see displays with fake words. They are used for describing colors and shapes, which are illustrated by the images.\n\nBelow is a group of word and images. Your task is to guess the meaning and to decide which image the word refers to.\n\nExample: word "bosa". It can be USED BY ITSELF to refer to a colored shape.',
+    font='Open Sans',
+    pos=(0, 0.3), height=0.02, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=0.0);
+polygon = visual.Polygon(
+    win=win, name='polygon',
+    edges=5, size=(0.1, 0.1),
+    ori=0.0, pos=(-0.2, 0),
+    lineWidth=1.0,     colorSpace='rgb',  lineColor='white', fillColor='white',
+    opacity=None, depth=-1.0, interpolate=True)
+polygonblack = visual.Polygon(
+    win=win, name='polygonblack',
+    edges=5, size=(0.1, 0.1),
+    ori=0.0, pos=(0.2, 0),
+    lineWidth=1.0,     colorSpace='rgb',  lineColor='white', fillColor='black',
+    opacity=None, depth=-2.0, interpolate=True)
+text_3 = visual.TextStim(win=win, name='text_3',
+    text='1',
+    font='Open Sans',
+    pos=(-0.2, -0.1), height=0.03, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-3.0);
+text_4 = visual.TextStim(win=win, name='text_4',
+    text='2',
+    font='Open Sans',
+    pos=(0.2, -0.1), height=0.03, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-4.0);
+text_6 = visual.TextStim(win=win, name='text_6',
+    text='For this example, suppose "bosa" means empty or white, when you TYPE 1 on your keyboard, you receive feedback "Correct".\n\nFor the learning part, you will receive prompts "Correct"/"Incorrect". Sometimes you will be tested on the words you have learned. You will not receive any feedback.\n\nSometimes, the task will seem very easy. Sometimes, it will seem trickier if not entirely arbitrary. This is not an IQ test and there may not always be a proper, unambiguous answer. What matters the most to us is that you follow your instinct and report your intuition, especially in these cases where it seems that you have to guess.\n\nPress SPACE bar to start the PRACTICE.',
+    font='Open Sans',
+    pos=(0, -0.3), height=0.02, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-5.0);
+key_resp_2 = keyboard.Keyboard()
+text_7 = visual.TextStim(win=win, name='text_7',
+    text='bosa',
+    font='Open Sans',
+    pos=(0, 0.1), height=0.03, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-7.0);
+
 # Initialize components for Routine "start_2"
 start_2Clock = core.Clock()
 text1 = visual.TextStim(win=win, name='text1',
-    text='You will receive feedbacks in the next few trials.\n\nClick anywhere to continue.',
+    text='Please TYPE your answer using  keyboard.\n\nAllowed Keys: 1, 2, 3\n\nYou will receive feedbacks in the next few trials.\n\nClick anywhere to continue.',
+    font='Open Sans',
+    pos=(0, 0), height=0.06, wrapWidth=None, ori=0.0, 
+    color='purple', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=0.0);
+mouse = event.Mouse(win=win)
+x, y = [None, None]
+mouse.mouseClock = core.Clock()
+
+# Initialize components for Routine "bosa1"
+bosa1Clock = core.Clock()
+key_resp_bosa = keyboard.Keyboard()
+blicket1_11 = visual.TextStim(win=win, name='blicket1_11',
+    text='bosa',
+    font='Open Sans',
+    pos=(0, 0.3), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-1.0);
+blicket_st_b15_5 = visual.Polygon(
+    win=win, name='blicket_st_b15_5',
+    edges=5, size=(0.2, 0.2),
+    ori=0.0, pos=(-0.2, 0),
+    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='white',
+    opacity=None, depth=-2.0, interpolate=True)
+blicket_st_w15_6 = visual.Polygon(
+    win=win, name='blicket_st_w15_6',
+    edges=5, size=(0.2, 0.2),
+    ori=0.0, pos=(0.2, 0),
+    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='white',
+    opacity=None, depth=-3.0, interpolate=True)
+option1_critical_14 = visual.TextStim(win=win, name='option1_critical_14',
+    text='1',
+    font='Open Sans',
+    pos=(-0.2, -0.2), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-4.0);
+option2_critical_14 = visual.TextStim(win=win, name='option2_critical_14',
+    text='2',
+    font='Open Sans',
+    pos=(0.2, -0.2), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-5.0);
+
+# Initialize components for Routine "fb_bosa1"
+fb_bosa1Clock = core.Clock()
+msg1=""
+msg0=""
+msg=""
+
+feedback1_zud1_2 = visual.TextStim(win=win, name='feedback1_zud1_2',
+    text='',
+    font='Open Sans',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    color='darkgreen', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-1.0);
+feedback0_zud1_2 = visual.TextStim(win=win, name='feedback0_zud1_2',
+    text='',
+    font='Open Sans',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    color='darkred', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-2.0);
+feedback_zud01_2 = visual.TextStim(win=win, name='feedback_zud01_2',
+    text='',
+    font='Open Sans',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    color='darkred', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-3.0);
+
+# Initialize components for Routine "bosa1"
+bosa1Clock = core.Clock()
+key_resp_bosa = keyboard.Keyboard()
+blicket1_11 = visual.TextStim(win=win, name='blicket1_11',
+    text='bosa',
+    font='Open Sans',
+    pos=(0, 0.3), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-1.0);
+blicket_st_b15_5 = visual.Polygon(
+    win=win, name='blicket_st_b15_5',
+    edges=5, size=(0.2, 0.2),
+    ori=0.0, pos=(-0.2, 0),
+    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='white',
+    opacity=None, depth=-2.0, interpolate=True)
+blicket_st_w15_6 = visual.Polygon(
+    win=win, name='blicket_st_w15_6',
+    edges=5, size=(0.2, 0.2),
+    ori=0.0, pos=(0.2, 0),
+    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='white',
+    opacity=None, depth=-3.0, interpolate=True)
+option1_critical_14 = visual.TextStim(win=win, name='option1_critical_14',
+    text='1',
+    font='Open Sans',
+    pos=(-0.2, -0.2), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-4.0);
+option2_critical_14 = visual.TextStim(win=win, name='option2_critical_14',
+    text='2',
+    font='Open Sans',
+    pos=(0.2, -0.2), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-5.0);
+
+# Initialize components for Routine "fb_bosa1"
+fb_bosa1Clock = core.Clock()
+msg1=""
+msg0=""
+msg=""
+
+feedback1_zud1_2 = visual.TextStim(win=win, name='feedback1_zud1_2',
+    text='',
+    font='Open Sans',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    color='darkgreen', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-1.0);
+feedback0_zud1_2 = visual.TextStim(win=win, name='feedback0_zud1_2',
+    text='',
+    font='Open Sans',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    color='darkred', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-2.0);
+feedback_zud01_2 = visual.TextStim(win=win, name='feedback_zud01_2',
+    text='',
+    font='Open Sans',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    color='darkred', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-3.0);
+
+# Initialize components for Routine "bosa2"
+bosa2Clock = core.Clock()
+key_resp_bosa2 = keyboard.Keyboard()
+blicket1_13 = visual.TextStim(win=win, name='blicket1_13',
+    text='bosa',
+    font='Open Sans',
+    pos=(0, 0.3), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-1.0);
+blicket_st_b15_7 = visual.Polygon(
+    win=win, name='blicket_st_b15_7',
+    edges=5, size=(0.2, 0.2),
+    ori=0.0, pos=(-0.2, 0),
+    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='white',
+    opacity=None, depth=-2.0, interpolate=True)
+blicket_st_w15_8 = visual.Polygon(
+    win=win, name='blicket_st_w15_8',
+    edges=5, size=(0.2, 0.2),
+    ori=0.0, pos=(0.2, 0),
+    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='white',
+    opacity=None, depth=-3.0, interpolate=True)
+option1_critical_16 = visual.TextStim(win=win, name='option1_critical_16',
+    text='1',
+    font='Open Sans',
+    pos=(-0.2, -0.2), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-4.0);
+option2_critical_16 = visual.TextStim(win=win, name='option2_critical_16',
+    text='2',
+    font='Open Sans',
+    pos=(0.2, -0.2), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-5.0);
+
+# Initialize components for Routine "fb_bosa2"
+fb_bosa2Clock = core.Clock()
+msg1=""
+msg0=""
+msg=""
+
+feedback1_zud1_3 = visual.TextStim(win=win, name='feedback1_zud1_3',
+    text='',
+    font='Open Sans',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    color='darkgreen', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-1.0);
+feedback0_zud1_3 = visual.TextStim(win=win, name='feedback0_zud1_3',
+    text='',
+    font='Open Sans',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    color='darkred', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-2.0);
+feedback_zud01_3 = visual.TextStim(win=win, name='feedback_zud01_3',
+    text='',
+    font='Open Sans',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    color='darkred', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-3.0);
+
+# Initialize components for Routine "bosa2"
+bosa2Clock = core.Clock()
+key_resp_bosa2 = keyboard.Keyboard()
+blicket1_13 = visual.TextStim(win=win, name='blicket1_13',
+    text='bosa',
+    font='Open Sans',
+    pos=(0, 0.3), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-1.0);
+blicket_st_b15_7 = visual.Polygon(
+    win=win, name='blicket_st_b15_7',
+    edges=5, size=(0.2, 0.2),
+    ori=0.0, pos=(-0.2, 0),
+    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='white',
+    opacity=None, depth=-2.0, interpolate=True)
+blicket_st_w15_8 = visual.Polygon(
+    win=win, name='blicket_st_w15_8',
+    edges=5, size=(0.2, 0.2),
+    ori=0.0, pos=(0.2, 0),
+    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='white',
+    opacity=None, depth=-3.0, interpolate=True)
+option1_critical_16 = visual.TextStim(win=win, name='option1_critical_16',
+    text='1',
+    font='Open Sans',
+    pos=(-0.2, -0.2), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-4.0);
+option2_critical_16 = visual.TextStim(win=win, name='option2_critical_16',
+    text='2',
+    font='Open Sans',
+    pos=(0.2, -0.2), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-5.0);
+
+# Initialize components for Routine "fb_bosa2"
+fb_bosa2Clock = core.Clock()
+msg1=""
+msg0=""
+msg=""
+
+feedback1_zud1_3 = visual.TextStim(win=win, name='feedback1_zud1_3',
+    text='',
+    font='Open Sans',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    color='darkgreen', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-1.0);
+feedback0_zud1_3 = visual.TextStim(win=win, name='feedback0_zud1_3',
+    text='',
+    font='Open Sans',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    color='darkred', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-2.0);
+feedback_zud01_3 = visual.TextStim(win=win, name='feedback_zud01_3',
+    text='',
+    font='Open Sans',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    color='darkred', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-3.0);
+
+# Initialize components for Routine "proceed"
+proceedClock = core.Clock()
+text2 = visual.TextStim(win=win, name='text2',
+    text='You will NOT receive feedbacks in the next few trials.\n\nClick anywhere to continue.',
     font='Open Sans',
     pos=(0, 0), height=0.07, wrapWidth=None, ori=0.0, 
-    color='darksalmon', colorSpace='rgb', opacity=None, 
+    color='darkorange', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=0.0);
+mouse_2 = event.Mouse(win=win)
+x, y = [None, None]
+mouse_2.mouseClock = core.Clock()
+
+# Initialize components for Routine "bosa1"
+bosa1Clock = core.Clock()
+key_resp_bosa = keyboard.Keyboard()
+blicket1_11 = visual.TextStim(win=win, name='blicket1_11',
+    text='bosa',
+    font='Open Sans',
+    pos=(0, 0.3), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-1.0);
+blicket_st_b15_5 = visual.Polygon(
+    win=win, name='blicket_st_b15_5',
+    edges=5, size=(0.2, 0.2),
+    ori=0.0, pos=(-0.2, 0),
+    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='white',
+    opacity=None, depth=-2.0, interpolate=True)
+blicket_st_w15_6 = visual.Polygon(
+    win=win, name='blicket_st_w15_6',
+    edges=5, size=(0.2, 0.2),
+    ori=0.0, pos=(0.2, 0),
+    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='white',
+    opacity=None, depth=-3.0, interpolate=True)
+option1_critical_14 = visual.TextStim(win=win, name='option1_critical_14',
+    text='1',
+    font='Open Sans',
+    pos=(-0.2, -0.2), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-4.0);
+option2_critical_14 = visual.TextStim(win=win, name='option2_critical_14',
+    text='2',
+    font='Open Sans',
+    pos=(0.2, -0.2), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-5.0);
+
+# Initialize components for Routine "practice_trial_end"
+practice_trial_endClock = core.Clock()
+text_5 = visual.TextStim(win=win, name='text_5',
+    text='This is the end of the practice! \n\nNow let’s start the real experiment!\n\nPress spacebar to continue.',
+    font='Open Sans',
+    pos=(0, 0), height=0.04, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=0.0);
+key_resp_3 = keyboard.Keyboard()
+
+# Initialize components for Routine "phase1"
+phase1Clock = core.Clock()
+text = visual.TextStim(win=win, name='text',
+    text='',
+    font='Open Sans',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    color='blue', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=0.0);
+
+# Initialize components for Routine "start_2"
+start_2Clock = core.Clock()
+text1 = visual.TextStim(win=win, name='text1',
+    text='Please TYPE your answer using  keyboard.\n\nAllowed Keys: 1, 2, 3\n\nYou will receive feedbacks in the next few trials.\n\nClick anywhere to continue.',
+    font='Open Sans',
+    pos=(0, 0), height=0.06, wrapWidth=None, ori=0.0, 
+    color='purple', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=0.0);
 mouse = event.Mouse(win=win)
@@ -871,6 +1266,16 @@ mouse_2 = event.Mouse(win=win)
 x, y = [None, None]
 mouse_2.mouseClock = core.Clock()
 
+# Initialize components for Routine "blank"
+blankClock = core.Clock()
+blank500ms = visual.TextStim(win=win, name='blank500ms',
+    text=None,
+    font='Open Sans',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=0.0);
+
 # Initialize components for Routine "test"
 testClock = core.Clock()
 key_resp_t1_3 = keyboard.Keyboard()
@@ -921,10 +1326,10 @@ p2 = visual.TextStim(win=win, name='p2',
 # Initialize components for Routine "start_2"
 start_2Clock = core.Clock()
 text1 = visual.TextStim(win=win, name='text1',
-    text='You will receive feedbacks in the next few trials.\n\nClick anywhere to continue.',
+    text='Please TYPE your answer using  keyboard.\n\nAllowed Keys: 1, 2, 3\n\nYou will receive feedbacks in the next few trials.\n\nClick anywhere to continue.',
     font='Open Sans',
-    pos=(0, 0), height=0.07, wrapWidth=None, ori=0.0, 
-    color='darksalmon', colorSpace='rgb', opacity=None, 
+    pos=(0, 0), height=0.06, wrapWidth=None, ori=0.0, 
+    color='purple', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=0.0);
 mouse = event.Mouse(win=win)
@@ -3256,6 +3661,16 @@ mouse_2 = event.Mouse(win=win)
 x, y = [None, None]
 mouse_2.mouseClock = core.Clock()
 
+# Initialize components for Routine "blank"
+blankClock = core.Clock()
+blank500ms = visual.TextStim(win=win, name='blank500ms',
+    text=None,
+    font='Open Sans',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=0.0);
+
 # Initialize components for Routine "test"
 testClock = core.Clock()
 key_resp_t1_3 = keyboard.Keyboard()
@@ -3306,10 +3721,10 @@ p3 = visual.TextStim(win=win, name='p3',
 # Initialize components for Routine "start_2"
 start_2Clock = core.Clock()
 text1 = visual.TextStim(win=win, name='text1',
-    text='You will receive feedbacks in the next few trials.\n\nClick anywhere to continue.',
+    text='Please TYPE your answer using  keyboard.\n\nAllowed Keys: 1, 2, 3\n\nYou will receive feedbacks in the next few trials.\n\nClick anywhere to continue.',
     font='Open Sans',
-    pos=(0, 0), height=0.07, wrapWidth=None, ori=0.0, 
-    color='darksalmon', colorSpace='rgb', opacity=None, 
+    pos=(0, 0), height=0.06, wrapWidth=None, ori=0.0, 
+    color='purple', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=0.0);
 mouse = event.Mouse(win=win)
@@ -4592,6 +5007,129 @@ mouse_2 = event.Mouse(win=win)
 x, y = [None, None]
 mouse_2.mouseClock = core.Clock()
 
+# Initialize components for Routine "test2dax9"
+test2dax9Clock = core.Clock()
+dax9_corr2_16 = visual.TextStim(win=win, name='dax9_corr2_16',
+    text='dax',
+    font='Open Sans',
+    pos=(0, 0.3), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-1.0);
+star_28 = visual.ShapeStim(
+    win=win, name='star_28', vertices='star7',
+    size=(0.2, 0.2),
+    ori=0.0, pos=(-0.5, 0),
+    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='white',
+    opacity=None, depth=-2.0, interpolate=True)
+triange_16 = visual.ShapeStim(
+    win=win, name='triange_16',
+    vertices=[[-(0.2, 0.2)[0]/2.0,-(0.2, 0.2)[1]/2.0], [+(0.2, 0.2)[0]/2.0,-(0.2, 0.2)[1]/2.0], [0,(0.2, 0.2)[1]/2.0]],
+    ori=0.0, pos=(0, 0),
+    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='white',
+    opacity=None, depth=-3.0, interpolate=True)
+cross_26 = visual.ShapeStim(
+    win=win, name='cross_26', vertices='cross',
+    size=(0.2, 0.2),
+    ori=0.0, pos=(0.5, 0),
+    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='white',
+    opacity=None, depth=-4.0, interpolate=True)
+key_resp_dax9_2 = keyboard.Keyboard()
+option1_23 = visual.TextStim(win=win, name='option1_23',
+    text='1',
+    font='Open Sans',
+    pos=(-0.5, -0.2), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-6.0);
+option2_23 = visual.TextStim(win=win, name='option2_23',
+    text='2',
+    font='Open Sans',
+    pos=(0, -0.2), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-7.0);
+option3_22 = visual.TextStim(win=win, name='option3_22',
+    text='3',
+    font='Open Sans',
+    pos=(0.5, -0.2), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-8.0);
+
+# Initialize components for Routine "test2tas32"
+test2tas32Clock = core.Clock()
+dax9_corr2_17 = visual.TextStim(win=win, name='dax9_corr2_17',
+    text='tas',
+    font='Open Sans',
+    pos=(0, 0.3), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-1.0);
+star_29 = visual.ShapeStim(
+    win=win, name='star_29', vertices='cross',
+    size=(0.2, 0.2),
+    ori=0.0, pos=(-0.5, 0),
+    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='white',
+    opacity=None, depth=-2.0, interpolate=True)
+triange_17 = visual.ShapeStim(
+    win=win, name='triange_17', vertices='star7',
+    size=(0.2, 0.2),
+    ori=0.0, pos=(0, 0),
+    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='white',
+    opacity=None, depth=-3.0, interpolate=True)
+cross_27 = visual.Rect(
+    win=win, name='cross_27',
+    width=(0.2, 0.2)[0], height=(0.2, 0.2)[1],
+    ori=0.0, pos=(0.5, 0),
+    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='white',
+    opacity=None, depth=-4.0, interpolate=True)
+key_resp_tas32_2 = keyboard.Keyboard()
+option1_24 = visual.TextStim(win=win, name='option1_24',
+    text='1',
+    font='Open Sans',
+    pos=(-0.5, -0.2), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-6.0);
+option2_24 = visual.TextStim(win=win, name='option2_24',
+    text='2',
+    font='Open Sans',
+    pos=(0, -0.2), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-7.0);
+option3_23 = visual.TextStim(win=win, name='option3_23',
+    text='3',
+    font='Open Sans',
+    pos=(0.5, -0.2), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-8.0);
+
+# Initialize components for Routine "proceed"
+proceedClock = core.Clock()
+text2 = visual.TextStim(win=win, name='text2',
+    text='You will NOT receive feedbacks in the next few trials.\n\nClick anywhere to continue.',
+    font='Open Sans',
+    pos=(0, 0), height=0.07, wrapWidth=None, ori=0.0, 
+    color='darkorange', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=0.0);
+mouse_2 = event.Mouse(win=win)
+x, y = [None, None]
+mouse_2.mouseClock = core.Clock()
+
+# Initialize components for Routine "blank"
+blankClock = core.Clock()
+blank500ms = visual.TextStim(win=win, name='blank500ms',
+    text=None,
+    font='Open Sans',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=0.0);
+
 # Initialize components for Routine "test"
 testClock = core.Clock()
 key_resp_t1_3 = keyboard.Keyboard()
@@ -4827,7 +5365,7 @@ routineTimer.reset()
 
 # ------Prepare to start Routine "blank"-------
 continueRoutine = True
-routineTimer.add(0.100000)
+routineTimer.add(0.200000)
 # update component parameters for each repeat
 # keep track of which components have finished
 blankComponents = [blank500ms]
@@ -4863,7 +5401,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         blank500ms.setAutoDraw(True)
     if blank500ms.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > blank500ms.tStartRefresh + 0.1-frameTolerance:
+        if tThisFlipGlobal > blank500ms.tStartRefresh + 0.2-frameTolerance:
             # keep track of stop time/frame for later
             blank500ms.tStop = t  # not accounting for scr refresh
             blank500ms.frameNStop = frameN  # exact frame index
@@ -4893,6 +5431,1771 @@ for thisComponent in blankComponents:
         thisComponent.setAutoDraw(False)
 thisExp.addData('blank500ms.started', blank500ms.tStartRefresh)
 thisExp.addData('blank500ms.stopped', blank500ms.tStopRefresh)
+
+# ------Prepare to start Routine "instruction"-------
+continueRoutine = True
+# update component parameters for each repeat
+key_resp_2.keys = []
+key_resp_2.rt = []
+_key_resp_2_allKeys = []
+# keep track of which components have finished
+instructionComponents = [text_2, polygon, polygonblack, text_3, text_4, text_6, key_resp_2, text_7]
+for thisComponent in instructionComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+instructionClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "instruction"-------
+while continueRoutine:
+    # get current time
+    t = instructionClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=instructionClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *text_2* updates
+    if text_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        text_2.frameNStart = frameN  # exact frame index
+        text_2.tStart = t  # local t and not account for scr refresh
+        text_2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(text_2, 'tStartRefresh')  # time at next scr refresh
+        text_2.setAutoDraw(True)
+    
+    # *polygon* updates
+    if polygon.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        polygon.frameNStart = frameN  # exact frame index
+        polygon.tStart = t  # local t and not account for scr refresh
+        polygon.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(polygon, 'tStartRefresh')  # time at next scr refresh
+        polygon.setAutoDraw(True)
+    
+    # *polygonblack* updates
+    if polygonblack.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        polygonblack.frameNStart = frameN  # exact frame index
+        polygonblack.tStart = t  # local t and not account for scr refresh
+        polygonblack.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(polygonblack, 'tStartRefresh')  # time at next scr refresh
+        polygonblack.setAutoDraw(True)
+    
+    # *text_3* updates
+    if text_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        text_3.frameNStart = frameN  # exact frame index
+        text_3.tStart = t  # local t and not account for scr refresh
+        text_3.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(text_3, 'tStartRefresh')  # time at next scr refresh
+        text_3.setAutoDraw(True)
+    
+    # *text_4* updates
+    if text_4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        text_4.frameNStart = frameN  # exact frame index
+        text_4.tStart = t  # local t and not account for scr refresh
+        text_4.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(text_4, 'tStartRefresh')  # time at next scr refresh
+        text_4.setAutoDraw(True)
+    
+    # *text_6* updates
+    if text_6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        text_6.frameNStart = frameN  # exact frame index
+        text_6.tStart = t  # local t and not account for scr refresh
+        text_6.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(text_6, 'tStartRefresh')  # time at next scr refresh
+        text_6.setAutoDraw(True)
+    
+    # *key_resp_2* updates
+    waitOnFlip = False
+    if key_resp_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        key_resp_2.frameNStart = frameN  # exact frame index
+        key_resp_2.tStart = t  # local t and not account for scr refresh
+        key_resp_2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(key_resp_2, 'tStartRefresh')  # time at next scr refresh
+        key_resp_2.status = STARTED
+        # keyboard checking is just starting
+        waitOnFlip = True
+        win.callOnFlip(key_resp_2.clock.reset)  # t=0 on next screen flip
+        win.callOnFlip(key_resp_2.clearEvents, eventType='keyboard')  # clear events on next screen flip
+    if key_resp_2.status == STARTED and not waitOnFlip:
+        theseKeys = key_resp_2.getKeys(keyList=['space'], waitRelease=False)
+        _key_resp_2_allKeys.extend(theseKeys)
+        if len(_key_resp_2_allKeys):
+            key_resp_2.keys = _key_resp_2_allKeys[-1].name  # just the last key pressed
+            key_resp_2.rt = _key_resp_2_allKeys[-1].rt
+            # a response ends the routine
+            continueRoutine = False
+    
+    # *text_7* updates
+    if text_7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        text_7.frameNStart = frameN  # exact frame index
+        text_7.tStart = t  # local t and not account for scr refresh
+        text_7.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(text_7, 'tStartRefresh')  # time at next scr refresh
+        text_7.setAutoDraw(True)
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in instructionComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "instruction"-------
+for thisComponent in instructionComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('text_2.started', text_2.tStartRefresh)
+thisExp.addData('text_2.stopped', text_2.tStopRefresh)
+thisExp.addData('polygon.started', polygon.tStartRefresh)
+thisExp.addData('polygon.stopped', polygon.tStopRefresh)
+thisExp.addData('polygonblack.started', polygonblack.tStartRefresh)
+thisExp.addData('polygonblack.stopped', polygonblack.tStopRefresh)
+thisExp.addData('text_3.started', text_3.tStartRefresh)
+thisExp.addData('text_3.stopped', text_3.tStopRefresh)
+thisExp.addData('text_4.started', text_4.tStartRefresh)
+thisExp.addData('text_4.stopped', text_4.tStopRefresh)
+thisExp.addData('text_6.started', text_6.tStartRefresh)
+thisExp.addData('text_6.stopped', text_6.tStopRefresh)
+# check responses
+if key_resp_2.keys in ['', [], None]:  # No response was made
+    key_resp_2.keys = None
+thisExp.addData('key_resp_2.keys',key_resp_2.keys)
+if key_resp_2.keys != None:  # we had a response
+    thisExp.addData('key_resp_2.rt', key_resp_2.rt)
+thisExp.addData('key_resp_2.started', key_resp_2.tStartRefresh)
+thisExp.addData('key_resp_2.stopped', key_resp_2.tStopRefresh)
+thisExp.nextEntry()
+thisExp.addData('text_7.started', text_7.tStartRefresh)
+thisExp.addData('text_7.stopped', text_7.tStopRefresh)
+# the Routine "instruction" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
+
+# ------Prepare to start Routine "start_2"-------
+continueRoutine = True
+# update component parameters for each repeat
+# setup some python lists for storing info about the mouse
+gotValidClick = False  # until a click is received
+# keep track of which components have finished
+start_2Components = [text1, mouse]
+for thisComponent in start_2Components:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+start_2Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "start_2"-------
+while continueRoutine:
+    # get current time
+    t = start_2Clock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=start_2Clock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *text1* updates
+    if text1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        text1.frameNStart = frameN  # exact frame index
+        text1.tStart = t  # local t and not account for scr refresh
+        text1.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(text1, 'tStartRefresh')  # time at next scr refresh
+        text1.setAutoDraw(True)
+    # *mouse* updates
+    if mouse.status == NOT_STARTED and t >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        mouse.frameNStart = frameN  # exact frame index
+        mouse.tStart = t  # local t and not account for scr refresh
+        mouse.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(mouse, 'tStartRefresh')  # time at next scr refresh
+        mouse.status = STARTED
+        mouse.mouseClock.reset()
+        prevButtonState = mouse.getPressed()  # if button is down already this ISN'T a new click
+    if mouse.status == STARTED:  # only update if started and not finished!
+        buttons = mouse.getPressed()
+        if buttons != prevButtonState:  # button state changed?
+            prevButtonState = buttons
+            if sum(buttons) > 0:  # state changed to a new click
+                # abort routine on response
+                continueRoutine = False
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in start_2Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "start_2"-------
+for thisComponent in start_2Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('text1.started', text1.tStartRefresh)
+thisExp.addData('text1.stopped', text1.tStopRefresh)
+# store data for thisExp (ExperimentHandler)
+x, y = mouse.getPos()
+buttons = mouse.getPressed()
+thisExp.addData('mouse.x', x)
+thisExp.addData('mouse.y', y)
+thisExp.addData('mouse.leftButton', buttons[0])
+thisExp.addData('mouse.midButton', buttons[1])
+thisExp.addData('mouse.rightButton', buttons[2])
+thisExp.addData('mouse.started', mouse.tStart)
+thisExp.addData('mouse.stopped', mouse.tStop)
+thisExp.nextEntry()
+# the Routine "start_2" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
+
+# ------Prepare to start Routine "bosa1"-------
+continueRoutine = True
+# update component parameters for each repeat
+key_resp_bosa.keys = []
+key_resp_bosa.rt = []
+_key_resp_bosa_allKeys = []
+blicket_st_b15_5.setFillColor('white')
+blicket_st_w15_6.setFillColor('black')
+# keep track of which components have finished
+bosa1Components = [key_resp_bosa, blicket1_11, blicket_st_b15_5, blicket_st_w15_6, option1_critical_14, option2_critical_14]
+for thisComponent in bosa1Components:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+bosa1Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "bosa1"-------
+while continueRoutine:
+    # get current time
+    t = bosa1Clock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=bosa1Clock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *key_resp_bosa* updates
+    waitOnFlip = False
+    if key_resp_bosa.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        key_resp_bosa.frameNStart = frameN  # exact frame index
+        key_resp_bosa.tStart = t  # local t and not account for scr refresh
+        key_resp_bosa.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(key_resp_bosa, 'tStartRefresh')  # time at next scr refresh
+        key_resp_bosa.status = STARTED
+        # keyboard checking is just starting
+        waitOnFlip = True
+        win.callOnFlip(key_resp_bosa.clock.reset)  # t=0 on next screen flip
+    if key_resp_bosa.status == STARTED and not waitOnFlip:
+        theseKeys = key_resp_bosa.getKeys(keyList=['1', '2'], waitRelease=False)
+        _key_resp_bosa_allKeys.extend(theseKeys)
+        if len(_key_resp_bosa_allKeys):
+            key_resp_bosa.keys = _key_resp_bosa_allKeys[-1].name  # just the last key pressed
+            key_resp_bosa.rt = _key_resp_bosa_allKeys[-1].rt
+            # was this correct?
+            if (key_resp_bosa.keys == str('1')) or (key_resp_bosa.keys == '1'):
+                key_resp_bosa.corr = 1
+            else:
+                key_resp_bosa.corr = 0
+            # a response ends the routine
+            continueRoutine = False
+    
+    # *blicket1_11* updates
+    if blicket1_11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        blicket1_11.frameNStart = frameN  # exact frame index
+        blicket1_11.tStart = t  # local t and not account for scr refresh
+        blicket1_11.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(blicket1_11, 'tStartRefresh')  # time at next scr refresh
+        blicket1_11.setAutoDraw(True)
+    
+    # *blicket_st_b15_5* updates
+    if blicket_st_b15_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        blicket_st_b15_5.frameNStart = frameN  # exact frame index
+        blicket_st_b15_5.tStart = t  # local t and not account for scr refresh
+        blicket_st_b15_5.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(blicket_st_b15_5, 'tStartRefresh')  # time at next scr refresh
+        blicket_st_b15_5.setAutoDraw(True)
+    
+    # *blicket_st_w15_6* updates
+    if blicket_st_w15_6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        blicket_st_w15_6.frameNStart = frameN  # exact frame index
+        blicket_st_w15_6.tStart = t  # local t and not account for scr refresh
+        blicket_st_w15_6.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(blicket_st_w15_6, 'tStartRefresh')  # time at next scr refresh
+        blicket_st_w15_6.setAutoDraw(True)
+    
+    # *option1_critical_14* updates
+    if option1_critical_14.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        option1_critical_14.frameNStart = frameN  # exact frame index
+        option1_critical_14.tStart = t  # local t and not account for scr refresh
+        option1_critical_14.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(option1_critical_14, 'tStartRefresh')  # time at next scr refresh
+        option1_critical_14.setAutoDraw(True)
+    
+    # *option2_critical_14* updates
+    if option2_critical_14.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        option2_critical_14.frameNStart = frameN  # exact frame index
+        option2_critical_14.tStart = t  # local t and not account for scr refresh
+        option2_critical_14.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(option2_critical_14, 'tStartRefresh')  # time at next scr refresh
+        option2_critical_14.setAutoDraw(True)
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in bosa1Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "bosa1"-------
+for thisComponent in bosa1Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+# check responses
+if key_resp_bosa.keys in ['', [], None]:  # No response was made
+    key_resp_bosa.keys = None
+    # was no response the correct answer?!
+    if str('1').lower() == 'none':
+       key_resp_bosa.corr = 1;  # correct non-response
+    else:
+       key_resp_bosa.corr = 0;  # failed to respond (incorrectly)
+# store data for thisExp (ExperimentHandler)
+thisExp.addData('key_resp_bosa.keys',key_resp_bosa.keys)
+thisExp.addData('key_resp_bosa.corr', key_resp_bosa.corr)
+if key_resp_bosa.keys != None:  # we had a response
+    thisExp.addData('key_resp_bosa.rt', key_resp_bosa.rt)
+thisExp.addData('key_resp_bosa.started', key_resp_bosa.tStartRefresh)
+thisExp.addData('key_resp_bosa.stopped', key_resp_bosa.tStopRefresh)
+thisExp.nextEntry()
+thisExp.addData('blicket1_11.started', blicket1_11.tStartRefresh)
+thisExp.addData('blicket1_11.stopped', blicket1_11.tStopRefresh)
+thisExp.addData('blicket_st_b15_5.started', blicket_st_b15_5.tStartRefresh)
+thisExp.addData('blicket_st_b15_5.stopped', blicket_st_b15_5.tStopRefresh)
+thisExp.addData('blicket_st_w15_6.started', blicket_st_w15_6.tStartRefresh)
+thisExp.addData('blicket_st_w15_6.stopped', blicket_st_w15_6.tStopRefresh)
+thisExp.addData('option1_critical_14.started', option1_critical_14.tStartRefresh)
+thisExp.addData('option1_critical_14.stopped', option1_critical_14.tStopRefresh)
+thisExp.addData('option2_critical_14.started', option2_critical_14.tStartRefresh)
+thisExp.addData('option2_critical_14.stopped', option2_critical_14.tStopRefresh)
+# the Routine "bosa1" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
+
+# ------Prepare to start Routine "fb_bosa1"-------
+continueRoutine = True
+routineTimer.add(4.000000)
+# update component parameters for each repeat
+if not key_resp_bosa.keys:
+    msg="Allowed Keys: 1, 2, 3"
+elif key_resp_bosa.corr:   #stored on last run routine 
+    msg1="Correct!"
+    msg0=""
+    msg=""
+else:
+    msg0="Oops! That was wrong"
+    msg1=""
+    msg=""
+feedback1_zud1_2.setText(msg1)
+feedback0_zud1_2.setText(msg0)
+feedback_zud01_2.setText(msg)
+# keep track of which components have finished
+fb_bosa1Components = [feedback1_zud1_2, feedback0_zud1_2, feedback_zud01_2]
+for thisComponent in fb_bosa1Components:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+fb_bosa1Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "fb_bosa1"-------
+while continueRoutine and routineTimer.getTime() > 0:
+    # get current time
+    t = fb_bosa1Clock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=fb_bosa1Clock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *feedback1_zud1_2* updates
+    if feedback1_zud1_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        feedback1_zud1_2.frameNStart = frameN  # exact frame index
+        feedback1_zud1_2.tStart = t  # local t and not account for scr refresh
+        feedback1_zud1_2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(feedback1_zud1_2, 'tStartRefresh')  # time at next scr refresh
+        feedback1_zud1_2.setAutoDraw(True)
+    if feedback1_zud1_2.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > feedback1_zud1_2.tStartRefresh + 2.0-frameTolerance:
+            # keep track of stop time/frame for later
+            feedback1_zud1_2.tStop = t  # not accounting for scr refresh
+            feedback1_zud1_2.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(feedback1_zud1_2, 'tStopRefresh')  # time at next scr refresh
+            feedback1_zud1_2.setAutoDraw(False)
+    
+    # *feedback0_zud1_2* updates
+    if feedback0_zud1_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        feedback0_zud1_2.frameNStart = frameN  # exact frame index
+        feedback0_zud1_2.tStart = t  # local t and not account for scr refresh
+        feedback0_zud1_2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(feedback0_zud1_2, 'tStartRefresh')  # time at next scr refresh
+        feedback0_zud1_2.setAutoDraw(True)
+    if feedback0_zud1_2.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > feedback0_zud1_2.tStartRefresh + 4.0-frameTolerance:
+            # keep track of stop time/frame for later
+            feedback0_zud1_2.tStop = t  # not accounting for scr refresh
+            feedback0_zud1_2.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(feedback0_zud1_2, 'tStopRefresh')  # time at next scr refresh
+            feedback0_zud1_2.setAutoDraw(False)
+    
+    # *feedback_zud01_2* updates
+    if feedback_zud01_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        feedback_zud01_2.frameNStart = frameN  # exact frame index
+        feedback_zud01_2.tStart = t  # local t and not account for scr refresh
+        feedback_zud01_2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(feedback_zud01_2, 'tStartRefresh')  # time at next scr refresh
+        feedback_zud01_2.setAutoDraw(True)
+    if feedback_zud01_2.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > feedback_zud01_2.tStartRefresh + 3.0-frameTolerance:
+            # keep track of stop time/frame for later
+            feedback_zud01_2.tStop = t  # not accounting for scr refresh
+            feedback_zud01_2.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(feedback_zud01_2, 'tStopRefresh')  # time at next scr refresh
+            feedback_zud01_2.setAutoDraw(False)
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in fb_bosa1Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "fb_bosa1"-------
+for thisComponent in fb_bosa1Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('feedback1_zud1_2.started', feedback1_zud1_2.tStartRefresh)
+thisExp.addData('feedback1_zud1_2.stopped', feedback1_zud1_2.tStopRefresh)
+thisExp.addData('feedback0_zud1_2.started', feedback0_zud1_2.tStartRefresh)
+thisExp.addData('feedback0_zud1_2.stopped', feedback0_zud1_2.tStopRefresh)
+thisExp.addData('feedback_zud01_2.started', feedback_zud01_2.tStartRefresh)
+thisExp.addData('feedback_zud01_2.stopped', feedback_zud01_2.tStopRefresh)
+
+# ------Prepare to start Routine "bosa1"-------
+continueRoutine = True
+# update component parameters for each repeat
+key_resp_bosa.keys = []
+key_resp_bosa.rt = []
+_key_resp_bosa_allKeys = []
+blicket_st_b15_5.setFillColor('white')
+blicket_st_w15_6.setFillColor('black')
+# keep track of which components have finished
+bosa1Components = [key_resp_bosa, blicket1_11, blicket_st_b15_5, blicket_st_w15_6, option1_critical_14, option2_critical_14]
+for thisComponent in bosa1Components:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+bosa1Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "bosa1"-------
+while continueRoutine:
+    # get current time
+    t = bosa1Clock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=bosa1Clock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *key_resp_bosa* updates
+    waitOnFlip = False
+    if key_resp_bosa.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        key_resp_bosa.frameNStart = frameN  # exact frame index
+        key_resp_bosa.tStart = t  # local t and not account for scr refresh
+        key_resp_bosa.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(key_resp_bosa, 'tStartRefresh')  # time at next scr refresh
+        key_resp_bosa.status = STARTED
+        # keyboard checking is just starting
+        waitOnFlip = True
+        win.callOnFlip(key_resp_bosa.clock.reset)  # t=0 on next screen flip
+    if key_resp_bosa.status == STARTED and not waitOnFlip:
+        theseKeys = key_resp_bosa.getKeys(keyList=['1', '2'], waitRelease=False)
+        _key_resp_bosa_allKeys.extend(theseKeys)
+        if len(_key_resp_bosa_allKeys):
+            key_resp_bosa.keys = _key_resp_bosa_allKeys[-1].name  # just the last key pressed
+            key_resp_bosa.rt = _key_resp_bosa_allKeys[-1].rt
+            # was this correct?
+            if (key_resp_bosa.keys == str('1')) or (key_resp_bosa.keys == '1'):
+                key_resp_bosa.corr = 1
+            else:
+                key_resp_bosa.corr = 0
+            # a response ends the routine
+            continueRoutine = False
+    
+    # *blicket1_11* updates
+    if blicket1_11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        blicket1_11.frameNStart = frameN  # exact frame index
+        blicket1_11.tStart = t  # local t and not account for scr refresh
+        blicket1_11.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(blicket1_11, 'tStartRefresh')  # time at next scr refresh
+        blicket1_11.setAutoDraw(True)
+    
+    # *blicket_st_b15_5* updates
+    if blicket_st_b15_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        blicket_st_b15_5.frameNStart = frameN  # exact frame index
+        blicket_st_b15_5.tStart = t  # local t and not account for scr refresh
+        blicket_st_b15_5.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(blicket_st_b15_5, 'tStartRefresh')  # time at next scr refresh
+        blicket_st_b15_5.setAutoDraw(True)
+    
+    # *blicket_st_w15_6* updates
+    if blicket_st_w15_6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        blicket_st_w15_6.frameNStart = frameN  # exact frame index
+        blicket_st_w15_6.tStart = t  # local t and not account for scr refresh
+        blicket_st_w15_6.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(blicket_st_w15_6, 'tStartRefresh')  # time at next scr refresh
+        blicket_st_w15_6.setAutoDraw(True)
+    
+    # *option1_critical_14* updates
+    if option1_critical_14.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        option1_critical_14.frameNStart = frameN  # exact frame index
+        option1_critical_14.tStart = t  # local t and not account for scr refresh
+        option1_critical_14.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(option1_critical_14, 'tStartRefresh')  # time at next scr refresh
+        option1_critical_14.setAutoDraw(True)
+    
+    # *option2_critical_14* updates
+    if option2_critical_14.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        option2_critical_14.frameNStart = frameN  # exact frame index
+        option2_critical_14.tStart = t  # local t and not account for scr refresh
+        option2_critical_14.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(option2_critical_14, 'tStartRefresh')  # time at next scr refresh
+        option2_critical_14.setAutoDraw(True)
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in bosa1Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "bosa1"-------
+for thisComponent in bosa1Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+# check responses
+if key_resp_bosa.keys in ['', [], None]:  # No response was made
+    key_resp_bosa.keys = None
+    # was no response the correct answer?!
+    if str('1').lower() == 'none':
+       key_resp_bosa.corr = 1;  # correct non-response
+    else:
+       key_resp_bosa.corr = 0;  # failed to respond (incorrectly)
+# store data for thisExp (ExperimentHandler)
+thisExp.addData('key_resp_bosa.keys',key_resp_bosa.keys)
+thisExp.addData('key_resp_bosa.corr', key_resp_bosa.corr)
+if key_resp_bosa.keys != None:  # we had a response
+    thisExp.addData('key_resp_bosa.rt', key_resp_bosa.rt)
+thisExp.addData('key_resp_bosa.started', key_resp_bosa.tStartRefresh)
+thisExp.addData('key_resp_bosa.stopped', key_resp_bosa.tStopRefresh)
+thisExp.nextEntry()
+thisExp.addData('blicket1_11.started', blicket1_11.tStartRefresh)
+thisExp.addData('blicket1_11.stopped', blicket1_11.tStopRefresh)
+thisExp.addData('blicket_st_b15_5.started', blicket_st_b15_5.tStartRefresh)
+thisExp.addData('blicket_st_b15_5.stopped', blicket_st_b15_5.tStopRefresh)
+thisExp.addData('blicket_st_w15_6.started', blicket_st_w15_6.tStartRefresh)
+thisExp.addData('blicket_st_w15_6.stopped', blicket_st_w15_6.tStopRefresh)
+thisExp.addData('option1_critical_14.started', option1_critical_14.tStartRefresh)
+thisExp.addData('option1_critical_14.stopped', option1_critical_14.tStopRefresh)
+thisExp.addData('option2_critical_14.started', option2_critical_14.tStartRefresh)
+thisExp.addData('option2_critical_14.stopped', option2_critical_14.tStopRefresh)
+# the Routine "bosa1" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
+
+# ------Prepare to start Routine "fb_bosa1"-------
+continueRoutine = True
+routineTimer.add(4.000000)
+# update component parameters for each repeat
+if not key_resp_bosa.keys:
+    msg="Allowed Keys: 1, 2, 3"
+elif key_resp_bosa.corr:   #stored on last run routine 
+    msg1="Correct!"
+    msg0=""
+    msg=""
+else:
+    msg0="Oops! That was wrong"
+    msg1=""
+    msg=""
+feedback1_zud1_2.setText(msg1)
+feedback0_zud1_2.setText(msg0)
+feedback_zud01_2.setText(msg)
+# keep track of which components have finished
+fb_bosa1Components = [feedback1_zud1_2, feedback0_zud1_2, feedback_zud01_2]
+for thisComponent in fb_bosa1Components:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+fb_bosa1Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "fb_bosa1"-------
+while continueRoutine and routineTimer.getTime() > 0:
+    # get current time
+    t = fb_bosa1Clock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=fb_bosa1Clock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *feedback1_zud1_2* updates
+    if feedback1_zud1_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        feedback1_zud1_2.frameNStart = frameN  # exact frame index
+        feedback1_zud1_2.tStart = t  # local t and not account for scr refresh
+        feedback1_zud1_2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(feedback1_zud1_2, 'tStartRefresh')  # time at next scr refresh
+        feedback1_zud1_2.setAutoDraw(True)
+    if feedback1_zud1_2.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > feedback1_zud1_2.tStartRefresh + 2.0-frameTolerance:
+            # keep track of stop time/frame for later
+            feedback1_zud1_2.tStop = t  # not accounting for scr refresh
+            feedback1_zud1_2.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(feedback1_zud1_2, 'tStopRefresh')  # time at next scr refresh
+            feedback1_zud1_2.setAutoDraw(False)
+    
+    # *feedback0_zud1_2* updates
+    if feedback0_zud1_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        feedback0_zud1_2.frameNStart = frameN  # exact frame index
+        feedback0_zud1_2.tStart = t  # local t and not account for scr refresh
+        feedback0_zud1_2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(feedback0_zud1_2, 'tStartRefresh')  # time at next scr refresh
+        feedback0_zud1_2.setAutoDraw(True)
+    if feedback0_zud1_2.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > feedback0_zud1_2.tStartRefresh + 4.0-frameTolerance:
+            # keep track of stop time/frame for later
+            feedback0_zud1_2.tStop = t  # not accounting for scr refresh
+            feedback0_zud1_2.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(feedback0_zud1_2, 'tStopRefresh')  # time at next scr refresh
+            feedback0_zud1_2.setAutoDraw(False)
+    
+    # *feedback_zud01_2* updates
+    if feedback_zud01_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        feedback_zud01_2.frameNStart = frameN  # exact frame index
+        feedback_zud01_2.tStart = t  # local t and not account for scr refresh
+        feedback_zud01_2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(feedback_zud01_2, 'tStartRefresh')  # time at next scr refresh
+        feedback_zud01_2.setAutoDraw(True)
+    if feedback_zud01_2.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > feedback_zud01_2.tStartRefresh + 3.0-frameTolerance:
+            # keep track of stop time/frame for later
+            feedback_zud01_2.tStop = t  # not accounting for scr refresh
+            feedback_zud01_2.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(feedback_zud01_2, 'tStopRefresh')  # time at next scr refresh
+            feedback_zud01_2.setAutoDraw(False)
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in fb_bosa1Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "fb_bosa1"-------
+for thisComponent in fb_bosa1Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('feedback1_zud1_2.started', feedback1_zud1_2.tStartRefresh)
+thisExp.addData('feedback1_zud1_2.stopped', feedback1_zud1_2.tStopRefresh)
+thisExp.addData('feedback0_zud1_2.started', feedback0_zud1_2.tStartRefresh)
+thisExp.addData('feedback0_zud1_2.stopped', feedback0_zud1_2.tStopRefresh)
+thisExp.addData('feedback_zud01_2.started', feedback_zud01_2.tStartRefresh)
+thisExp.addData('feedback_zud01_2.stopped', feedback_zud01_2.tStopRefresh)
+
+# ------Prepare to start Routine "bosa2"-------
+continueRoutine = True
+# update component parameters for each repeat
+key_resp_bosa2.keys = []
+key_resp_bosa2.rt = []
+_key_resp_bosa2_allKeys = []
+blicket_st_b15_7.setFillColor('black')
+blicket_st_w15_8.setFillColor('white')
+# keep track of which components have finished
+bosa2Components = [key_resp_bosa2, blicket1_13, blicket_st_b15_7, blicket_st_w15_8, option1_critical_16, option2_critical_16]
+for thisComponent in bosa2Components:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+bosa2Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "bosa2"-------
+while continueRoutine:
+    # get current time
+    t = bosa2Clock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=bosa2Clock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *key_resp_bosa2* updates
+    waitOnFlip = False
+    if key_resp_bosa2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        key_resp_bosa2.frameNStart = frameN  # exact frame index
+        key_resp_bosa2.tStart = t  # local t and not account for scr refresh
+        key_resp_bosa2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(key_resp_bosa2, 'tStartRefresh')  # time at next scr refresh
+        key_resp_bosa2.status = STARTED
+        # keyboard checking is just starting
+        waitOnFlip = True
+        win.callOnFlip(key_resp_bosa2.clock.reset)  # t=0 on next screen flip
+    if key_resp_bosa2.status == STARTED and not waitOnFlip:
+        theseKeys = key_resp_bosa2.getKeys(keyList=['1', '2'], waitRelease=False)
+        _key_resp_bosa2_allKeys.extend(theseKeys)
+        if len(_key_resp_bosa2_allKeys):
+            key_resp_bosa2.keys = _key_resp_bosa2_allKeys[-1].name  # just the last key pressed
+            key_resp_bosa2.rt = _key_resp_bosa2_allKeys[-1].rt
+            # was this correct?
+            if (key_resp_bosa2.keys == str('2')) or (key_resp_bosa2.keys == '2'):
+                key_resp_bosa2.corr = 1
+            else:
+                key_resp_bosa2.corr = 0
+            # a response ends the routine
+            continueRoutine = False
+    
+    # *blicket1_13* updates
+    if blicket1_13.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        blicket1_13.frameNStart = frameN  # exact frame index
+        blicket1_13.tStart = t  # local t and not account for scr refresh
+        blicket1_13.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(blicket1_13, 'tStartRefresh')  # time at next scr refresh
+        blicket1_13.setAutoDraw(True)
+    
+    # *blicket_st_b15_7* updates
+    if blicket_st_b15_7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        blicket_st_b15_7.frameNStart = frameN  # exact frame index
+        blicket_st_b15_7.tStart = t  # local t and not account for scr refresh
+        blicket_st_b15_7.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(blicket_st_b15_7, 'tStartRefresh')  # time at next scr refresh
+        blicket_st_b15_7.setAutoDraw(True)
+    
+    # *blicket_st_w15_8* updates
+    if blicket_st_w15_8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        blicket_st_w15_8.frameNStart = frameN  # exact frame index
+        blicket_st_w15_8.tStart = t  # local t and not account for scr refresh
+        blicket_st_w15_8.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(blicket_st_w15_8, 'tStartRefresh')  # time at next scr refresh
+        blicket_st_w15_8.setAutoDraw(True)
+    
+    # *option1_critical_16* updates
+    if option1_critical_16.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        option1_critical_16.frameNStart = frameN  # exact frame index
+        option1_critical_16.tStart = t  # local t and not account for scr refresh
+        option1_critical_16.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(option1_critical_16, 'tStartRefresh')  # time at next scr refresh
+        option1_critical_16.setAutoDraw(True)
+    
+    # *option2_critical_16* updates
+    if option2_critical_16.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        option2_critical_16.frameNStart = frameN  # exact frame index
+        option2_critical_16.tStart = t  # local t and not account for scr refresh
+        option2_critical_16.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(option2_critical_16, 'tStartRefresh')  # time at next scr refresh
+        option2_critical_16.setAutoDraw(True)
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in bosa2Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "bosa2"-------
+for thisComponent in bosa2Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+# check responses
+if key_resp_bosa2.keys in ['', [], None]:  # No response was made
+    key_resp_bosa2.keys = None
+    # was no response the correct answer?!
+    if str('2').lower() == 'none':
+       key_resp_bosa2.corr = 1;  # correct non-response
+    else:
+       key_resp_bosa2.corr = 0;  # failed to respond (incorrectly)
+# store data for thisExp (ExperimentHandler)
+thisExp.addData('key_resp_bosa2.keys',key_resp_bosa2.keys)
+thisExp.addData('key_resp_bosa2.corr', key_resp_bosa2.corr)
+if key_resp_bosa2.keys != None:  # we had a response
+    thisExp.addData('key_resp_bosa2.rt', key_resp_bosa2.rt)
+thisExp.addData('key_resp_bosa2.started', key_resp_bosa2.tStartRefresh)
+thisExp.addData('key_resp_bosa2.stopped', key_resp_bosa2.tStopRefresh)
+thisExp.nextEntry()
+thisExp.addData('blicket1_13.started', blicket1_13.tStartRefresh)
+thisExp.addData('blicket1_13.stopped', blicket1_13.tStopRefresh)
+thisExp.addData('blicket_st_b15_7.started', blicket_st_b15_7.tStartRefresh)
+thisExp.addData('blicket_st_b15_7.stopped', blicket_st_b15_7.tStopRefresh)
+thisExp.addData('blicket_st_w15_8.started', blicket_st_w15_8.tStartRefresh)
+thisExp.addData('blicket_st_w15_8.stopped', blicket_st_w15_8.tStopRefresh)
+thisExp.addData('option1_critical_16.started', option1_critical_16.tStartRefresh)
+thisExp.addData('option1_critical_16.stopped', option1_critical_16.tStopRefresh)
+thisExp.addData('option2_critical_16.started', option2_critical_16.tStartRefresh)
+thisExp.addData('option2_critical_16.stopped', option2_critical_16.tStopRefresh)
+# the Routine "bosa2" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
+
+# ------Prepare to start Routine "fb_bosa2"-------
+continueRoutine = True
+routineTimer.add(4.000000)
+# update component parameters for each repeat
+if not key_resp_bosa2.keys:
+    msg="Allowed Keys: 1, 2, 3"
+elif key_resp_bosa2.corr:   #stored on last run routine 
+    msg1="Correct!"
+    msg0=""
+    msg=""
+else:
+    msg0="Oops! That was wrong"
+    msg1=""
+    msg=""
+feedback1_zud1_3.setText(msg1)
+feedback0_zud1_3.setText(msg0)
+feedback_zud01_3.setText(msg)
+# keep track of which components have finished
+fb_bosa2Components = [feedback1_zud1_3, feedback0_zud1_3, feedback_zud01_3]
+for thisComponent in fb_bosa2Components:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+fb_bosa2Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "fb_bosa2"-------
+while continueRoutine and routineTimer.getTime() > 0:
+    # get current time
+    t = fb_bosa2Clock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=fb_bosa2Clock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *feedback1_zud1_3* updates
+    if feedback1_zud1_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        feedback1_zud1_3.frameNStart = frameN  # exact frame index
+        feedback1_zud1_3.tStart = t  # local t and not account for scr refresh
+        feedback1_zud1_3.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(feedback1_zud1_3, 'tStartRefresh')  # time at next scr refresh
+        feedback1_zud1_3.setAutoDraw(True)
+    if feedback1_zud1_3.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > feedback1_zud1_3.tStartRefresh + 2.0-frameTolerance:
+            # keep track of stop time/frame for later
+            feedback1_zud1_3.tStop = t  # not accounting for scr refresh
+            feedback1_zud1_3.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(feedback1_zud1_3, 'tStopRefresh')  # time at next scr refresh
+            feedback1_zud1_3.setAutoDraw(False)
+    
+    # *feedback0_zud1_3* updates
+    if feedback0_zud1_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        feedback0_zud1_3.frameNStart = frameN  # exact frame index
+        feedback0_zud1_3.tStart = t  # local t and not account for scr refresh
+        feedback0_zud1_3.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(feedback0_zud1_3, 'tStartRefresh')  # time at next scr refresh
+        feedback0_zud1_3.setAutoDraw(True)
+    if feedback0_zud1_3.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > feedback0_zud1_3.tStartRefresh + 4.0-frameTolerance:
+            # keep track of stop time/frame for later
+            feedback0_zud1_3.tStop = t  # not accounting for scr refresh
+            feedback0_zud1_3.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(feedback0_zud1_3, 'tStopRefresh')  # time at next scr refresh
+            feedback0_zud1_3.setAutoDraw(False)
+    
+    # *feedback_zud01_3* updates
+    if feedback_zud01_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        feedback_zud01_3.frameNStart = frameN  # exact frame index
+        feedback_zud01_3.tStart = t  # local t and not account for scr refresh
+        feedback_zud01_3.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(feedback_zud01_3, 'tStartRefresh')  # time at next scr refresh
+        feedback_zud01_3.setAutoDraw(True)
+    if feedback_zud01_3.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > feedback_zud01_3.tStartRefresh + 3.0-frameTolerance:
+            # keep track of stop time/frame for later
+            feedback_zud01_3.tStop = t  # not accounting for scr refresh
+            feedback_zud01_3.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(feedback_zud01_3, 'tStopRefresh')  # time at next scr refresh
+            feedback_zud01_3.setAutoDraw(False)
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in fb_bosa2Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "fb_bosa2"-------
+for thisComponent in fb_bosa2Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('feedback1_zud1_3.started', feedback1_zud1_3.tStartRefresh)
+thisExp.addData('feedback1_zud1_3.stopped', feedback1_zud1_3.tStopRefresh)
+thisExp.addData('feedback0_zud1_3.started', feedback0_zud1_3.tStartRefresh)
+thisExp.addData('feedback0_zud1_3.stopped', feedback0_zud1_3.tStopRefresh)
+thisExp.addData('feedback_zud01_3.started', feedback_zud01_3.tStartRefresh)
+thisExp.addData('feedback_zud01_3.stopped', feedback_zud01_3.tStopRefresh)
+
+# ------Prepare to start Routine "bosa2"-------
+continueRoutine = True
+# update component parameters for each repeat
+key_resp_bosa2.keys = []
+key_resp_bosa2.rt = []
+_key_resp_bosa2_allKeys = []
+blicket_st_b15_7.setFillColor('black')
+blicket_st_w15_8.setFillColor('white')
+# keep track of which components have finished
+bosa2Components = [key_resp_bosa2, blicket1_13, blicket_st_b15_7, blicket_st_w15_8, option1_critical_16, option2_critical_16]
+for thisComponent in bosa2Components:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+bosa2Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "bosa2"-------
+while continueRoutine:
+    # get current time
+    t = bosa2Clock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=bosa2Clock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *key_resp_bosa2* updates
+    waitOnFlip = False
+    if key_resp_bosa2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        key_resp_bosa2.frameNStart = frameN  # exact frame index
+        key_resp_bosa2.tStart = t  # local t and not account for scr refresh
+        key_resp_bosa2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(key_resp_bosa2, 'tStartRefresh')  # time at next scr refresh
+        key_resp_bosa2.status = STARTED
+        # keyboard checking is just starting
+        waitOnFlip = True
+        win.callOnFlip(key_resp_bosa2.clock.reset)  # t=0 on next screen flip
+    if key_resp_bosa2.status == STARTED and not waitOnFlip:
+        theseKeys = key_resp_bosa2.getKeys(keyList=['1', '2'], waitRelease=False)
+        _key_resp_bosa2_allKeys.extend(theseKeys)
+        if len(_key_resp_bosa2_allKeys):
+            key_resp_bosa2.keys = _key_resp_bosa2_allKeys[-1].name  # just the last key pressed
+            key_resp_bosa2.rt = _key_resp_bosa2_allKeys[-1].rt
+            # was this correct?
+            if (key_resp_bosa2.keys == str('2')) or (key_resp_bosa2.keys == '2'):
+                key_resp_bosa2.corr = 1
+            else:
+                key_resp_bosa2.corr = 0
+            # a response ends the routine
+            continueRoutine = False
+    
+    # *blicket1_13* updates
+    if blicket1_13.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        blicket1_13.frameNStart = frameN  # exact frame index
+        blicket1_13.tStart = t  # local t and not account for scr refresh
+        blicket1_13.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(blicket1_13, 'tStartRefresh')  # time at next scr refresh
+        blicket1_13.setAutoDraw(True)
+    
+    # *blicket_st_b15_7* updates
+    if blicket_st_b15_7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        blicket_st_b15_7.frameNStart = frameN  # exact frame index
+        blicket_st_b15_7.tStart = t  # local t and not account for scr refresh
+        blicket_st_b15_7.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(blicket_st_b15_7, 'tStartRefresh')  # time at next scr refresh
+        blicket_st_b15_7.setAutoDraw(True)
+    
+    # *blicket_st_w15_8* updates
+    if blicket_st_w15_8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        blicket_st_w15_8.frameNStart = frameN  # exact frame index
+        blicket_st_w15_8.tStart = t  # local t and not account for scr refresh
+        blicket_st_w15_8.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(blicket_st_w15_8, 'tStartRefresh')  # time at next scr refresh
+        blicket_st_w15_8.setAutoDraw(True)
+    
+    # *option1_critical_16* updates
+    if option1_critical_16.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        option1_critical_16.frameNStart = frameN  # exact frame index
+        option1_critical_16.tStart = t  # local t and not account for scr refresh
+        option1_critical_16.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(option1_critical_16, 'tStartRefresh')  # time at next scr refresh
+        option1_critical_16.setAutoDraw(True)
+    
+    # *option2_critical_16* updates
+    if option2_critical_16.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        option2_critical_16.frameNStart = frameN  # exact frame index
+        option2_critical_16.tStart = t  # local t and not account for scr refresh
+        option2_critical_16.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(option2_critical_16, 'tStartRefresh')  # time at next scr refresh
+        option2_critical_16.setAutoDraw(True)
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in bosa2Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "bosa2"-------
+for thisComponent in bosa2Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+# check responses
+if key_resp_bosa2.keys in ['', [], None]:  # No response was made
+    key_resp_bosa2.keys = None
+    # was no response the correct answer?!
+    if str('2').lower() == 'none':
+       key_resp_bosa2.corr = 1;  # correct non-response
+    else:
+       key_resp_bosa2.corr = 0;  # failed to respond (incorrectly)
+# store data for thisExp (ExperimentHandler)
+thisExp.addData('key_resp_bosa2.keys',key_resp_bosa2.keys)
+thisExp.addData('key_resp_bosa2.corr', key_resp_bosa2.corr)
+if key_resp_bosa2.keys != None:  # we had a response
+    thisExp.addData('key_resp_bosa2.rt', key_resp_bosa2.rt)
+thisExp.addData('key_resp_bosa2.started', key_resp_bosa2.tStartRefresh)
+thisExp.addData('key_resp_bosa2.stopped', key_resp_bosa2.tStopRefresh)
+thisExp.nextEntry()
+thisExp.addData('blicket1_13.started', blicket1_13.tStartRefresh)
+thisExp.addData('blicket1_13.stopped', blicket1_13.tStopRefresh)
+thisExp.addData('blicket_st_b15_7.started', blicket_st_b15_7.tStartRefresh)
+thisExp.addData('blicket_st_b15_7.stopped', blicket_st_b15_7.tStopRefresh)
+thisExp.addData('blicket_st_w15_8.started', blicket_st_w15_8.tStartRefresh)
+thisExp.addData('blicket_st_w15_8.stopped', blicket_st_w15_8.tStopRefresh)
+thisExp.addData('option1_critical_16.started', option1_critical_16.tStartRefresh)
+thisExp.addData('option1_critical_16.stopped', option1_critical_16.tStopRefresh)
+thisExp.addData('option2_critical_16.started', option2_critical_16.tStartRefresh)
+thisExp.addData('option2_critical_16.stopped', option2_critical_16.tStopRefresh)
+# the Routine "bosa2" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
+
+# ------Prepare to start Routine "fb_bosa2"-------
+continueRoutine = True
+routineTimer.add(4.000000)
+# update component parameters for each repeat
+if not key_resp_bosa2.keys:
+    msg="Allowed Keys: 1, 2, 3"
+elif key_resp_bosa2.corr:   #stored on last run routine 
+    msg1="Correct!"
+    msg0=""
+    msg=""
+else:
+    msg0="Oops! That was wrong"
+    msg1=""
+    msg=""
+feedback1_zud1_3.setText(msg1)
+feedback0_zud1_3.setText(msg0)
+feedback_zud01_3.setText(msg)
+# keep track of which components have finished
+fb_bosa2Components = [feedback1_zud1_3, feedback0_zud1_3, feedback_zud01_3]
+for thisComponent in fb_bosa2Components:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+fb_bosa2Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "fb_bosa2"-------
+while continueRoutine and routineTimer.getTime() > 0:
+    # get current time
+    t = fb_bosa2Clock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=fb_bosa2Clock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *feedback1_zud1_3* updates
+    if feedback1_zud1_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        feedback1_zud1_3.frameNStart = frameN  # exact frame index
+        feedback1_zud1_3.tStart = t  # local t and not account for scr refresh
+        feedback1_zud1_3.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(feedback1_zud1_3, 'tStartRefresh')  # time at next scr refresh
+        feedback1_zud1_3.setAutoDraw(True)
+    if feedback1_zud1_3.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > feedback1_zud1_3.tStartRefresh + 2.0-frameTolerance:
+            # keep track of stop time/frame for later
+            feedback1_zud1_3.tStop = t  # not accounting for scr refresh
+            feedback1_zud1_3.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(feedback1_zud1_3, 'tStopRefresh')  # time at next scr refresh
+            feedback1_zud1_3.setAutoDraw(False)
+    
+    # *feedback0_zud1_3* updates
+    if feedback0_zud1_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        feedback0_zud1_3.frameNStart = frameN  # exact frame index
+        feedback0_zud1_3.tStart = t  # local t and not account for scr refresh
+        feedback0_zud1_3.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(feedback0_zud1_3, 'tStartRefresh')  # time at next scr refresh
+        feedback0_zud1_3.setAutoDraw(True)
+    if feedback0_zud1_3.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > feedback0_zud1_3.tStartRefresh + 4.0-frameTolerance:
+            # keep track of stop time/frame for later
+            feedback0_zud1_3.tStop = t  # not accounting for scr refresh
+            feedback0_zud1_3.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(feedback0_zud1_3, 'tStopRefresh')  # time at next scr refresh
+            feedback0_zud1_3.setAutoDraw(False)
+    
+    # *feedback_zud01_3* updates
+    if feedback_zud01_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        feedback_zud01_3.frameNStart = frameN  # exact frame index
+        feedback_zud01_3.tStart = t  # local t and not account for scr refresh
+        feedback_zud01_3.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(feedback_zud01_3, 'tStartRefresh')  # time at next scr refresh
+        feedback_zud01_3.setAutoDraw(True)
+    if feedback_zud01_3.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > feedback_zud01_3.tStartRefresh + 3.0-frameTolerance:
+            # keep track of stop time/frame for later
+            feedback_zud01_3.tStop = t  # not accounting for scr refresh
+            feedback_zud01_3.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(feedback_zud01_3, 'tStopRefresh')  # time at next scr refresh
+            feedback_zud01_3.setAutoDraw(False)
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in fb_bosa2Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "fb_bosa2"-------
+for thisComponent in fb_bosa2Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('feedback1_zud1_3.started', feedback1_zud1_3.tStartRefresh)
+thisExp.addData('feedback1_zud1_3.stopped', feedback1_zud1_3.tStopRefresh)
+thisExp.addData('feedback0_zud1_3.started', feedback0_zud1_3.tStartRefresh)
+thisExp.addData('feedback0_zud1_3.stopped', feedback0_zud1_3.tStopRefresh)
+thisExp.addData('feedback_zud01_3.started', feedback_zud01_3.tStartRefresh)
+thisExp.addData('feedback_zud01_3.stopped', feedback_zud01_3.tStopRefresh)
+
+# ------Prepare to start Routine "proceed"-------
+continueRoutine = True
+# update component parameters for each repeat
+# setup some python lists for storing info about the mouse_2
+gotValidClick = False  # until a click is received
+# keep track of which components have finished
+proceedComponents = [text2, mouse_2]
+for thisComponent in proceedComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+proceedClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "proceed"-------
+while continueRoutine:
+    # get current time
+    t = proceedClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=proceedClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *text2* updates
+    if text2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        text2.frameNStart = frameN  # exact frame index
+        text2.tStart = t  # local t and not account for scr refresh
+        text2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(text2, 'tStartRefresh')  # time at next scr refresh
+        text2.setAutoDraw(True)
+    # *mouse_2* updates
+    if mouse_2.status == NOT_STARTED and t >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        mouse_2.frameNStart = frameN  # exact frame index
+        mouse_2.tStart = t  # local t and not account for scr refresh
+        mouse_2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(mouse_2, 'tStartRefresh')  # time at next scr refresh
+        mouse_2.status = STARTED
+        mouse_2.mouseClock.reset()
+        prevButtonState = mouse_2.getPressed()  # if button is down already this ISN'T a new click
+    if mouse_2.status == STARTED:  # only update if started and not finished!
+        buttons = mouse_2.getPressed()
+        if buttons != prevButtonState:  # button state changed?
+            prevButtonState = buttons
+            if sum(buttons) > 0:  # state changed to a new click
+                # abort routine on response
+                continueRoutine = False
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in proceedComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "proceed"-------
+for thisComponent in proceedComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('text2.started', text2.tStartRefresh)
+thisExp.addData('text2.stopped', text2.tStopRefresh)
+# store data for thisExp (ExperimentHandler)
+x, y = mouse_2.getPos()
+buttons = mouse_2.getPressed()
+thisExp.addData('mouse_2.x', x)
+thisExp.addData('mouse_2.y', y)
+thisExp.addData('mouse_2.leftButton', buttons[0])
+thisExp.addData('mouse_2.midButton', buttons[1])
+thisExp.addData('mouse_2.rightButton', buttons[2])
+thisExp.addData('mouse_2.started', mouse_2.tStart)
+thisExp.addData('mouse_2.stopped', mouse_2.tStop)
+thisExp.nextEntry()
+# the Routine "proceed" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
+
+# ------Prepare to start Routine "bosa1"-------
+continueRoutine = True
+# update component parameters for each repeat
+key_resp_bosa.keys = []
+key_resp_bosa.rt = []
+_key_resp_bosa_allKeys = []
+blicket_st_b15_5.setFillColor('white')
+blicket_st_w15_6.setFillColor('black')
+# keep track of which components have finished
+bosa1Components = [key_resp_bosa, blicket1_11, blicket_st_b15_5, blicket_st_w15_6, option1_critical_14, option2_critical_14]
+for thisComponent in bosa1Components:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+bosa1Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "bosa1"-------
+while continueRoutine:
+    # get current time
+    t = bosa1Clock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=bosa1Clock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *key_resp_bosa* updates
+    waitOnFlip = False
+    if key_resp_bosa.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        key_resp_bosa.frameNStart = frameN  # exact frame index
+        key_resp_bosa.tStart = t  # local t and not account for scr refresh
+        key_resp_bosa.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(key_resp_bosa, 'tStartRefresh')  # time at next scr refresh
+        key_resp_bosa.status = STARTED
+        # keyboard checking is just starting
+        waitOnFlip = True
+        win.callOnFlip(key_resp_bosa.clock.reset)  # t=0 on next screen flip
+    if key_resp_bosa.status == STARTED and not waitOnFlip:
+        theseKeys = key_resp_bosa.getKeys(keyList=['1', '2'], waitRelease=False)
+        _key_resp_bosa_allKeys.extend(theseKeys)
+        if len(_key_resp_bosa_allKeys):
+            key_resp_bosa.keys = _key_resp_bosa_allKeys[-1].name  # just the last key pressed
+            key_resp_bosa.rt = _key_resp_bosa_allKeys[-1].rt
+            # was this correct?
+            if (key_resp_bosa.keys == str('1')) or (key_resp_bosa.keys == '1'):
+                key_resp_bosa.corr = 1
+            else:
+                key_resp_bosa.corr = 0
+            # a response ends the routine
+            continueRoutine = False
+    
+    # *blicket1_11* updates
+    if blicket1_11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        blicket1_11.frameNStart = frameN  # exact frame index
+        blicket1_11.tStart = t  # local t and not account for scr refresh
+        blicket1_11.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(blicket1_11, 'tStartRefresh')  # time at next scr refresh
+        blicket1_11.setAutoDraw(True)
+    
+    # *blicket_st_b15_5* updates
+    if blicket_st_b15_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        blicket_st_b15_5.frameNStart = frameN  # exact frame index
+        blicket_st_b15_5.tStart = t  # local t and not account for scr refresh
+        blicket_st_b15_5.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(blicket_st_b15_5, 'tStartRefresh')  # time at next scr refresh
+        blicket_st_b15_5.setAutoDraw(True)
+    
+    # *blicket_st_w15_6* updates
+    if blicket_st_w15_6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        blicket_st_w15_6.frameNStart = frameN  # exact frame index
+        blicket_st_w15_6.tStart = t  # local t and not account for scr refresh
+        blicket_st_w15_6.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(blicket_st_w15_6, 'tStartRefresh')  # time at next scr refresh
+        blicket_st_w15_6.setAutoDraw(True)
+    
+    # *option1_critical_14* updates
+    if option1_critical_14.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        option1_critical_14.frameNStart = frameN  # exact frame index
+        option1_critical_14.tStart = t  # local t and not account for scr refresh
+        option1_critical_14.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(option1_critical_14, 'tStartRefresh')  # time at next scr refresh
+        option1_critical_14.setAutoDraw(True)
+    
+    # *option2_critical_14* updates
+    if option2_critical_14.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        option2_critical_14.frameNStart = frameN  # exact frame index
+        option2_critical_14.tStart = t  # local t and not account for scr refresh
+        option2_critical_14.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(option2_critical_14, 'tStartRefresh')  # time at next scr refresh
+        option2_critical_14.setAutoDraw(True)
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in bosa1Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "bosa1"-------
+for thisComponent in bosa1Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+# check responses
+if key_resp_bosa.keys in ['', [], None]:  # No response was made
+    key_resp_bosa.keys = None
+    # was no response the correct answer?!
+    if str('1').lower() == 'none':
+       key_resp_bosa.corr = 1;  # correct non-response
+    else:
+       key_resp_bosa.corr = 0;  # failed to respond (incorrectly)
+# store data for thisExp (ExperimentHandler)
+thisExp.addData('key_resp_bosa.keys',key_resp_bosa.keys)
+thisExp.addData('key_resp_bosa.corr', key_resp_bosa.corr)
+if key_resp_bosa.keys != None:  # we had a response
+    thisExp.addData('key_resp_bosa.rt', key_resp_bosa.rt)
+thisExp.addData('key_resp_bosa.started', key_resp_bosa.tStartRefresh)
+thisExp.addData('key_resp_bosa.stopped', key_resp_bosa.tStopRefresh)
+thisExp.nextEntry()
+thisExp.addData('blicket1_11.started', blicket1_11.tStartRefresh)
+thisExp.addData('blicket1_11.stopped', blicket1_11.tStopRefresh)
+thisExp.addData('blicket_st_b15_5.started', blicket_st_b15_5.tStartRefresh)
+thisExp.addData('blicket_st_b15_5.stopped', blicket_st_b15_5.tStopRefresh)
+thisExp.addData('blicket_st_w15_6.started', blicket_st_w15_6.tStartRefresh)
+thisExp.addData('blicket_st_w15_6.stopped', blicket_st_w15_6.tStopRefresh)
+thisExp.addData('option1_critical_14.started', option1_critical_14.tStartRefresh)
+thisExp.addData('option1_critical_14.stopped', option1_critical_14.tStopRefresh)
+thisExp.addData('option2_critical_14.started', option2_critical_14.tStartRefresh)
+thisExp.addData('option2_critical_14.stopped', option2_critical_14.tStopRefresh)
+# the Routine "bosa1" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
+
+# ------Prepare to start Routine "practice_trial_end"-------
+continueRoutine = True
+# update component parameters for each repeat
+key_resp_3.keys = []
+key_resp_3.rt = []
+_key_resp_3_allKeys = []
+# keep track of which components have finished
+practice_trial_endComponents = [text_5, key_resp_3]
+for thisComponent in practice_trial_endComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+practice_trial_endClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "practice_trial_end"-------
+while continueRoutine:
+    # get current time
+    t = practice_trial_endClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=practice_trial_endClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *text_5* updates
+    if text_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        text_5.frameNStart = frameN  # exact frame index
+        text_5.tStart = t  # local t and not account for scr refresh
+        text_5.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(text_5, 'tStartRefresh')  # time at next scr refresh
+        text_5.setAutoDraw(True)
+    if text_5.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_5.tStartRefresh + 2.0-frameTolerance:
+            # keep track of stop time/frame for later
+            text_5.tStop = t  # not accounting for scr refresh
+            text_5.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_5, 'tStopRefresh')  # time at next scr refresh
+            text_5.setAutoDraw(False)
+    
+    # *key_resp_3* updates
+    waitOnFlip = False
+    if key_resp_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        key_resp_3.frameNStart = frameN  # exact frame index
+        key_resp_3.tStart = t  # local t and not account for scr refresh
+        key_resp_3.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(key_resp_3, 'tStartRefresh')  # time at next scr refresh
+        key_resp_3.status = STARTED
+        # keyboard checking is just starting
+        waitOnFlip = True
+        win.callOnFlip(key_resp_3.clock.reset)  # t=0 on next screen flip
+        win.callOnFlip(key_resp_3.clearEvents, eventType='keyboard')  # clear events on next screen flip
+    if key_resp_3.status == STARTED and not waitOnFlip:
+        theseKeys = key_resp_3.getKeys(keyList=['space'], waitRelease=False)
+        _key_resp_3_allKeys.extend(theseKeys)
+        if len(_key_resp_3_allKeys):
+            key_resp_3.keys = _key_resp_3_allKeys[-1].name  # just the last key pressed
+            key_resp_3.rt = _key_resp_3_allKeys[-1].rt
+            # a response ends the routine
+            continueRoutine = False
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in practice_trial_endComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "practice_trial_end"-------
+for thisComponent in practice_trial_endComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('text_5.started', text_5.tStartRefresh)
+thisExp.addData('text_5.stopped', text_5.tStopRefresh)
+# check responses
+if key_resp_3.keys in ['', [], None]:  # No response was made
+    key_resp_3.keys = None
+thisExp.addData('key_resp_3.keys',key_resp_3.keys)
+if key_resp_3.keys != None:  # we had a response
+    thisExp.addData('key_resp_3.rt', key_resp_3.rt)
+thisExp.addData('key_resp_3.started', key_resp_3.tStartRefresh)
+thisExp.addData('key_resp_3.stopped', key_resp_3.tStopRefresh)
+thisExp.nextEntry()
+# the Routine "practice_trial_end" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
+
+# ------Prepare to start Routine "phase1"-------
+continueRoutine = True
+routineTimer.add(2.000000)
+# update component parameters for each repeat
+text.setText('Phase 1')
+# keep track of which components have finished
+phase1Components = [text]
+for thisComponent in phase1Components:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+phase1Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "phase1"-------
+while continueRoutine and routineTimer.getTime() > 0:
+    # get current time
+    t = phase1Clock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=phase1Clock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *text* updates
+    if text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        text.frameNStart = frameN  # exact frame index
+        text.tStart = t  # local t and not account for scr refresh
+        text.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(text, 'tStartRefresh')  # time at next scr refresh
+        text.setAutoDraw(True)
+    if text.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text.tStartRefresh + 2.0-frameTolerance:
+            # keep track of stop time/frame for later
+            text.tStop = t  # not accounting for scr refresh
+            text.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text, 'tStopRefresh')  # time at next scr refresh
+            text.setAutoDraw(False)
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in phase1Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "phase1"-------
+for thisComponent in phase1Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('text.started', text.tStartRefresh)
+thisExp.addData('text.stopped', text.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
 trials_phase1 = data.TrialHandler(nReps=4.0, method='random', 
@@ -5006,7 +7309,7 @@ for thisTrials_phase1 in trials_phase1:
     
     # ------Prepare to start Routine "blank"-------
     continueRoutine = True
-    routineTimer.add(0.100000)
+    routineTimer.add(0.200000)
     # update component parameters for each repeat
     # keep track of which components have finished
     blankComponents = [blank500ms]
@@ -5042,7 +7345,7 @@ for thisTrials_phase1 in trials_phase1:
             blank500ms.setAutoDraw(True)
         if blank500ms.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > blank500ms.tStartRefresh + 0.1-frameTolerance:
+            if tThisFlipGlobal > blank500ms.tStartRefresh + 0.2-frameTolerance:
                 # keep track of stop time/frame for later
                 blank500ms.tStop = t  # not accounting for scr refresh
                 blank500ms.frameNStop = frameN  # exact frame index
@@ -7607,8 +9910,7 @@ for thisTrials_phase1 in trials_phase1:
         key_resp_t1.keys = []
         key_resp_t1.rt = []
         _key_resp_t1_allKeys = []
-        if trials_T1.thisN == 0:
-            number_correct = 0
+        number_correct=0
         t1_triangle1.setFillColor('black')
         t1_rectangle1.setFillColor('black')
         # keep track of which components have finished
@@ -7653,11 +9955,6 @@ for thisTrials_phase1 in trials_phase1:
                 if len(_key_resp_t1_allKeys):
                     key_resp_t1.keys = _key_resp_t1_allKeys[-1].name  # just the last key pressed
                     key_resp_t1.rt = _key_resp_t1_allKeys[-1].rt
-                    # was this correct?
-                    if (key_resp_t1.keys == str('1')) or (key_resp_t1.keys == '1'):
-                        key_resp_t1.corr = 1
-                    else:
-                        key_resp_t1.corr = 0
                     # a response ends the routine
                     continueRoutine = False
             
@@ -7730,33 +10027,21 @@ for thisTrials_phase1 in trials_phase1:
         # check responses
         if key_resp_t1.keys in ['', [], None]:  # No response was made
             key_resp_t1.keys = None
-            # was no response the correct answer?!
-            if str('1').lower() == 'none':
-               key_resp_t1.corr = 1;  # correct non-response
-            else:
-               key_resp_t1.corr = 0;  # failed to respond (incorrectly)
-        # store data for trials_T1 (TrialHandler)
         trials_T1.addData('key_resp_t1.keys',key_resp_t1.keys)
-        trials_T1.addData('key_resp_t1.corr', key_resp_t1.corr)
         if key_resp_t1.keys != None:  # we had a response
             trials_T1.addData('key_resp_t1.rt', key_resp_t1.rt)
         trials_T1.addData('key_resp_t1.started', key_resp_t1.tStartRefresh)
         trials_T1.addData('key_resp_t1.stopped', key_resp_t1.tStopRefresh)
-        #''' update the number correct:'''
-        if key_resp_t1.corr: 
-            number_correct = number_correct + 1
-            print('Correct: ' + str(number_correct))
-        #     ''' if this is the final repetition, check the proportion correct.
-        #         (am avoiding hard coding the value '12' for flexibility):'''
-        if trials_T1.thisN + 1 == trials_T1.nTotal:
-            print('trials_T1.thisN: ' + str(trials_T1.thisN))
-            if number_correct == trials_T1.nTotal : 
-                print('total Correct: ' + str(number_correct))
-                # ''' terminate the outer loop so no more practice happens:'''
-                trials_phase1.finished = True
-            else:
-                print('flag!')
-                trials_phase1.finished = False
+        number_correct = number_correct + 1
+        
+        
+        if number_correct == 2 : 
+            print('total Correct: ' + str(number_correct))
+            # ''' terminate the outer loop so no more practice happens:'''
+            trials_phase1.finished = True
+        else:
+            print('flag!')
+            trials_phase1.finished = False
         trials_T1.addData('t1_zud.started', t1_zud.tStartRefresh)
         trials_T1.addData('t1_zud.stopped', t1_zud.tStopRefresh)
         trials_T1.addData('t1_triangle1.started', t1_triangle1.tStartRefresh)
@@ -7776,8 +10061,6 @@ for thisTrials_phase1 in trials_phase1:
         key_resp_t1_2.keys = []
         key_resp_t1_2.rt = []
         _key_resp_t1_2_allKeys = []
-        if trials_T1.thisN == 0:
-            number_correct = 0
         t1_triangle1_2.setFillColor('white')
         t1_rectangle1_2.setFillColor('white')
         # keep track of which components have finished
@@ -7822,11 +10105,6 @@ for thisTrials_phase1 in trials_phase1:
                 if len(_key_resp_t1_2_allKeys):
                     key_resp_t1_2.keys = _key_resp_t1_2_allKeys[-1].name  # just the last key pressed
                     key_resp_t1_2.rt = _key_resp_t1_2_allKeys[-1].rt
-                    # was this correct?
-                    if (key_resp_t1_2.keys == str('2')) or (key_resp_t1_2.keys == '2'):
-                        key_resp_t1_2.corr = 1
-                    else:
-                        key_resp_t1_2.corr = 0
                     # a response ends the routine
                     continueRoutine = False
             
@@ -7899,33 +10177,21 @@ for thisTrials_phase1 in trials_phase1:
         # check responses
         if key_resp_t1_2.keys in ['', [], None]:  # No response was made
             key_resp_t1_2.keys = None
-            # was no response the correct answer?!
-            if str('2').lower() == 'none':
-               key_resp_t1_2.corr = 1;  # correct non-response
-            else:
-               key_resp_t1_2.corr = 0;  # failed to respond (incorrectly)
-        # store data for trials_T1 (TrialHandler)
         trials_T1.addData('key_resp_t1_2.keys',key_resp_t1_2.keys)
-        trials_T1.addData('key_resp_t1_2.corr', key_resp_t1_2.corr)
         if key_resp_t1_2.keys != None:  # we had a response
             trials_T1.addData('key_resp_t1_2.rt', key_resp_t1_2.rt)
         trials_T1.addData('key_resp_t1_2.started', key_resp_t1_2.tStartRefresh)
         trials_T1.addData('key_resp_t1_2.stopped', key_resp_t1_2.tStopRefresh)
-        #''' update the number correct:'''
-        if key_resp_t1_2.corr: 
-            number_correct = number_correct + 1
-            print('Correct empty: ' + str(number_correct))
-        #     ''' if this is the final repetition, check the proportion correct.
-        #         (am avoiding hard coding the value '12' for flexibility):'''
-        if trials_T1.thisN + 1 == trials_T1.nTotal:
-            print('trials_T1.thisN empty: ' + str(trials_T1.thisN))
-            if number_correct == 2 * trials_T1.nTotal -1: 
-                print('total Correct empty: ' + str(number_correct))
-                # ''' terminate the outer loop so no more practice happens:'''
-                trials_phase1.finished = True
-            else:
-                print('flag! empty')
-                trials_phase1.finished = False
+        
+        number_correct = number_correct + 1
+        
+        if number_correct == 2 : 
+            print('total Correct: ' + str(number_correct))
+            # ''' terminate the outer loop so no more practice happens:'''
+            trials_phase1.finished = True
+        else:
+            print('flag!')
+            trials_phase1.finished = False
         trials_T1.addData('t1_zud_2.started', t1_zud_2.tStartRefresh)
         trials_T1.addData('t1_zud_2.stopped', t1_zud_2.tStopRefresh)
         trials_T1.addData('t1_triangle1_2.started', t1_triangle1_2.tStartRefresh)
@@ -8038,6 +10304,75 @@ thisExp.addData('mouse_2.stopped', mouse_2.tStop)
 thisExp.nextEntry()
 # the Routine "proceed" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
+
+# ------Prepare to start Routine "blank"-------
+continueRoutine = True
+routineTimer.add(0.200000)
+# update component parameters for each repeat
+# keep track of which components have finished
+blankComponents = [blank500ms]
+for thisComponent in blankComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+blankClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "blank"-------
+while continueRoutine and routineTimer.getTime() > 0:
+    # get current time
+    t = blankClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=blankClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *blank500ms* updates
+    if blank500ms.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        blank500ms.frameNStart = frameN  # exact frame index
+        blank500ms.tStart = t  # local t and not account for scr refresh
+        blank500ms.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(blank500ms, 'tStartRefresh')  # time at next scr refresh
+        blank500ms.setAutoDraw(True)
+    if blank500ms.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > blank500ms.tStartRefresh + 0.2-frameTolerance:
+            # keep track of stop time/frame for later
+            blank500ms.tStop = t  # not accounting for scr refresh
+            blank500ms.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(blank500ms, 'tStopRefresh')  # time at next scr refresh
+            blank500ms.setAutoDraw(False)
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in blankComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "blank"-------
+for thisComponent in blankComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('blank500ms.started', blank500ms.tStartRefresh)
+thisExp.addData('blank500ms.stopped', blank500ms.tStopRefresh)
 
 # ------Prepare to start Routine "test"-------
 continueRoutine = True
@@ -16660,7 +18995,7 @@ for thisTrials_phase_2 in trials_phase_2:
     # set up handler to look after randomisation of conditions etc
     trials_test2 = data.TrialHandler(nReps=1.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('../../../../../../Users/yancong/Desktop/CB/05 psychopy/T2conditions.xlsx'),
+        trialList=[None],
         seed=None, name='trials_test2')
     thisExp.addLoop(trials_test2)  # add the loop to the experiment
     thisTrials_test2 = trials_test2.trialList[0]  # so we can initialise stimuli with some values
@@ -16679,8 +19014,7 @@ for thisTrials_phase_2 in trials_phase_2:
         # ------Prepare to start Routine "dax12test2"-------
         continueRoutine = True
         # update component parameters for each repeat
-        if trials_test2.thisN == 0:
-            number_correct2 = 0
+        number_correct2 = 0
         star_21.setFillColor('white')
         tr.setFillColor('white')
         cr.setFillColor('white')
@@ -16827,15 +19161,13 @@ for thisTrials_phase_2 in trials_phase_2:
             print('Correct2: ' + str(number_correct2))
         #     ''' if this is the final repetition, check the proportion correct.
         #         (am avoiding hard coding the value '12' for flexibility):'''
-        if trials_test2.thisN + 1 == trials_test2.nTotal:
-            print('trials_test2.thisN: ' + str(trials_test2.thisN))
-            if number_correct2 == trials_test2.nTotal : 
-                print('total Correct2: ' + str(number_correct2))
-                # ''' terminate the outer loop so no more practice happens:'''
-                trials_phase_2.finished = True
-            else:
-                print('flag2!')
-                trials_phase_2.finished = False
+        if number_correct2 == 5:
+            print('total Correct2: ' + str(number_correct2))
+        # ''' terminate the outer loop so no more practice happens:'''
+            trials_phase_2.finished = True
+        else:
+            print('flag2!')
+            trials_phase_2.finished = False
         trials_test2.addData('dax11_corr2_2.started', dax11_corr2_2.tStartRefresh)
         trials_test2.addData('dax11_corr2_2.stopped', dax11_corr2_2.tStopRefresh)
         trials_test2.addData('star_21.started', star_21.tStartRefresh)
@@ -16871,8 +19203,6 @@ for thisTrials_phase_2 in trials_phase_2:
         # ------Prepare to start Routine "blicket15test2"-------
         continueRoutine = True
         # update component parameters for each repeat
-        if trials_test2.thisN == 0:
-            number_correct2 = 0
         key_resp_blicket15_2.keys = []
         key_resp_blicket15_2.rt = []
         _key_resp_blicket15_2_allKeys = []
@@ -17000,15 +19330,13 @@ for thisTrials_phase_2 in trials_phase_2:
             print('Correct2: ' + str(number_correct2))
         #     ''' if this is the final repetition, check the proportion correct.
         #         (am avoiding hard coding the value '12' for flexibility):'''
-        if trials_test2.thisN + 1 == trials_test2.nTotal:
-            print('trials_test2.thisN: ' + str(trials_test2.thisN))
-            if number_correct2 == trials_test2.nTotal : 
-                print('total Correct2: ' + str(number_correct2))
-                # ''' terminate the outer loop so no more practice happens:'''
-                trials_phase_2.finished = True
-            else:
-                print('flag2!')
-                trials_phase_2.finished = False
+        if number_correct2 == 5:
+            print('total Correct2: ' + str(number_correct2))
+        # ''' terminate the outer loop so no more practice happens:'''
+            trials_phase_2.finished = True
+        else:
+            print('flag2!')
+            trials_phase_2.finished = False
         # check responses
         if key_resp_blicket15_2.keys in ['', [], None]:  # No response was made
             key_resp_blicket15_2.keys = None
@@ -17040,8 +19368,6 @@ for thisTrials_phase_2 in trials_phase_2:
         # ------Prepare to start Routine "smicket18test2"-------
         continueRoutine = True
         # update component parameters for each repeat
-        if trials_test2.thisN == 0:
-            number_correct2 = 0
         key_resp_smicket18_2.keys = []
         key_resp_smicket18_2.rt = []
         _key_resp_smicket18_2_allKeys = []
@@ -17169,15 +19495,13 @@ for thisTrials_phase_2 in trials_phase_2:
             print('Correct2: ' + str(number_correct2))
         #     ''' if this is the final repetition, check the proportion correct.
         #         (am avoiding hard coding the value '12' for flexibility):'''
-        if trials_test2.thisN + 1 == trials_test2.nTotal:
-            print('trials_test2.thisN: ' + str(trials_test2.thisN))
-            if number_correct2 == trials_test2.nTotal : 
-                print('total Correct2: ' + str(number_correct2))
-                # ''' terminate the outer loop so no more practice happens:'''
-                trials_phase_2.finished = True
-            else:
-                print('flag2!')
-                trials_phase_2.finished = False
+        if number_correct2 == 5:
+            print('total Correct2: ' + str(number_correct2))
+        # ''' terminate the outer loop so no more practice happens:'''
+            trials_phase_2.finished = True
+        else:
+            print('flag2!')
+            trials_phase_2.finished = False
         # check responses
         if key_resp_smicket18_2.keys in ['', [], None]:  # No response was made
             key_resp_smicket18_2.keys = None
@@ -17209,8 +19533,6 @@ for thisTrials_phase_2 in trials_phase_2:
         # ------Prepare to start Routine "blicketfep21test2"-------
         continueRoutine = True
         # update component parameters for each repeat
-        if trials_test2.thisN == 0:
-            number_correct2 = 0
         star_22.setFillColor('black')
         triange_10.setFillColor('black')
         cross_20.setFillColor('black')
@@ -17357,15 +19679,13 @@ for thisTrials_phase_2 in trials_phase_2:
             print('Correct2: ' + str(number_correct2))
         #     ''' if this is the final repetition, check the proportion correct.
         #         (am avoiding hard coding the value '12' for flexibility):'''
-        if trials_test2.thisN + 1 == trials_test2.nTotal:
-            print('trials_test2.thisN: ' + str(trials_test2.thisN))
-            if number_correct2 == trials_test2.nTotal : 
-                print('total Correct2: ' + str(number_correct2))
-                # ''' terminate the outer loop so no more practice happens:'''
-                trials_phase_2.finished = True
-            else:
-                print('flag2!')
-                trials_phase_2.finished = False
+        if number_correct2 == 5:
+            print('total Correct2: ' + str(number_correct2))
+        # ''' terminate the outer loop so no more practice happens:'''
+            trials_phase_2.finished = True
+        else:
+            print('flag2!')
+            trials_phase_2.finished = False
         trials_test2.addData('dax9_corr2_10.started', dax9_corr2_10.tStartRefresh)
         trials_test2.addData('dax9_corr2_10.stopped', dax9_corr2_10.tStopRefresh)
         trials_test2.addData('star_22.started', star_22.tStartRefresh)
@@ -17401,8 +19721,6 @@ for thisTrials_phase_2 in trials_phase_2:
         # ------Prepare to start Routine "smicketfep27test2"-------
         continueRoutine = True
         # update component parameters for each repeat
-        if trials_test2.thisN == 0:
-            number_correct2 = 0
         star_23.setFillColor('white')
         triange_11.setFillColor('white')
         cross_21.setFillColor('white')
@@ -17549,15 +19867,13 @@ for thisTrials_phase_2 in trials_phase_2:
             print('Correct2: ' + str(number_correct2))
         #     ''' if this is the final repetition, check the proportion correct.
         #         (am avoiding hard coding the value '12' for flexibility):'''
-        if trials_test2.thisN + 1 == trials_test2.nTotal:
-            print('trials_test2.thisN: ' + str(trials_test2.thisN))
-            if number_correct2 == 5 * trials_test2.nTotal  - 4: 
-                print('total Correct2: ' + str(number_correct2))
-                # ''' terminate the outer loop so no more practice happens:'''
-                trials_phase_2.finished = True
-            else:
-                print('flag2!')
-                trials_phase_2.finished = False
+        if number_correct2 == 5:
+            print('total Correct2: ' + str(number_correct2))
+        # ''' terminate the outer loop so no more practice happens:'''
+            trials_phase_2.finished = True
+        else:
+            print('flag2!')
+            trials_phase_2.finished = False
         trials_test2.addData('dax9_corr2_11.started', dax9_corr2_11.tStartRefresh)
         trials_test2.addData('dax9_corr2_11.stopped', dax9_corr2_11.tStopRefresh)
         trials_test2.addData('star_23.started', star_23.tStartRefresh)
@@ -17689,6 +20005,75 @@ thisExp.addData('mouse_2.stopped', mouse_2.tStop)
 thisExp.nextEntry()
 # the Routine "proceed" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
+
+# ------Prepare to start Routine "blank"-------
+continueRoutine = True
+routineTimer.add(0.200000)
+# update component parameters for each repeat
+# keep track of which components have finished
+blankComponents = [blank500ms]
+for thisComponent in blankComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+blankClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "blank"-------
+while continueRoutine and routineTimer.getTime() > 0:
+    # get current time
+    t = blankClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=blankClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *blank500ms* updates
+    if blank500ms.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        blank500ms.frameNStart = frameN  # exact frame index
+        blank500ms.tStart = t  # local t and not account for scr refresh
+        blank500ms.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(blank500ms, 'tStartRefresh')  # time at next scr refresh
+        blank500ms.setAutoDraw(True)
+    if blank500ms.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > blank500ms.tStartRefresh + 0.2-frameTolerance:
+            # keep track of stop time/frame for later
+            blank500ms.tStop = t  # not accounting for scr refresh
+            blank500ms.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(blank500ms, 'tStopRefresh')  # time at next scr refresh
+            blank500ms.setAutoDraw(False)
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in blankComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "blank"-------
+for thisComponent in blankComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('blank500ms.started', blank500ms.tStartRefresh)
+thisExp.addData('blank500ms.stopped', blank500ms.tStopRefresh)
 
 # ------Prepare to start Routine "test"-------
 continueRoutine = True
@@ -17902,7 +20287,7 @@ thisExp.addData('p3.started', p3.tStartRefresh)
 thisExp.addData('p3.stopped', p3.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-trials_phase3 = data.TrialHandler(nReps=1.0, method='sequential', 
+trials_phase3 = data.TrialHandler(nReps=4.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=[None],
     seed=None, name='trials_phase3')
@@ -22868,9 +25253,500 @@ for thisTrials_phase3 in trials_phase3:
     trials_phase3.addData('feedback0_dax9_24.stopped', feedback0_dax9_24.tStopRefresh)
     trials_phase3.addData('feedback_dax9_24.started', feedback_dax9_24.tStartRefresh)
     trials_phase3.addData('feedback_dax9_24.stopped', feedback_dax9_24.tStopRefresh)
+    
+    # ------Prepare to start Routine "proceed"-------
+    continueRoutine = True
+    # update component parameters for each repeat
+    # setup some python lists for storing info about the mouse_2
+    gotValidClick = False  # until a click is received
+    # keep track of which components have finished
+    proceedComponents = [text2, mouse_2]
+    for thisComponent in proceedComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    proceedClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    
+    # -------Run Routine "proceed"-------
+    while continueRoutine:
+        # get current time
+        t = proceedClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=proceedClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *text2* updates
+        if text2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text2.frameNStart = frameN  # exact frame index
+            text2.tStart = t  # local t and not account for scr refresh
+            text2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text2, 'tStartRefresh')  # time at next scr refresh
+            text2.setAutoDraw(True)
+        # *mouse_2* updates
+        if mouse_2.status == NOT_STARTED and t >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            mouse_2.frameNStart = frameN  # exact frame index
+            mouse_2.tStart = t  # local t and not account for scr refresh
+            mouse_2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(mouse_2, 'tStartRefresh')  # time at next scr refresh
+            mouse_2.status = STARTED
+            mouse_2.mouseClock.reset()
+            prevButtonState = mouse_2.getPressed()  # if button is down already this ISN'T a new click
+        if mouse_2.status == STARTED:  # only update if started and not finished!
+            buttons = mouse_2.getPressed()
+            if buttons != prevButtonState:  # button state changed?
+                prevButtonState = buttons
+                if sum(buttons) > 0:  # state changed to a new click
+                    # abort routine on response
+                    continueRoutine = False
+        
+        # check for quit (typically the Esc key)
+        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in proceedComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "proceed"-------
+    for thisComponent in proceedComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    trials_phase3.addData('text2.started', text2.tStartRefresh)
+    trials_phase3.addData('text2.stopped', text2.tStopRefresh)
+    # store data for trials_phase3 (TrialHandler)
+    x, y = mouse_2.getPos()
+    buttons = mouse_2.getPressed()
+    trials_phase3.addData('mouse_2.x', x)
+    trials_phase3.addData('mouse_2.y', y)
+    trials_phase3.addData('mouse_2.leftButton', buttons[0])
+    trials_phase3.addData('mouse_2.midButton', buttons[1])
+    trials_phase3.addData('mouse_2.rightButton', buttons[2])
+    trials_phase3.addData('mouse_2.started', mouse_2.tStart)
+    trials_phase3.addData('mouse_2.stopped', mouse_2.tStop)
+    # the Routine "proceed" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
+    
+    # set up handler to look after randomisation of conditions etc
+    trials_test3 = data.TrialHandler(nReps=1.0, method='random', 
+        extraInfo=expInfo, originPath=-1,
+        trialList=[None],
+        seed=None, name='trials_test3')
+    thisExp.addLoop(trials_test3)  # add the loop to the experiment
+    thisTrials_test3 = trials_test3.trialList[0]  # so we can initialise stimuli with some values
+    # abbreviate parameter names if possible (e.g. rgb = thisTrials_test3.rgb)
+    if thisTrials_test3 != None:
+        for paramName in thisTrials_test3:
+            exec('{} = thisTrials_test3[paramName]'.format(paramName))
+    
+    for thisTrials_test3 in trials_test3:
+        currentLoop = trials_test3
+        # abbreviate parameter names if possible (e.g. rgb = thisTrials_test3.rgb)
+        if thisTrials_test3 != None:
+            for paramName in thisTrials_test3:
+                exec('{} = thisTrials_test3[paramName]'.format(paramName))
+        
+        # ------Prepare to start Routine "test2dax9"-------
+        continueRoutine = True
+        # update component parameters for each repeat
+        number_correct3 = 0
+        star_28.setFillColor('black')
+        triange_16.setFillColor('black')
+        cross_26.setFillColor('black')
+        key_resp_dax9_2.keys = []
+        key_resp_dax9_2.rt = []
+        _key_resp_dax9_2_allKeys = []
+        # keep track of which components have finished
+        test2dax9Components = [dax9_corr2_16, star_28, triange_16, cross_26, key_resp_dax9_2, option1_23, option2_23, option3_22]
+        for thisComponent in test2dax9Components:
+            thisComponent.tStart = None
+            thisComponent.tStop = None
+            thisComponent.tStartRefresh = None
+            thisComponent.tStopRefresh = None
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        # reset timers
+        t = 0
+        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+        test2dax9Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+        frameN = -1
+        
+        # -------Run Routine "test2dax9"-------
+        while continueRoutine:
+            # get current time
+            t = test2dax9Clock.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=test2dax9Clock)
+            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
+            
+            # *dax9_corr2_16* updates
+            if dax9_corr2_16.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                dax9_corr2_16.frameNStart = frameN  # exact frame index
+                dax9_corr2_16.tStart = t  # local t and not account for scr refresh
+                dax9_corr2_16.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(dax9_corr2_16, 'tStartRefresh')  # time at next scr refresh
+                dax9_corr2_16.setAutoDraw(True)
+            
+            # *star_28* updates
+            if star_28.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                star_28.frameNStart = frameN  # exact frame index
+                star_28.tStart = t  # local t and not account for scr refresh
+                star_28.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(star_28, 'tStartRefresh')  # time at next scr refresh
+                star_28.setAutoDraw(True)
+            
+            # *triange_16* updates
+            if triange_16.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                triange_16.frameNStart = frameN  # exact frame index
+                triange_16.tStart = t  # local t and not account for scr refresh
+                triange_16.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(triange_16, 'tStartRefresh')  # time at next scr refresh
+                triange_16.setAutoDraw(True)
+            
+            # *cross_26* updates
+            if cross_26.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                cross_26.frameNStart = frameN  # exact frame index
+                cross_26.tStart = t  # local t and not account for scr refresh
+                cross_26.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(cross_26, 'tStartRefresh')  # time at next scr refresh
+                cross_26.setAutoDraw(True)
+            
+            # *key_resp_dax9_2* updates
+            waitOnFlip = False
+            if key_resp_dax9_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                key_resp_dax9_2.frameNStart = frameN  # exact frame index
+                key_resp_dax9_2.tStart = t  # local t and not account for scr refresh
+                key_resp_dax9_2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(key_resp_dax9_2, 'tStartRefresh')  # time at next scr refresh
+                key_resp_dax9_2.status = STARTED
+                # keyboard checking is just starting
+                waitOnFlip = True
+                win.callOnFlip(key_resp_dax9_2.clock.reset)  # t=0 on next screen flip
+            if key_resp_dax9_2.status == STARTED and not waitOnFlip:
+                theseKeys = key_resp_dax9_2.getKeys(keyList=['1', '2', '3'], waitRelease=False)
+                _key_resp_dax9_2_allKeys.extend(theseKeys)
+                if len(_key_resp_dax9_2_allKeys):
+                    key_resp_dax9_2.keys = _key_resp_dax9_2_allKeys[-1].name  # just the last key pressed
+                    key_resp_dax9_2.rt = _key_resp_dax9_2_allKeys[-1].rt
+                    # was this correct?
+                    if (key_resp_dax9_2.keys == str('2')) or (key_resp_dax9_2.keys == '2'):
+                        key_resp_dax9_2.corr = 1
+                    else:
+                        key_resp_dax9_2.corr = 0
+                    # a response ends the routine
+                    continueRoutine = False
+            
+            # *option1_23* updates
+            if option1_23.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                option1_23.frameNStart = frameN  # exact frame index
+                option1_23.tStart = t  # local t and not account for scr refresh
+                option1_23.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(option1_23, 'tStartRefresh')  # time at next scr refresh
+                option1_23.setAutoDraw(True)
+            
+            # *option2_23* updates
+            if option2_23.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                option2_23.frameNStart = frameN  # exact frame index
+                option2_23.tStart = t  # local t and not account for scr refresh
+                option2_23.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(option2_23, 'tStartRefresh')  # time at next scr refresh
+                option2_23.setAutoDraw(True)
+            
+            # *option3_22* updates
+            if option3_22.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                option3_22.frameNStart = frameN  # exact frame index
+                option3_22.tStart = t  # local t and not account for scr refresh
+                option3_22.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(option3_22, 'tStartRefresh')  # time at next scr refresh
+                option3_22.setAutoDraw(True)
+            
+            # check for quit (typically the Esc key)
+            if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+                core.quit()
+            
+            # check if all components have finished
+            if not continueRoutine:  # a component has requested a forced-end of Routine
+                break
+            continueRoutine = False  # will revert to True if at least one component still running
+            for thisComponent in test2dax9Components:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
+        
+        # -------Ending Routine "test2dax9"-------
+        for thisComponent in test2dax9Components:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        #''' update the number correct:'''
+        if key_resp_dax9_2.corr: 
+            number_correct3 = number_correct3 + 1
+            print('Correct3: ' + str(number_correct3))
+        #     ''' if this is the final repetition, check the proportion correct.
+        #         (am avoiding hard coding the value '12' for flexibility):'''
+        if number_correct3 == 2:
+            print('total Correct2: ' + str(number_correct3))
+        # ''' terminate the outer loop so no more practice happens:'''
+            trials_phase3.finished = True
+        else:
+            print('flag2!')
+            trials_phase3.finished = False
+        trials_test3.addData('dax9_corr2_16.started', dax9_corr2_16.tStartRefresh)
+        trials_test3.addData('dax9_corr2_16.stopped', dax9_corr2_16.tStopRefresh)
+        trials_test3.addData('star_28.started', star_28.tStartRefresh)
+        trials_test3.addData('star_28.stopped', star_28.tStopRefresh)
+        trials_test3.addData('triange_16.started', triange_16.tStartRefresh)
+        trials_test3.addData('triange_16.stopped', triange_16.tStopRefresh)
+        trials_test3.addData('cross_26.started', cross_26.tStartRefresh)
+        trials_test3.addData('cross_26.stopped', cross_26.tStopRefresh)
+        # check responses
+        if key_resp_dax9_2.keys in ['', [], None]:  # No response was made
+            key_resp_dax9_2.keys = None
+            # was no response the correct answer?!
+            if str('2').lower() == 'none':
+               key_resp_dax9_2.corr = 1;  # correct non-response
+            else:
+               key_resp_dax9_2.corr = 0;  # failed to respond (incorrectly)
+        # store data for trials_test3 (TrialHandler)
+        trials_test3.addData('key_resp_dax9_2.keys',key_resp_dax9_2.keys)
+        trials_test3.addData('key_resp_dax9_2.corr', key_resp_dax9_2.corr)
+        if key_resp_dax9_2.keys != None:  # we had a response
+            trials_test3.addData('key_resp_dax9_2.rt', key_resp_dax9_2.rt)
+        trials_test3.addData('key_resp_dax9_2.started', key_resp_dax9_2.tStartRefresh)
+        trials_test3.addData('key_resp_dax9_2.stopped', key_resp_dax9_2.tStopRefresh)
+        trials_test3.addData('option1_23.started', option1_23.tStartRefresh)
+        trials_test3.addData('option1_23.stopped', option1_23.tStopRefresh)
+        trials_test3.addData('option2_23.started', option2_23.tStartRefresh)
+        trials_test3.addData('option2_23.stopped', option2_23.tStopRefresh)
+        trials_test3.addData('option3_22.started', option3_22.tStartRefresh)
+        trials_test3.addData('option3_22.stopped', option3_22.tStopRefresh)
+        # the Routine "test2dax9" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
+        
+        # ------Prepare to start Routine "test2tas32"-------
+        continueRoutine = True
+        # update component parameters for each repeat
+        star_29.setFillColor('white')
+        triange_17.setFillColor('white')
+        cross_27.setFillColor('white')
+        key_resp_tas32_2.keys = []
+        key_resp_tas32_2.rt = []
+        _key_resp_tas32_2_allKeys = []
+        # keep track of which components have finished
+        test2tas32Components = [dax9_corr2_17, star_29, triange_17, cross_27, key_resp_tas32_2, option1_24, option2_24, option3_23]
+        for thisComponent in test2tas32Components:
+            thisComponent.tStart = None
+            thisComponent.tStop = None
+            thisComponent.tStartRefresh = None
+            thisComponent.tStopRefresh = None
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        # reset timers
+        t = 0
+        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+        test2tas32Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+        frameN = -1
+        
+        # -------Run Routine "test2tas32"-------
+        while continueRoutine:
+            # get current time
+            t = test2tas32Clock.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=test2tas32Clock)
+            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
+            
+            # *dax9_corr2_17* updates
+            if dax9_corr2_17.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                dax9_corr2_17.frameNStart = frameN  # exact frame index
+                dax9_corr2_17.tStart = t  # local t and not account for scr refresh
+                dax9_corr2_17.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(dax9_corr2_17, 'tStartRefresh')  # time at next scr refresh
+                dax9_corr2_17.setAutoDraw(True)
+            
+            # *star_29* updates
+            if star_29.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                star_29.frameNStart = frameN  # exact frame index
+                star_29.tStart = t  # local t and not account for scr refresh
+                star_29.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(star_29, 'tStartRefresh')  # time at next scr refresh
+                star_29.setAutoDraw(True)
+            
+            # *triange_17* updates
+            if triange_17.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                triange_17.frameNStart = frameN  # exact frame index
+                triange_17.tStart = t  # local t and not account for scr refresh
+                triange_17.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(triange_17, 'tStartRefresh')  # time at next scr refresh
+                triange_17.setAutoDraw(True)
+            
+            # *cross_27* updates
+            if cross_27.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                cross_27.frameNStart = frameN  # exact frame index
+                cross_27.tStart = t  # local t and not account for scr refresh
+                cross_27.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(cross_27, 'tStartRefresh')  # time at next scr refresh
+                cross_27.setAutoDraw(True)
+            
+            # *key_resp_tas32_2* updates
+            waitOnFlip = False
+            if key_resp_tas32_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                key_resp_tas32_2.frameNStart = frameN  # exact frame index
+                key_resp_tas32_2.tStart = t  # local t and not account for scr refresh
+                key_resp_tas32_2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(key_resp_tas32_2, 'tStartRefresh')  # time at next scr refresh
+                key_resp_tas32_2.status = STARTED
+                # keyboard checking is just starting
+                waitOnFlip = True
+                win.callOnFlip(key_resp_tas32_2.clock.reset)  # t=0 on next screen flip
+            if key_resp_tas32_2.status == STARTED and not waitOnFlip:
+                theseKeys = key_resp_tas32_2.getKeys(keyList=['1', '2', '3'], waitRelease=False)
+                _key_resp_tas32_2_allKeys.extend(theseKeys)
+                if len(_key_resp_tas32_2_allKeys):
+                    key_resp_tas32_2.keys = _key_resp_tas32_2_allKeys[-1].name  # just the last key pressed
+                    key_resp_tas32_2.rt = _key_resp_tas32_2_allKeys[-1].rt
+                    # was this correct?
+                    if (key_resp_tas32_2.keys == str('3')) or (key_resp_tas32_2.keys == '3'):
+                        key_resp_tas32_2.corr = 1
+                    else:
+                        key_resp_tas32_2.corr = 0
+                    # a response ends the routine
+                    continueRoutine = False
+            
+            # *option1_24* updates
+            if option1_24.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                option1_24.frameNStart = frameN  # exact frame index
+                option1_24.tStart = t  # local t and not account for scr refresh
+                option1_24.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(option1_24, 'tStartRefresh')  # time at next scr refresh
+                option1_24.setAutoDraw(True)
+            
+            # *option2_24* updates
+            if option2_24.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                option2_24.frameNStart = frameN  # exact frame index
+                option2_24.tStart = t  # local t and not account for scr refresh
+                option2_24.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(option2_24, 'tStartRefresh')  # time at next scr refresh
+                option2_24.setAutoDraw(True)
+            
+            # *option3_23* updates
+            if option3_23.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                option3_23.frameNStart = frameN  # exact frame index
+                option3_23.tStart = t  # local t and not account for scr refresh
+                option3_23.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(option3_23, 'tStartRefresh')  # time at next scr refresh
+                option3_23.setAutoDraw(True)
+            
+            # check for quit (typically the Esc key)
+            if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+                core.quit()
+            
+            # check if all components have finished
+            if not continueRoutine:  # a component has requested a forced-end of Routine
+                break
+            continueRoutine = False  # will revert to True if at least one component still running
+            for thisComponent in test2tas32Components:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
+        
+        # -------Ending Routine "test2tas32"-------
+        for thisComponent in test2tas32Components:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        #''' update the number correct:'''
+        if key_resp_tas32_2.corr: 
+            number_correct3 = number_correct3 + 1
+            print('Correct3: ' + str(number_correct3))
+        #     ''' if this is the final repetition, check the proportion correct.
+        #         (am avoiding hard coding the value '12' for flexibility):'''
+        if number_correct3 == 2:
+            print('total Correct2: ' + str(number_correct3))
+        # ''' terminate the outer loop so no more practice happens:'''
+            trials_phase3.finished = True
+        else:
+            print('flag2!')
+            trials_phase3.finished = False
+        trials_test3.addData('dax9_corr2_17.started', dax9_corr2_17.tStartRefresh)
+        trials_test3.addData('dax9_corr2_17.stopped', dax9_corr2_17.tStopRefresh)
+        trials_test3.addData('star_29.started', star_29.tStartRefresh)
+        trials_test3.addData('star_29.stopped', star_29.tStopRefresh)
+        trials_test3.addData('triange_17.started', triange_17.tStartRefresh)
+        trials_test3.addData('triange_17.stopped', triange_17.tStopRefresh)
+        trials_test3.addData('cross_27.started', cross_27.tStartRefresh)
+        trials_test3.addData('cross_27.stopped', cross_27.tStopRefresh)
+        # check responses
+        if key_resp_tas32_2.keys in ['', [], None]:  # No response was made
+            key_resp_tas32_2.keys = None
+            # was no response the correct answer?!
+            if str('3').lower() == 'none':
+               key_resp_tas32_2.corr = 1;  # correct non-response
+            else:
+               key_resp_tas32_2.corr = 0;  # failed to respond (incorrectly)
+        # store data for trials_test3 (TrialHandler)
+        trials_test3.addData('key_resp_tas32_2.keys',key_resp_tas32_2.keys)
+        trials_test3.addData('key_resp_tas32_2.corr', key_resp_tas32_2.corr)
+        if key_resp_tas32_2.keys != None:  # we had a response
+            trials_test3.addData('key_resp_tas32_2.rt', key_resp_tas32_2.rt)
+        trials_test3.addData('key_resp_tas32_2.started', key_resp_tas32_2.tStartRefresh)
+        trials_test3.addData('key_resp_tas32_2.stopped', key_resp_tas32_2.tStopRefresh)
+        trials_test3.addData('option1_24.started', option1_24.tStartRefresh)
+        trials_test3.addData('option1_24.stopped', option1_24.tStopRefresh)
+        trials_test3.addData('option2_24.started', option2_24.tStartRefresh)
+        trials_test3.addData('option2_24.stopped', option2_24.tStopRefresh)
+        trials_test3.addData('option3_23.started', option3_23.tStartRefresh)
+        trials_test3.addData('option3_23.stopped', option3_23.tStopRefresh)
+        # the Routine "test2tas32" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
+        thisExp.nextEntry()
+        
+    # completed 1.0 repeats of 'trials_test3'
+    
     thisExp.nextEntry()
     
-# completed 1.0 repeats of 'trials_phase3'
+# completed 4.0 repeats of 'trials_phase3'
 
 
 # ------Prepare to start Routine "proceed"-------
@@ -22964,6 +25840,75 @@ thisExp.addData('mouse_2.stopped', mouse_2.tStop)
 thisExp.nextEntry()
 # the Routine "proceed" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
+
+# ------Prepare to start Routine "blank"-------
+continueRoutine = True
+routineTimer.add(0.200000)
+# update component parameters for each repeat
+# keep track of which components have finished
+blankComponents = [blank500ms]
+for thisComponent in blankComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+blankClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "blank"-------
+while continueRoutine and routineTimer.getTime() > 0:
+    # get current time
+    t = blankClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=blankClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *blank500ms* updates
+    if blank500ms.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        blank500ms.frameNStart = frameN  # exact frame index
+        blank500ms.tStart = t  # local t and not account for scr refresh
+        blank500ms.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(blank500ms, 'tStartRefresh')  # time at next scr refresh
+        blank500ms.setAutoDraw(True)
+    if blank500ms.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > blank500ms.tStartRefresh + 0.2-frameTolerance:
+            # keep track of stop time/frame for later
+            blank500ms.tStop = t  # not accounting for scr refresh
+            blank500ms.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(blank500ms, 'tStopRefresh')  # time at next scr refresh
+            blank500ms.setAutoDraw(False)
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in blankComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "blank"-------
+for thisComponent in blankComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('blank500ms.started', blank500ms.tStartRefresh)
+thisExp.addData('blank500ms.stopped', blank500ms.tStopRefresh)
 
 # ------Prepare to start Routine "test"-------
 continueRoutine = True
