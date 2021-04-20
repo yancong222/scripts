@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# @authors: Phillip Wolff and Yn Cong
+# @authors: Phillip Wolff and Yan Cong
 """
 
 import torch
