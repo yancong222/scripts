@@ -1,5 +1,8 @@
+#########################
 # author: Yan Cong
-#####################################################################################
+# evaluate transformer models' linguistic performance
+# as of 04/23/2021
+#############################install packages##################################################
 load("...") # add directory
 
 install.packages("plyr") # you don't need to install pkg every single time
@@ -7,7 +10,6 @@ install.packages("dplyr") # you need to type Yes into the console
 #install.packages("stringr")
 install.packages("lattice")
 install.packages("tidyverse")
-
 install.packages("sciplot")
 
 library(lattice)
@@ -18,10 +20,9 @@ library(forcats)
 library(ggplot2)
 theme_update(text = element_text(size=11),
              axis.text.x = element_text(angle=90, hjust=1))
-      
 library(sciplot)
 
-# data visualization ----
+##########################for data visualization ----#########################
 
 # link: https://mgimond.github.io/ES218/Week04b.html
 # Define an array of colors. The first array generates unique hues while the 
@@ -35,7 +36,7 @@ trellis.par.set(strip.background = list(col = col.grey))
 trellis.par.set(add.text = list(cex = 0.8, col="black"))
 trellis.par.set(par.xlab.text = list(cex = 0.8, col="grey20"))
 
-
+#########################read CSV file; descriptive statistics#########################
 MIdata = read.csv("T5SepMannerImplicatureLoss.csv", header = TRUE)
 SIdata = read.csv("T5SepScalarImplicatureLoss.csv", header = TRUE)
 Presupdata = read.csv("T5SepPresupLoss.csv", header = TRUE)
@@ -49,6 +50,7 @@ summary(Presupdata)
 summary(AccuracyByModel) # Mean   :0.7928 
 se(AccuracyByModel$accuracy.mean) # 0.03366137
 
+#########################plot a bar chart#########################
 barchart(accuracy.mean ~ model | phenomena, data = AccuracyByModel,
          strip = strip.custom(bg="lightgrey",
                               par.strip.text=list(col="black", cex=.65, font=4)),
@@ -60,7 +62,7 @@ barchart(accuracy.mean ~ model | phenomena, data = AccuracyByModel,
          layout = c(3,1),
          scales = list(x = list(rot = 65)))
 
-################################################################
+##########################make your figures pretty!!!###############################
 library(RColorBrewer)
 
 clrs_spec <- colorRampPalette(rev(brewer.pal(11, "Spectral")))
@@ -70,12 +72,12 @@ clrs_hcl <- function(n) {
       fixup = TRUE)
 }
 
-################################################################
+#########################Summarize; Plot models using ggplot----################################
 summary(AccuracyByModel)
 
 t5all <- read.csv("T5all.csv", header = TRUE)
 summary(t5all)
-#Summarize
+
 data=group_by(t5all, phenomena, model)%>% 
   summarise(mean=mean(bad.good.loss.diff...0),se=se(bad.good.loss.diff...0))
 head(data)
@@ -90,7 +92,7 @@ p
 p + scale_x_discrete(name ="T5 models") +
   scale_y_continuous(name="Accuracy Mean")
 
-#######################################################
+########################Summarize; plot phenomena using ggplot-------############################
 p=ggplot(data = data, aes(x = phenomena, y = mean)) + 
   geom_bar(fill = rep(clrs_hcl(3), 5), position = "dodge", stat = "identity") + 
   geom_errorbar(aes(ymin=mean-se,ymax=mean+se),width = 0.3,position = "dodge",alpha = 0.7) +
@@ -102,9 +104,7 @@ p + scale_x_discrete(name ="Pragmatic phenomena") +
   theme(axis.text.x = element_text(face="bold", color="#993333", 
                              size=7, angle=70))
 
-#############################################################
-#####################################################
-
+############################plot barchart-------#################################
 barchart(accuracy.mean ~ phenomena | model, data = AccuracyByModel,
          strip = strip.custom(bg="lightgrey",
                               par.strip.text=list(col="black", cex=.65, font=4)),
@@ -117,13 +117,12 @@ barchart(accuracy.mean ~ phenomena | model, data = AccuracyByModel,
          layout = c(3,2),
          index.cond=list(c(4,2,1,3,5)))
 
-
-###statistics
-
+##############################Exploratory Statistics------###########################
 MIsmall <- subset(MIdata, MIdata$model == "t5-small")
 d1 <- with(MIsmall, 
           MIsmall$outputs.bad.loss - MIsmall$outputs.good.loss)
-# Shapiro-Wilk normality test for the differences
+
+############################Shapiro-Wilk normality test for the differences--####################
 shapiro.test(d1) # => 0.05821
 #From the output, the p-value is greater than the significance level 0.05 
 #implying that the distribution of the differences (d) are not significantly different from normal distribution. 
@@ -134,7 +133,8 @@ res1
 
 d2 <- with(MIsmall, 
           MIsmall$outputs.baseline.bad.loss - MIsmall$outputs.exp.soso.loss)
-# Shapiro-Wilk normality test for the differences
+
+###########################Shapiro-Wilk normality test for the differences-----###########################
 shapiro.test(d2) # => 0.1347
 
 res2 <- t.test(MIsmall$outputs.baseline.bad.loss, MIsmall$outputs.exp.soso.loss, paired = TRUE)
@@ -142,14 +142,13 @@ res2
 
 d_sbj <- with(MIsmall, 
            MIsmall$bad.good.loss.diff - MIsmall$b_bad.soso.loss.diff)
-# Shapiro-Wilk normality test for the differences
+###########################Shapiro-Wilk normality test for the differences----###########################
 shapiro.test(d_sbj) # => 0.2139
 
 res_sbj <- t.test(MIsmall$bad.good.loss.diff, MIsmall$b_bad.soso.loss.diff, paired = TRUE)
 res_sbj
 
-
-###################################################
+#######################normality test first, then decide whether move forward with parametric or non-parametric test----############################
 MIbase <- subset(MIdata, MIdata$model=="t5-base")
 d1 <- with(MIbase, MIbase$outputs.bad.loss-MIbase$outputs.good.loss)
 shapiro.test(d1) #0.007458
@@ -171,7 +170,7 @@ d_sbj <- with(MIbase, MIbase$bad.good.loss.diff-MIbase$b_bad.soso.loss.diff)
 shapiro.test(d_sbj) 
 t.test(MIbase$bad.good.loss.diff, MIbase$b_bad.soso.loss.diff, paired = TRUE)
 
-
+#######################normality test first, then decide whether move forward with parametric or non-parametric test----############################
 MIlarge <- subset(MIdata, MIdata$model=="t5-large")
 d1 <- with(MIlarge, MIlarge$outputs.bad.loss-MIlarge$outputs.good.loss)
 shapiro.test(d1)
@@ -187,7 +186,7 @@ shapiro.test(d_sbj)
 
 t.test(MIlarge$bad.good.loss.diff, MIlarge$b_bad.soso.loss.diff, paired = TRUE)
 
-
+#######################normality test; paird t-test----############################
 MI3b <- subset(MIdata, MIdata$model=="t5-3b")
 d1 <- with(MI3b, MI3b$outputs.bad.loss-MI3b$outputs.good.loss)
 shapiro.test(d1)
@@ -217,8 +216,7 @@ d_sbj <- with(MI11b, MI11b$bad.good.loss.diff-MI11b$b_bad.soso.loss.diff)
 shapiro.test(d_sbj)
 t.test(MI11b$bad.good.loss.diff, MI11b$b_bad.soso.loss.diff, paired = TRUE)
 
-
-###################################################
+########################one-way ANOVA------###########################
 comp <- subset(MIdata, MIdata$model=="t5-small" | MIdata$model=="t5-11b")
 #comp = read.csv("comp_mi.csv", header = TRUE)
 one.way <- aov(bad.good.loss.diff ~ model, data = comp)
@@ -238,9 +236,8 @@ summary(one.way)
 
 one.way <- aov(outputs.exp.soso.loss ~ model, data = comp)
 summary(one.way)
-###################################################
-###################################################
-###################################################
+
+#####################normality test; t-test-----########################################
 SIdata = read.csv("T5SepScalarImplicatureLoss.csv", header = TRUE)
 SIsmall <- subset(SIdata, SIdata$model=="t5-small")
 summary(SIsmall)
@@ -271,7 +268,8 @@ summary(SI11b)
 d_sst <- with(SI11b, SI11b$bad.good.loss.diff-SI11b$b_soso.b_good.loss.diff)
 shapiro.test(d_sst)
 t.test(SI11b$bad.good.loss.diff, SI11b$b_soso.b_good.loss.diff, paired = TRUE)
-###################################################
+
+#########################one-way ANOVA for comparison----##########################
 comp <- subset(SIdata, SIdata$model == "t5-small" | SIdata$model == "t5-11b")
 one.way <- aov(outputs.bad.loss ~ model, data = comp)
 summary(one.way)
@@ -288,7 +286,7 @@ summary(one.way)
 one.way <- aov(b_soso.b_good.loss.diff ~ model, data = comp)
 summary(one.way)
 
-#################################################
+########################normality tests and parametric tests----#########################
 Psmall <- subset(Presupdata, Presupdata$model=="t5-small")
 d <- with(Psmall, Psmall$outputs.bad.loss-Psmall$outputs.good.loss)
 shapiro.test(d)
@@ -315,8 +313,7 @@ d <- with(P11b, P11b$outputs.bad.loss-P11b$outputs.good.loss)
 shapiro.test(d)
 t.test(P11b$outputs.bad.loss,P11b$outputs.good.loss,paired = TRUE)
 
-
-###################################################
+####################ANOVA----##################################
 comp <- subset(Presupdata, Presupdata$model == "t5-small" | Presupdata$model == "t5-11b")
 one.way <- aov(loss.diff ~ model, data = comp)
 summary(one.way)
