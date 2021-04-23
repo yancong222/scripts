@@ -2,12 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Aug 20 20:37:17 2019
-
 @author: Phillip Wolff
-"""
-"""
 Significantly modified on Tue Jan 30 2021
-
 @author: Yan Cong
 """
 #%%
@@ -15,6 +11,7 @@ import torch
 #from pytorch_transformers import RobertaTokenizer, RobertaForMaskedLM
 from transformers import RobertaTokenizer, RobertaForMaskedLM
 
+################initialize roberta (fill in the mask)---##############################
 def initialize_roberta(bert_model):
     global tokenizer
     global model
@@ -25,7 +22,8 @@ def initialize_roberta(bert_model):
         model.to('cuda')#if we have a GPU
     else:
         model.to('cpu')
-   
+
+#######################find mask word index---##############################        
 def find_mask_indices(tokenized_text):
     masked_index = []
     for i in range(len(tokenized_text)):
@@ -33,16 +31,18 @@ def find_mask_indices(tokenized_text):
             masked_index.append(i)
     return masked_index
 
+#############generate top k words list---##############################
 def generate_predictions(prediction_scores,mindex,num_possibilities):
     predicted_k_indexes = torch.topk(prediction_scores[0, mindex],k=num_possibilities)
     predicted_logits_list = predicted_k_indexes[0] 
     predicted_indexes_list = predicted_k_indexes[1]
     return predicted_indexes_list, predicted_logits_list
 
+##############################generate words and logits---##############################
 def generate_possible_words_for_mask(doc):
     # "add_special_tokens adds a <s> to the beginning and </s> to the end of the text
     input_ids = torch.tensor(tokenizer.encode(doc,add_special_tokens=True)).unsqueeze(0)  
-    input_ids_tensor = input_ids.to('cpu') # I changed cuda to cpu on 092820
+    input_ids_tensor = input_ids.to('cpu') # yan changed cuda to cpu on 092820
     
     outputs = model(input_ids_tensor, labels=input_ids_tensor) #masked_lm_labels is changed to labels in a recent commit on master. 013021
     
@@ -52,6 +52,7 @@ def generate_possible_words_for_mask(doc):
     predicted_indexes_list, predicted_logits_list = generate_predictions(prediction_scores,last_masked_index,num_possibilities)
     return predicted_indexes_list, predicted_logits_list
 
+##############################locate and calculate word rank and logits--##############################
 def find_rank_and_logit(target,predicted_indexes_list,predicted_logits_list):
     tokens_list = predicted_indexes_list.tolist()   
     target = 'Ġ'+target
@@ -65,12 +66,14 @@ def find_rank_and_logit(target,predicted_indexes_list,predicted_logits_list):
         logit = 'nan'
     return rank, logit
 #%%
-###################### Begin here ###########################
+
+######################Begin here to process csv file---###########################
 initialize_roberta('roberta-large')
 import csv
 
 #%%
-# presupposition csv
+
+#####presupposition csv---##############################
 rank_diff_0 = 0
 rank_good = 0
 rank_bad = 0
@@ -112,6 +115,8 @@ with open ('minimal pairs bert - presupposition.csv', newline='') as csvfile:
             
 
 #%%
+
+####################write the results into a new csv file---##############################
 n=0
 with open('bert_accuracy_presupposition.csv', 'w', newline='') as file:
     writer = csv.writer(file)
@@ -124,7 +129,8 @@ with open('bert_accuracy_presupposition.csv', 'w', newline='') as file:
             writer.writerow([n, i, j, q, 0])
             
 #%%
-# manner implicature csv
+
+################manner implicature csv---##############################
 rank_diff = 0
 rank_good = 0
 rank_bad = 0
@@ -182,8 +188,8 @@ with open ('minimal pairs bert - manner implicature.csv', newline='') as csvfile
             
 
 #%%
-# manner implicature write csv
 
+############manner implicature results write into a new csv---##############################
 t=0
 with open('bert_accuracy_mannerimplicature.csv', 'w', newline='') as file:
     writer = csv.writer(file)
@@ -207,7 +213,7 @@ with open('bert_accuracy_mannerimplicature.csv', 'w', newline='') as file:
             
 
 #%%
-# scalar implicature csv
+######################scalar implicature csv---##############################
 rank_diff_baseline = 0
 rank_good_baseline = 0
 rank_soso_baseline = 0
@@ -265,13 +271,10 @@ with open ('minimal pairs bert - scalar implicature.csv', newline='') as csvfile
                  rank_diff_exp_lst.append(rank_diff_exp)
                  
                  sensitivity = rank_diff_exp - rank_diff_baseline
-                 sensitivity_lst.append(sensitivity)
-             
-            
-
+                 sensitivity_lst.append(sensitivity)            
 #%%
-# scalar implicature write csv
 
+################scalar implicature results write into a new csv---##############################
 t=0
 with open('bert_accuracy_scalarimplicature.csv', 'w', newline='') as file:
     writer = csv.writer(file)
@@ -298,9 +301,5 @@ with open('bert_accuracy_scalarimplicature.csv', 'w', newline='') as file:
                             writer.writerow([t, i, j, q, m, n, p, a, 1, 1, 0])
                         else:
                             if ((q > 0) and (p < 0) and (a<0)):
-                                writer.writerow([t, i, j, q, m, n, p, a, 1, 0, 0])
-                
-            
-
-
+                                writer.writerow([t, i, j, q, m, n, p, a, 1, 0, 0])                         
 #%%
