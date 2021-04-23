@@ -1,13 +1,13 @@
 #%%
 # authors: Phillip Wolff and Yan Cong
 #%%
+# import libraries
 import torch 
-
 from transformerslogits import T5Tokenizer, T5Config, T5ForConditionalGeneration
-
 import sys  
 
 #%%
+# t5-11b needs virtual machine, or a big GPU
 T5_PATH = 't5-small' # "t5-small", "t5-base", "t5-large", "t5-3b", "t5-11b"
 
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu') 
@@ -21,7 +21,7 @@ t5_mlm = T5ForConditionalGeneration.from_pretrained(T5_PATH, config=t5_config).t
 # text = "A sugar cube can be dissolved by adding <extra_id_0>. </s>" #base: -0.37333520253499347
 import csv
 
-##############reinforce-implicature-word####################
+##############reinforce-implicature-word----##############################################
 l=0
 with open ('MannerImplicature1102.csv', newline='') as f:
     reader = csv.DictReader(f)
@@ -60,7 +60,7 @@ with open ('MannerImplicature1102.csv', newline='') as f:
             print('rank_in_all: ', rank_in_all) 
             print('logits_in_all: ', logits_in_all) 
             
-            # prob distribution
+            ##############prob distribution-------#######################################
             print('p_in_all: ', p_in_all) 
 
 
