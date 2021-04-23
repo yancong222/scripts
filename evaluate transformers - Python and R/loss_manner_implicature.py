@@ -2,10 +2,9 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Jan 12 22:25:48 2021
-
 @author: Yan Cong and Phillip Wolff
 """
-
+######################################################
 import torch
 import csv
 #from transformerslogits import T5Tokenizer, T5Config, T5ForConditionalGeneration, T5Model
@@ -14,15 +13,14 @@ from transformers import T5Tokenizer, T5Config, T5ForConditionalGeneration, T5Mo
 
 T5_PATH = 't5-small' # "t5-small", "t5-base", "t5-large", "t5-3b", "t5-11b"
 
-
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu') 
 
 t5_tokenizer = T5Tokenizer.from_pretrained(T5_PATH)
 t5_config = T5Config.from_pretrained(T5_PATH)
 t5_mlm = T5ForConditionalGeneration.from_pretrained(T5_PATH, config=t5_config).to(DEVICE)
 
-
 #%%
+#############initialize variables and data structures---##########################
 first_loss_difference = 0
 first_loss_difference_lst = []
 
@@ -37,6 +35,7 @@ outputs_exp_soso_loss = []
 
 l=0
 
+##########################loop over each line; generate cross-entropy loss based on different conditions---##########################
 with open ('minimal pairs - manner implicature.csv', newline='') as f:
     reader = csv.DictReader(f)
     for line in reader:
@@ -101,7 +100,9 @@ with open ('minimal pairs - manner implicature.csv', newline='') as f:
 #print(second_loss_difference_lst)
 loss_difference_lst = first_loss_difference_lst + second_loss_difference_lst
 #print(loss_difference_lst)
+#%%
 
+#######################################writes the results in a new csv file----#######################################
 t=0
 with open('SepMannerImplicatureLoss.csv', 'w', newline='') as file:
     writer = csv.writer(file)
