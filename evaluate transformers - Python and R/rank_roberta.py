@@ -1,11 +1,13 @@
+"""
 # -*- coding: utf-8 -*-
 # @authors: Phillip Wolff and Yan Cong
 """
-
+#####################import libraries---################################
 import torch
 #from pytorch_transformers import RobertaTokenizer, RobertaForMaskedLM
 from transformers import RobertaTokenizer, RobertaForMaskedLM
 
+##############################initialize roberta (fill in the mask)---##############################
 def initialize_roberta(bert_model):
     global tokenizer
     global model
@@ -13,7 +15,8 @@ def initialize_roberta(bert_model):
     model = RobertaForMaskedLM.from_pretrained('roberta-large')
     model.eval()
     if torch.cuda.is_available(): model.to('cuda') #if we have a GPU
-   
+
+##############################find mask indices in tokenized text---##############################
 def find_mask_indices(tokenized_text):
     masked_index = []
     for i in range(len(tokenized_text)):
@@ -21,12 +24,14 @@ def find_mask_indices(tokenized_text):
             masked_index.append(i)
     return masked_index
 
+##############################generate logits---##############################
 def generate_predictions(prediction_scores,mindex,num_possibilities):
     predicted_k_indexes = torch.topk(prediction_scores[0, mindex],k=num_possibilities)
     predicted_logits_list = predicted_k_indexes[0] 
     predicted_indexes_list = predicted_k_indexes[1]
     return predicted_indexes_list, predicted_logits_list
 
+##############################generate words based on context/surround words, calculates logits---##############################
 def generate_possible_words_for_mask(doc):
     # "add_special_tokens adds a <s> to the beginning and </s> to the end of the text
     input_ids = torch.tensor(tokenizer.encode(doc,add_special_tokens=True)).unsqueeze(0)  
@@ -38,6 +43,7 @@ def generate_possible_words_for_mask(doc):
     predicted_indexes_list, predicted_logits_list = generate_predictions(prediction_scores,last_masked_index,num_possibilities)
     return predicted_indexes_list, predicted_logits_list
 
+##############################locate the word id, rank, and its logit---##############################
 def find_rank_and_logit(target,predicted_indexes_list,predicted_logits_list):
     tokens_list = predicted_indexes_list.tolist()   
     target = 'Ġ'+target
@@ -51,15 +57,14 @@ def find_rank_and_logit(target,predicted_indexes_list,predicted_logits_list):
         logit = 'nan'
     return rank, logit
 
-###################### Begin here ###########################
+######################Begin here - csv file###########################
 initialize_roberta('roberta-large')
-
-#####read csv file line by line - i lost the logits... they are not right...
+#####read csv file line by line - I lost the logits... they are not quite right...
 import csv
 # make sure put the csv file in stellacong/
 #raw = {}
         
-############### Hit 10 5 1 SI ########################
+###############metric: Hit 10 5 1 for Scalar Implicature---##############################
 l = 0
 r10 = 0
 r5 = 0
@@ -81,12 +86,11 @@ with open ('ScalarImplicature1023.csv', newline = '') as f:
             else:
                 r += 0
                 
-                
 print('r10: ', r10)    
 print('r5: ', r5)     
-print('r1: ', r1)         
-################ScalarImplicature
+print('r1: ', r1)    
 
+################metric: relative rank for ScalarImplicature---##############################
 # mean rank of lungs which
 l = 0
 lst = []
@@ -98,12 +102,10 @@ with open ('ScalarImplicature1021.csv', newline = '') as f:
             lst.append(int(row['rank']))
 lst
 len(lst)
-
 sum(lst)/len(lst)
-##############entailment-yes####################
-################ScalarImplicature
 
-# mean rank of lungs that
+##############meric: relative rank for entailment-yes---##############################
+# mean rank of "lungs that..."
 l = 0
 lst = []
 with open ('ScalarImplicature1021.csv', newline = '') as f:
@@ -114,9 +116,7 @@ with open ('ScalarImplicature1021.csv', newline = '') as f:
             lst.append(int(row['rank']))
 lst
 len(lst)
-
 sum(lst)/len(lst)
-##############entailment-yes####################
 
 with open ('MannerImplicature1020.csv', newline='') as f:
     reader = csv.DictReader(f)
@@ -128,8 +128,7 @@ with open ('MannerImplicature1020.csv', newline='') as f:
         rank, logit = find_rank_and_logit(target,predicted_indexes_list,predicted_logits_list)
         print(rank,logit)        
         
-#######################################
-####################logits mean ##########################
+####################metric: logits mean---##############################################
 l = 0
 r = 0
 n = 0
@@ -143,8 +142,7 @@ with open ('MannerImplicature1102.csv', newline = '') as f:
             r += float(row['rewordlogits']) # reinforcement Internal argument 
 print('tpretty-re-logits: ', r/n) 
 
-
-####################logits mean ##########################
+####################metric: logits mean---##############################
 l = 0
 r = 0
 n = 0
@@ -158,9 +156,7 @@ with open ('MannerImplicature1102.csv', newline = '') as f:
             r += float(row['ewordlogtis']) # Internal argument 
 print('tpretty-e-logits: ', r/n)  
 
-
-##############################################3
-############### Hit 10 trunc yes rank group 1 ########################
+###############3##metric: Hit @ 10 and trunc for yes rank group 1---##############################
 l = 0
 r = 0
 with open ('MannerImplicature1023.csv', newline = '') as f:
@@ -172,11 +168,7 @@ with open ('MannerImplicature1023.csv', newline = '') as f:
                 r += 1
 print('tpretty-q: ', r/34)   
                 
-##############################################3
-################################
-#######################################
-
-# mean rank
+################################3##metric: mean rank---##############################
 l = 0
 lstt = []
 
@@ -189,12 +181,8 @@ with open ('MannerImplicature1023.csv', newline = '') as f:
  
 
 print('tshorterq: ', sum(lstt)/len(lstt))
-
- 
-#######################################
-####################################        
-############## trunctation #########################
-
+      
+##############metric: trunctation---##################################################
 with open ('PrespSurprise1023.csv', newline='') as f:
     reader = csv.DictReader(f)
     for line in reader:
@@ -203,4 +191,4 @@ with open ('PrespSurprise1023.csv', newline='') as f:
         predicted_indexes_list, predicted_logits_list = generate_possible_words_for_mask(doc)
         rank, logit = find_rank_and_logit(target,predicted_indexes_list,predicted_logits_list)
         print(rank,logit)
-########################################################
+
