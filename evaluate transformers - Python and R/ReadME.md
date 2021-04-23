@@ -4,12 +4,15 @@ Project description: The team developed scripts and metrics to evaluate transfor
 
 Folder includes: Python scripts and R scripts
 
+-----------------------------------------------
+
 RoBERTa:
 
 roberta_rank_accuracy.py implements the 'fill in the mask' algorithm to predict word, and uses metrics such as accuracy, HITs@K, relative rank, logits mean, and trucation.
 
 rank_roberta.py implements the 'fill in the mask' algorithm to predict word, and functions are defined to generate logits and rank
 
+-----------------------------------------------
 
 Text-to-Text-Transformer (T5):
 
@@ -24,6 +27,7 @@ loss_presupposition.py generates cross-entropy loss for presupposition
 loss_scalar_implicature.py generates cross-entropy loss for scalar implicature
 
 
+-----------------------------------------------
 
 Data Analysis:
 
