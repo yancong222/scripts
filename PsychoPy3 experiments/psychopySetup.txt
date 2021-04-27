@@ -1,3 +1,18 @@
+amb (triangle & square) badi
+solid tepi
+empty bute
+
+triangle tago (also shows up in practice trial)
+square kagu (can't be used by itself)
+solid square tepi kagu
+empty square bute kagu
+
+kako square (can be used by itself) 
+
+cloud (filler word) gope
+
+################################################
+
 IMG
 
 1
