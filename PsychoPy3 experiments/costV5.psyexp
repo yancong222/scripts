@@ -164,8 +164,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="if (key_resp_zud1.corr) {&amp;#10;    number_correct_l1 = (number_correct_l1 + 1);&amp;#10;}&amp;#10;if ((number_correct_l1 === 12)) {&amp;#10;    console.log((&quot;total Correct: &quot; + number_correct_l1.toString()));&amp;#10;    trials_phase1.finished = true;&amp;#10;} else {&amp;#10;    console.log(&quot;flag!&quot;);&amp;#10;    trials_phase1.finished = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="if key_resp_zud1.corr:&amp;#10;    number_correct_l1 = number_correct_l1 + 1&amp;#10;&amp;#10;if number_correct_l1 == 12 : &amp;#10;    print('total Correct: ' + str(number_correct_l1))&amp;#10;    # ''' terminate the outer loop so no more practice happens:'''&amp;#10;    trials_phase1.finished = True&amp;#10;else:&amp;#10;    print('flag!')&amp;#10;    trials_phase1.finished = False" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="if (key_resp_zud1.corr) {&amp;#10;    number_correct_l1 = (number_correct_l1 + 1);&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="if key_resp_zud1.corr:&amp;#10;    number_correct_l1 = number_correct_l1 + 1&amp;#10;&amp;#10;#if number_correct_l1 == 12 : &amp;#10;#    print('total Correct: ' + str(number_correct_l1))&amp;#10;    # ''' terminate the outer loop so no more practice happens:'''&amp;#10;#    trials_phase1.finished = True&amp;#10;#else:&amp;#10;#    print('flag!')&amp;#10;#    trials_phase1.finished = False" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_0" valType="code"/>
       </CodeComponent>
@@ -401,8 +401,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="if (key_resp_zud2.corr) {&amp;#10;    number_correct_l1 = (number_correct_l1 + 1);&amp;#10;}&amp;#10;if ((number_correct_l1 === 12)) {&amp;#10;    console.log((&quot;total Correct: &quot; + number_correct_l1.toString()));&amp;#10;    trials_phase1.finished = true;&amp;#10;} else {&amp;#10;    console.log(&quot;flag!&quot;);&amp;#10;    trials_phase1.finished = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="if key_resp_zud2.corr:&amp;#10;    number_correct_l1 = number_correct_l1 + 1&amp;#10;&amp;#10;if number_correct_l1 == 12 : &amp;#10;    print('total Correct: ' + str(number_correct_l1))&amp;#10;    # ''' terminate the outer loop so no more practice happens:'''&amp;#10;    trials_phase1.finished = True&amp;#10;else:&amp;#10;    print('flag!')&amp;#10;    trials_phase1.finished = False" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="if (key_resp_zud2.corr) {&amp;#10;    number_correct_l1 = (number_correct_l1 + 1);&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="if key_resp_zud2.corr:&amp;#10;    number_correct_l1 = number_correct_l1 + 1&amp;#10;&amp;#10;#if number_correct_l1 == 12 : &amp;#10;    #print('total Correct: ' + str(number_correct_l1))&amp;#10;    # ''' terminate the outer loop so no more practice happens:'''&amp;#10;    #trials_phase1.finished = True&amp;#10;#else:&amp;#10;    #print('flag!')&amp;#10;    #trials_phase1.finished = False" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_1_l1" valType="code"/>
       </CodeComponent>
@@ -613,8 +613,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="if (key_resp_zud3.corr) {&amp;#10;    number_correct_l1 = (number_correct_l1 + 1);&amp;#10;}&amp;#10;if ((number_correct_l1 === 12)) {&amp;#10;    console.log((&quot;total Correct: &quot; + number_correct_l1.toString()));&amp;#10;    trials_phase1.finished = true;&amp;#10;} else {&amp;#10;    console.log(&quot;flag!&quot;);&amp;#10;    trials_phase1.finished = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="if key_resp_zud3.corr:&amp;#10;    number_correct_l1 = number_correct_l1 + 1&amp;#10;&amp;#10;if number_correct_l1 == 12 : &amp;#10;    print('total Correct: ' + str(number_correct_l1))&amp;#10;    # ''' terminate the outer loop so no more practice happens:'''&amp;#10;    trials_phase1.finished = True&amp;#10;else:&amp;#10;    print('flag!')&amp;#10;    trials_phase1.finished = False" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="if (key_resp_zud3.corr) {&amp;#10;    number_correct_l1 = (number_correct_l1 + 1);&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="if key_resp_zud3.corr:&amp;#10;    number_correct_l1 = number_correct_l1 + 1&amp;#10;&amp;#10;#if number_correct_l1 == 12 : &amp;#10;    #print('total Correct: ' + str(number_correct_l1))&amp;#10;    # ''' terminate the outer loop so no more practice happens:'''&amp;#10;    #trials_phase1.finished = True&amp;#10;#else:&amp;#10;    #print('flag!')&amp;#10;    #trials_phase1.finished = False" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code3l1" valType="code"/>
       </CodeComponent>
@@ -877,8 +877,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="if (key_resp_zud4.corr) {&amp;#10;    number_correct_l1 = (number_correct_l1 + 1);&amp;#10;}&amp;#10;if ((number_correct_l1 === 12)) {&amp;#10;    console.log((&quot;total Correct: &quot; + number_correct_l1.toString()));&amp;#10;    trials_phase1.finished = true;&amp;#10;} else {&amp;#10;    console.log(&quot;flag!&quot;);&amp;#10;    trials_phase1.finished = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="if key_resp_zud4.corr:&amp;#10;    number_correct_l1 = number_correct_l1 + 1&amp;#10;&amp;#10;if number_correct_l1 == 12 : &amp;#10;    print('total Correct: ' + str(number_correct_l1))&amp;#10;    # ''' terminate the outer loop so no more practice happens:'''&amp;#10;    trials_phase1.finished = True&amp;#10;else:&amp;#10;    print('flag!')&amp;#10;    trials_phase1.finished = False" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="if (key_resp_zud4.corr) {&amp;#10;    number_correct_l1 = (number_correct_l1 + 1);&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="if key_resp_zud4.corr:&amp;#10;    number_correct_l1 = number_correct_l1 + 1&amp;#10;&amp;#10;#if number_correct_l1 == 12 : &amp;#10;    #print('total Correct: ' + str(number_correct_l1))&amp;#10;    # ''' terminate the outer loop so no more practice happens:'''&amp;#10;    #trials_phase1.finished = True&amp;#10;#else:&amp;#10;    #print('flag!')&amp;#10;    #trials_phase1.finished = False" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code4l1" valType="code"/>
       </CodeComponent>
@@ -4856,8 +4856,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="if (key_resp_blicket13.corr) {&amp;#10;    number_correct_l1 = (number_correct_l1 + 1);&amp;#10;}&amp;#10;if ((number_correct_l1 === 12)) {&amp;#10;    console.log((&quot;total Correct: &quot; + number_correct_l1.toString()));&amp;#10;    trials_phase1.finished = true;&amp;#10;} else {&amp;#10;    console.log(&quot;flag!&quot;);&amp;#10;    trials_phase1.finished = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="if key_resp_blicket13.corr:&amp;#10;    number_correct_l1 = number_correct_l1 + 1&amp;#10;&amp;#10;if number_correct_l1 == 12 : &amp;#10;    print('total Correct: ' + str(number_correct_l1))&amp;#10;    # ''' terminate the outer loop so no more practice happens:'''&amp;#10;    trials_phase1.finished = True&amp;#10;else:&amp;#10;    print('flag!')&amp;#10;    trials_phase1.finished = False" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="if (key_resp_blicket13.corr) {&amp;#10;    number_correct_l1 = (number_correct_l1 + 1);&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="if key_resp_blicket13.corr:&amp;#10;    number_correct_l1 = number_correct_l1 + 1&amp;#10;&amp;#10;#if number_correct_l1 == 12 : &amp;#10;    #print('total Correct: ' + str(number_correct_l1))&amp;#10;    # ''' terminate the outer loop so no more practice happens:'''&amp;#10;    #trials_phase1.finished = True&amp;#10;#else:&amp;#10;    #print('flag!')&amp;#10;    #trials_phase1.finished = False" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code5l1" valType="code"/>
       </CodeComponent>
@@ -5162,8 +5162,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="if (key_resp_blicket14.corr) {&amp;#10;    number_correct_l1 = (number_correct_l1 + 1);&amp;#10;}&amp;#10;if ((number_correct_l1 === 12)) {&amp;#10;    console.log((&quot;total Correct: &quot; + number_correct_l1.toString()));&amp;#10;    trials_phase1.finished = true;&amp;#10;} else {&amp;#10;    console.log(&quot;flag!&quot;);&amp;#10;    trials_phase1.finished = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="if key_resp_blicket14.corr:&amp;#10;    number_correct_l1 = number_correct_l1 + 1&amp;#10;&amp;#10;if number_correct_l1 == 12 : &amp;#10;    print('total Correct: ' + str(number_correct_l1))&amp;#10;    # ''' terminate the outer loop so no more practice happens:'''&amp;#10;    trials_phase1.finished = True&amp;#10;else:&amp;#10;    print('flag!')&amp;#10;    trials_phase1.finished = False" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="if (key_resp_blicket14.corr) {&amp;#10;    number_correct_l1 = (number_correct_l1 + 1);&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="if key_resp_blicket14.corr:&amp;#10;    number_correct_l1 = number_correct_l1 + 1&amp;#10;&amp;#10;#if number_correct_l1 == 12 : &amp;#10;    #print('total Correct: ' + str(number_correct_l1))&amp;#10;    # ''' terminate the outer loop so no more practice happens:'''&amp;#10;    #trials_phase1.finished = True&amp;#10;#else:&amp;#10;    #print('flag!')&amp;#10;    #trials_phase1.finished = False" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code6l1" valType="code"/>
       </CodeComponent>
@@ -5946,8 +5946,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="if (key_resp_smicket17.corr) {&amp;#10;    number_correct_l1 = (number_correct_l1 + 1);&amp;#10;}&amp;#10;if ((number_correct_l1 === 12)) {&amp;#10;    console.log((&quot;total Correct: &quot; + number_correct_l1.toString()));&amp;#10;    trials_phase1.finished = true;&amp;#10;} else {&amp;#10;    console.log(&quot;flag!&quot;);&amp;#10;    trials_phase1.finished = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="if key_resp_smicket17.corr:&amp;#10;    number_correct_l1 = number_correct_l1 + 1&amp;#10;&amp;#10;if number_correct_l1 == 12 : &amp;#10;    print('total Correct: ' + str(number_correct_l1))&amp;#10;    # ''' terminate the outer loop so no more practice happens:'''&amp;#10;    trials_phase1.finished = True&amp;#10;else:&amp;#10;    print('flag!')&amp;#10;    trials_phase1.finished = False" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="if (key_resp_smicket17.corr) {&amp;#10;    number_correct_l1 = (number_correct_l1 + 1);&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="if key_resp_smicket17.corr:&amp;#10;    number_correct_l1 = number_correct_l1 + 1&amp;#10;&amp;#10;#if number_correct_l1 == 12 : &amp;#10;    #print('total Correct: ' + str(number_correct_l1))&amp;#10;    # ''' terminate the outer loop so no more practice happens:'''&amp;#10;    #trials_phase1.finished = True&amp;#10;#else:&amp;#10;    #print('flag!')&amp;#10;    #trials_phase1.finished = False" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code7l1" valType="code"/>
       </CodeComponent>
@@ -6252,8 +6252,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="if (key_resp_smicket18.corr) {&amp;#10;    number_correct_l1 = (number_correct_l1 + 1);&amp;#10;}&amp;#10;console.log((&quot;number_Correct: &quot; + number_correct_l1.toString()));&amp;#10;if ((number_correct_l1 === 12)) {&amp;#10;    console.log((&quot;total Correct: &quot; + number_correct_l1.toString()));&amp;#10;    trials_phase1.finished = true;&amp;#10;} else {&amp;#10;    console.log(&quot;flag!&quot;);&amp;#10;    trials_phase1.finished = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="if key_resp_smicket18.corr:&amp;#10;    number_correct_l1 = number_correct_l1 + 1&amp;#10;print('number_Correct: ' + str(number_correct_l1))&amp;#10;&amp;#10;if number_correct_l1 == 12 : &amp;#10;    print('total Correct: ' + str(number_correct_l1))&amp;#10;    # ''' terminate the outer loop so no more practice happens:'''&amp;#10;    trials_phase1.finished = True&amp;#10;else:&amp;#10;    print('flag!')&amp;#10;    trials_phase1.finished = False" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="/* Syntax Error: Fix Python code */" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="if key_resp_smicket18.corr:&amp;#10;    number_correct_l1 = number_correct_l1 + 1&amp;#10;print('number_Correct: ' + str(number_correct_l1))&amp;#10;&amp;#10;#if number_correct_l1 == 12 : &amp;#10;    #print('total Correct: ' + str(number_correct_l1))&amp;#10;    # ''' terminate the outer loop so no more practice happens:'''&amp;#10;    t#rials_phase1.finished = True&amp;#10;#else:&amp;#10;    #print('flag!')&amp;#10;    #trials_phase1.finished = False" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code6l1_2" valType="code"/>
       </CodeComponent>
@@ -12680,8 +12680,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="if (key_resp_bosa.corr) {&amp;#10;    number_correct_l1 = (number_correct_l1 + 1);&amp;#10;}&amp;#10;console.log((&quot;number_Correct: &quot; + number_correct_l1.toString()));&amp;#10;if ((number_correct_l1 === 12)) {&amp;#10;    console.log((&quot;total Correct: &quot; + number_correct_l1.toString()));&amp;#10;    trials_phase1.finished = true;&amp;#10;} else {&amp;#10;    console.log(&quot;flag!&quot;);&amp;#10;    trials_phase1.finished = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="if key_resp_bosa.corr:&amp;#10;    number_correct_l1 = number_correct_l1 + 1&amp;#10;print('number_Correct: ' + str(number_correct_l1))&amp;#10;&amp;#10;if number_correct_l1 == 12 : &amp;#10;    print('total Correct: ' + str(number_correct_l1))&amp;#10;    # ''' terminate the outer loop so no more practice happens:'''&amp;#10;    trials_phase1.finished = True&amp;#10;else:&amp;#10;    print('flag!')&amp;#10;    trials_phase1.finished = False" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="if (key_resp_bosa.corr) {&amp;#10;    number_correct_l1 = (number_correct_l1 + 1);&amp;#10;}&amp;#10;console.log((&quot;number_Correct: &quot; + number_correct_l1.toString()));&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="if key_resp_bosa.corr:&amp;#10;    number_correct_l1 = number_correct_l1 + 1&amp;#10;print('number_Correct: ' + str(number_correct_l1))&amp;#10;&amp;#10;#if number_correct_l1 == 12 : &amp;#10;    #print('total Correct: ' + str(number_correct_l1))&amp;#10;    # ''' terminate the outer loop so no more practice happens:'''&amp;#10;    #trials_phase1.finished = True&amp;#10;#else:&amp;#10;    #print('flag!')&amp;#10;    #trials_phase1.finished = False" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_bosa1" valType="code"/>
       </CodeComponent>
@@ -13189,17 +13189,17 @@
       <CodeComponent name="code_bosa1_2">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="number_correct_bosap=0" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="number_correct_bosap = 0;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="number_correct_bosap = 0;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="number_correct_bosap=0" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="if (key_resp_bosa_2.corr) {&amp;#10;    number_correct_bosap = (number_correct_bosap + 1);&amp;#10;    console.log((&quot;number_correct_bosap: &quot; + number_correct_bosap.toString()));&amp;#10;}&amp;#10;if ((number_correct_bosap === 2)) {&amp;#10;    console.log((&quot;total Correct: &quot; + number_correct_bosap.toString()));&amp;#10;    trials_practice.finished = true;&amp;#10;} else {&amp;#10;    console.log(&quot;flag2!&quot;);&amp;#10;    trials_practice.finished = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="#''' update the number correct:'''&amp;#10;if key_resp_bosa_2.corr: &amp;#10;    number_correct_bosap = number_correct_bosap + 1&amp;#10;    print('number_correct_bosap: ' + str(number_correct_bosap))&amp;#10;#     ''' if this is the final repetition, check the proportion correct.&amp;#10;#         (am avoiding hard coding the value '12' for flexibility):'''&amp;#10;if number_correct_bosap == 2:&amp;#10;    print('total Correct: ' + str(number_correct_bosap))&amp;#10;# ''' terminate the outer loop so no more practice happens:'''&amp;#10;    trials_practice.finished = True&amp;#10;else:&amp;#10;    print('flag2!')&amp;#10;    trials_practice.finished = False" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="if (key_resp_bosa_2.corr) {&amp;#10;    number_correct_bosap = (number_correct_bosap + 1);&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="#''' update the number correct:'''&amp;#10;if key_resp_bosa_2.corr: &amp;#10;    number_correct_bosap = number_correct_bosap + 1&amp;#10;#    print('number_correct_bosap: ' + str(number_correct_bosap))&amp;#10;#     ''' if this is the final repetition, check the proportion correct.&amp;#10;#         (am avoiding hard coding the value '12' for flexibility):'''&amp;#10;#if number_correct_bosap == 2:&amp;#10;#    print('total Correct: ' + str(number_correct_bosap))&amp;#10;# ''' terminate the outer loop so no more practice happens:'''&amp;#10;#    trials_practice.finished = True&amp;#10;#else:&amp;#10;#    print('flag2!')&amp;#10;#    trials_practice.finished = False" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_bosa1_2" valType="code"/>
       </CodeComponent>
@@ -14034,7 +14034,7 @@
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="3" valType="num"/>
+      <Param name="nReps" updates="None" val="4" valType="num"/>
       <Param name="name" updates="None" val="trials_practice" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
@@ -14109,6 +14109,7 @@
     <Routine name="fb_zud3"/>
     <Routine name="zud4"/>
     <Routine name="fb_zud4"/>
+    <Routine name="blicket13"/>
     <Routine name="dax9"/>
     <Routine name="fb_dax9"/>
     <Routine name="dax10"/>
