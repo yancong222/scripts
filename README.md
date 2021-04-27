@@ -7,12 +7,20 @@ There are five subfolders, each representing a different study. Each subfolder c
 -------------------------------------------------------
 Overview: 
 
-the "PsychoPy3 expepriments" subfolder: both web-based and lab-based experiments implemented in PsychoPy (participants: neurotypical; Chinese speakers; English speakers),
+the "PsychoPy3 expepriments" subfolder: both web-based and lab-based experiments implemented in PsychoPy (participants: neurotypical; Chinese speakers; English speakers).
 
-the "artificial language learning" subfolder: general cognition tasks such as rule learning and testing (participants: neurotypical; English speakers), 
+-------------------------------------------------------
 
-the "behavioral experiments" subfolder: characterize linguistic features through measuring human participants' reaction times, reading times, and language decisions  (participants: neurotypical and neuroatypical; Chinese speakers; English speakers), 
+the "artificial language learning" subfolder: general cognition tasks such as rule learning and testing (participants: neurotypical; English speakers).
 
-the "confusion matrix" subfolder: acoustic analysis of speech data (participants: neurotypical; Chinese speakers; English speakers),
+-------------------------------------------------------
+
+the "behavioral experiments" subfolder: characterize linguistic features through measuring human participants' reaction times, reading times, and language decisions  (participants: neurotypical and neuroatypical; Chinese speakers; English speakers).
+
+-------------------------------------------------------
+
+the "confusion matrix" subfolder: acoustic analysis of speech data (participants: neurotypical; Chinese speakers; English speakers).
+
+-------------------------------------------------------
 
 the "evaluate transformers" subfolder: natural language processing and natural language inference.
