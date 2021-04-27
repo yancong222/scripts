@@ -1,0 +1,43 @@
+IMG
+
+1
+size (0.2, 0.2)
+position (-0.5, 0)
+
+2 
+size (0.2, 0.2)
+position (0, 0)
+
+3
+size (0.2, 0.2)
+position (0.5, 0)
+
+
+TEXT
+
+word position (0, 0.3)
+
+1 position (-0.5, -0.2)
+2 position (0, -0.2)
+3 position (0.5, -0.2)
+
+CODE
+end_routine:
+
+#''' update the number correct:'''
+if key_resp_dax9_2.corr: 
+    number_correct3 = number_correct3 + 1
+    print('Correct3: ' + str(number_correct3))
+#     ''' if this is the final repetition, check the proportion correct.
+#         (am avoiding hard coding the value '12' for flexibility):'''
+if number_correct3 == 2:
+    print('total Correct2: ' + str(number_correct3))
+# ''' terminate the outer loop so no more practice happens:'''
+    trials_phase3.finished = True
+else:
+    print('flag2!')
+    trials_phase3.finished = False
+
+
+
+
