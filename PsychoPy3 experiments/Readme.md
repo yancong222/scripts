@@ -1,6 +1,10 @@
+Note: the experiments have been hosted on a platform called "pavlovia".
+Please git https://gitlab.pavlovia.org/yancong/artificial-language-learning-experiment.git for the most recent version of the artificial language learning experiment.
+
+-------------------------------------------------------
 Xprag: truth-value judgement survey
 
-costV4: artificial language learning experiment; with cost manipulated
+costV4 and costV5: artificial language learning experiment; with cost manipulated; following Buccola et al (2018)
 
 Sofatware used: PsychoPy. psychopyVersion 2021.1.3
 
