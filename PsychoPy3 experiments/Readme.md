@@ -1,5 +1,5 @@
 Note: the experiments have been hosted on a platform called "pavlovia".
-Please git https://gitlab.pavlovia.org/yancong/artificial-language-learning-experiment.git and https://gitlab.pavlovia.org/yancong/aritificial-language-learning-experiment-expgrouptwo for the most recent version of the artificial language learning experiment.
+Please git https://gitlab.pavlovia.org/yancong/alle_2phase/tree/master (the two-phase version), https://gitlab.pavlovia.org/yancong/artificial-language-learning-experiment.git or https://gitlab.pavlovia.org/yancong/aritificial-language-learning-experiment-expgrouptwo (the three-phase version) for the most recent versions of the artificial language learning experiment.
 
 -------------------------------------------------------
 Xprag: truth-value judgement survey
