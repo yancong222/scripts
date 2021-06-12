@@ -1,0 +1,125 @@
+======================================================================
+Even priors and all-0 message costs
+
+         r1   r2 costs
+hengao  0.0    1     0
+gao     1.0    1     0
+prior   0.5  0.5      
+alpha   1.0           
+
+Literal listener
+         r1   r2
+hengao  0.0  1.0
+gao     0.5  0.5
+
+Pragmatic speaker
+      hengao       gao
+r1  0.000000  1.000000
+r2  0.666667  0.333333
+
+Pragmatic listener
+          r1    r2
+hengao  0.00  1.00
+gao     0.75  0.25
+======================================================================
+Even priors, imbalanced message costs
+
+         r1   r2 costs
+hengao  0.0    1    -1
+gao     1.0    1     0
+prior   0.5  0.5      
+alpha   1.0           
+
+Literal listener
+         r1   r2
+hengao  0.0  1.0
+gao     0.5  0.5
+
+Pragmatic speaker
+      hengao       gao
+r1  0.000000  1.000000
+r2  0.423883  0.576117
+
+Pragmatic listener
+              r1        r2
+hengao  0.000000  1.000000
+gao     0.634471  0.365529
+======================================================================
+Even priors, imbalanced message costs
+
+         r1   r2 costs
+hengao  0.0    1    -6
+gao     1.0    1     0
+prior   0.5  0.5      
+alpha   1.0           
+
+Literal listener
+         r1   r2
+hengao  0.0  1.0
+gao     0.5  0.5
+
+Pragmatic speaker
+      hengao       gao
+r1  0.000000  1.000000
+r2  0.004933  0.995067
+
+Pragmatic listener
+              r1        r2
+hengao  0.000000  1.000000
+gao     0.501236  0.498764
+======================================================================
+Even priors and all-0 message costs
+
+              r1    r2    r3    r4 costs
+yiyang gao  1.00     0     1     0     0
+bi...ai     0.00     1     0     1     0
+bu gao      1.00     1     1     1     0
+prior       0.25  0.25  0.25  0.25      
+alpha       1.00                        
+
+Literal listener
+              r1    r2    r3    r4
+yiyang gao  0.50  0.00  0.50  0.00
+bi...ai     0.00  0.50  0.00  0.50
+bu gao      0.25  0.25  0.25  0.25
+
+Pragmatic speaker
+    yiyang gao   bi...ai    bu gao
+r1    0.666667  0.000000  0.333333
+r2    0.000000  0.666667  0.333333
+r3    0.666667  0.000000  0.333333
+r4    0.000000  0.666667  0.333333
+
+Pragmatic listener
+              r1    r2    r3    r4
+yiyang gao  0.50  0.00  0.50  0.00
+bi...ai     0.00  0.50  0.00  0.50
+bu gao      0.25  0.25  0.25  0.25
+(base) CONGs-MacBook-Air-2:rsapython stellacong$ python3 neg.py
+======================================================================
+Even priors and all-0 message costs
+
+                  r1        r2        r3 costs
+yiyang gao  1.000000         0         0     0
+bi...ai     0.000000         1         0     0
+bu gao      1.000000         1         1     0
+prior       0.333333  0.333333  0.333333      
+alpha       1.000000                          
+
+Literal listener
+                  r1        r2        r3
+yiyang gao  1.000000  0.000000  0.000000
+bi...ai     0.000000  1.000000  0.000000
+bu gao      0.333333  0.333333  0.333333
+
+Pragmatic speaker
+    yiyang gao  bi...ai  bu gao
+r1        0.75     0.00    0.25
+r2        0.00     0.75    0.25
+r3        0.00     0.00    1.00
+
+Pragmatic listener
+                  r1        r2        r3
+yiyang gao  1.000000  0.000000  0.000000
+bi...ai     0.000000  1.000000  0.000000
+bu gao      0.166667  0.166667  0.666667
