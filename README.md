@@ -24,7 +24,11 @@ the "confusion matrix" subfolder: acoustic analysis of speech data (participants
 
 -------------------------------------------------------
 
-the "evaluate transformers" subfolder: natural language processing and natural language inference.
+the "evaluate transformers" subfolder: natural language processing (NLP) and natural language inference (NLI).
+
+-------------------------------------------------------
+
+the "Bayesian probabilistic models" subfolder: rational speech act (RSA) framework and its implementation.
 
 -------------------------------------------------------
 
