@@ -4,9 +4,10 @@ This folder contains various scripts and modified code (Python, R, javascript, M
 
 There are five subfolders, each representing a different study. Each subfolder contains its own Readme file with a summary of the contents of that folder.
 
-Overview: 
 
 -------------------------------------------------------
+
+Overview: 
 
 the "PsychoPy3 expepriments" subfolder: both web-based and lab-based experiments implemented in PsychoPy (participants: neurotypical; Chinese speakers; English speakers).
 
