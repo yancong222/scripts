@@ -1,13 +1,15 @@
-Note: the experiments have been hosted on a platform called "pavlovia".
-Please git https://gitlab.pavlovia.org/yancong/alle_2phase/tree/master (the two-phase version), https://gitlab.pavlovia.org/yancong/artificial-language-learning-experiment.git or https://gitlab.pavlovia.org/yancong/aritificial-language-learning-experiment-expgrouptwo (the three-phase version) for the most recent versions of the artificial language learning experiment.
+Note: the experiments have been hosted on a platform called "pavlovia" https://pavlovia.org/. 
+For the most recent versions of the artificial language learning experiment (henceforth alle), please git https://gitlab.pavlovia.org/yancong/alle_2phase/tree/master (the two-phase version), https://gitlab.pavlovia.org/yancong/artificial-language-learning-experiment.git or https://gitlab.pavlovia.org/yancong/aritificial-language-learning-experiment-expgrouptwo (the three-phase version).
 
 -------------------------------------------------------
 For data, statistical analysis, and manuscripts, please go to https://osf.io/b6dwe/?view_only=aa691ac230db458ba676158909a70dc4 for details.
 
 -------------------------------------------------------
+Files summary:
+
 Xprag: truth-value judgement survey
 
-costV4 and costV5: artificial language learning experiment; with cost manipulated; following Buccola et al (2018)
+"alle" (artificial language learning experiment), costV4 and costV5: artificial language learning experiment; with cost manipulated; following Buccola et al (2018)
 
 Sofatware used: PsychoPy. psychopyVersion 2021.1.3
 
