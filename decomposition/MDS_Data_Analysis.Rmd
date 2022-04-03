@@ -1,0 +1,575 @@
+---
+title: "MDS Optics Clusters Analysis of (Non-)Relative Adjectives"
+author: "yan cong"
+date: "4/03/2022"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+library(lattice)
+library(plyr)
+library(dplyr)
+library(stringr)
+library(forcats)
+library(ggplot2)
+theme_update(text = element_text(size=11),
+             axis.text.x = element_text(angle=90, hjust=1))
+library(sciplot)
+library(tidyr)
+
+library(hrbrthemes)
+library(viridis)
+
+library(reshape2)
+
+library(gridExtra)
+library(grid)
+
+library(Hmisc)
+library(hrbrthemes)
+library(lattice)
+library(plyr)
+library(dplyr)
+library(stringr)
+library(forcats)
+library(ggplot2)
+theme_update(text = element_text(size=11),
+             axis.text.x = element_text(angle=90, hjust=1))
+library(sciplot)
+library(tidyr)
+#library(hrbrthemes)
+library(viridis)
+library(reshape2)
+library(gridExtra)
+library(grid)
+library(corrplot)
+library(ggpubr)
+#need to install lm.beta first
+#library(lm.beta)
+
+library(ROCR)
+library(precrec) # first install.packages("precrec") 
+library(AUC) # first install.packages("AUC)
+
+```
+
+```{r read in data}
+data_in = read.csv("/Users/yancong/Desktop/2 decomp/MDS/cluster_comp_definitions_adj_stats.csv", header = TRUE)
+```
+
+
+
+```{r roc}
+plot(roc(data_in$Neg_comp, data_in$relative))
+```
+
+
+
+```{r accuracy}
+plot(accuracy(data_in$Neg_comp, data_in$marked))
+```
+
+
+```{r specificity}
+plot(specificity(data_in$Neg_comp,data_in$marked))
+```
+
+
+```{r sensitivity}
+plot(sensitivity(data_in$Neg_comp,data_in$marked))
+```
+
+
+```{r stats logsitic regression Adj_elem and Verb_elem predicting markedness}
+model <- glm(marked ~ Adj_elem + Verb_elem, family="binomial",
+             data = data_in)
+summary(model)
+```
+
+
+
+```{r stats logsitic regression Adj_elem and Verb_elem and Noun_elem predicting markedness}
+model <- glm(marked ~ Adj_elem + Verb_elem + Noun_elem, family="binomial",
+             data = data_in)
+summary(model)
+```
+
+
+
+```{r stats logsitic regression Adj_elem predicting markedness}
+model <- glm(marked ~ Adj_elem, family="binomial",
+             data = data_in)
+summary(model)
+```
+
+
+```{r stats logsitic regression Adj_comp predicting markedness}
+model <- glm(marked ~ Adj_comp, family="binomial",
+             data = data_in)
+summary(model)
+```
+
+
+
+```{r stats logsitic regression Verb_elem predicting markedness}
+model <- glm(marked ~ Verb_elem, family="binomial",
+             data = data_in)
+summary(model)
+```
+
+
+
+
+```{r stats logsitic regression Verb_comp predicting markedness}
+model <- glm(marked ~ Verb_comp, family="binomial",
+             data = data_in)
+summary(model)
+```
+
+
+
+```{r stats logsitic regression Noun_elem predicting markedness}
+model <- glm(marked ~ Noun_elem, family="binomial",
+             data = data_in)
+summary(model)
+```
+
+
+```{r stats logsitic regression Noun_comp predicting markedness}
+model <- glm(marked ~ Noun_comp, family="binomial",
+             data = data_in)
+summary(model)
+```
+
+
+```{r stats logsitic regression Neg_elem predicting markedness}
+model <- glm(marked ~ Neg_elem, family="binomial",
+             data = data_in)
+summary(model)
+```
+
+```{r stats logsitic regression Neg_comp predicting markedness}
+model <- glm(marked ~ Neg_comp, family="binomial",
+             data = data_in)
+summary(model)
+```
+
+
+```{r stats logsitic regression N_of_components predicting markedness}
+model <- glm(marked ~ N_of_components, family="binomial",
+             data = data_in)
+summary(model)
+```
+
+
+```{r stats logsitic regression Adj_elem Verb_elem and Noun_elem predicting relativeness}
+model <- glm(relative ~ Adj_elem + Verb_elem + Noun_elem, family="binomial",
+             data = data_in)
+summary(model)
+```
+
+
+
+```{r stats logsitic regression Adj_elem and Verb_elem predicting relativeness}
+model <- glm(relative ~ Adj_elem + Verb_elem, family="binomial",
+             data = data_in)
+summary(model)
+```
+
+
+```{r stats logsitic regression Adj_elem predicting relativeness}
+model <- glm(relative ~ Adj_elem, family="binomial",
+             data = data_in)
+summary(model)
+```
+
+
+```{r stats logsitic regression Adj_comp predicting relativeness}
+model <- glm(relative ~ Adj_comp, family="binomial",
+             data = data_in)
+summary(model)
+```
+
+
+```{r stats logsitic regression Verb_elem predicting relativeness}
+model <- glm(relative ~ Verb_elem, family="binomial",
+             data = data_in)
+summary(model)
+```
+
+
+```{r stats logsitic regression Verb_comp predicting relativeness}
+model <- glm(relative ~ Verb_comp, family="binomial",
+             data = data_in)
+summary(model)
+```
+
+
+```{r stats logsitic regression Noun_elem predicting relativeness}
+model <- glm(relative ~ Noun_elem, family="binomial",
+             data = data_in)
+summary(model)
+```
+
+
+```{r stats logsitic regression Noun_comp predicting relativeness}
+model <- glm(relative ~ Noun_comp, family="binomial",
+             data = data_in)
+summary(model)
+```
+
+
+```{r stats logsitic regression Neg_elem predicting relativeness}
+model <- glm(relative ~ Neg_elem, family="binomial",
+             data = data_in)
+summary(model)
+```
+
+
+```{r stats logsitic regression Neg_comp predicting relativeness}
+model <- glm(relative ~ Neg_comp, family="binomial",
+             data = data_in)
+summary(model)
+```
+
+
+```{r stats logsitic regression N_of_components predicting relativeness}
+model <- glm(relative ~ N_of_components, family="binomial",
+             data = data_in)
+summary(model)
+```
+
+
+```{r read in relative data}
+data_relative = data_in[ which(data_in$relative == '1'), ]
+summary(data_relative)
+```
+
+```{r stats logsitic regression N_of_components predicting markedness in relative adj}
+model <- glm(marked ~ N_of_components, family="binomial",
+             data = data_relative)
+summary(model)
+```
+
+
+```{r stats logsitic regression Neg_comp predicting markedness in relative adj}
+model <- glm(marked ~ Neg_comp, family="binomial",
+             data = data_relative)
+summary(model)
+```
+
+```{r stats logsitic regression Neg_elem predicting markedness in relative adj}
+model <- glm(marked ~ Neg_elem, family="binomial",
+             data = data_relative)
+summary(model)
+```
+
+```{r stats logsitic regression Noun_comp predicting markedness in relative adj}
+model <- glm(marked ~ Noun_comp, family="binomial",
+             data = data_relative)
+summary(model)
+```
+
+
+```{r stats logsitic regression Noun_elem predicting markedness in relative adj}
+model <- glm(marked ~ Noun_elem, family="binomial",
+             data = data_relative)
+summary(model)
+```
+
+
+
+```{r stats logsitic regression Verb_comp predicting markedness in relative adj}
+model <- glm(marked ~ Verb_comp, family="binomial",
+             data = data_relative)
+summary(model)
+```
+
+
+```{r stats logsitic regression Verb_elem predicting markedness in relative adj}
+model <- glm(marked ~ Verb_elem, family="binomial",
+             data = data_relative)
+summary(model)
+```
+
+
+```{r stats logsitic regression Adj_comp predicting markedness in relative adj}
+model <- glm(marked ~ Adj_comp, family="binomial",
+             data = data_relative)
+summary(model)
+```
+
+
+```{r stats logsitic regression Adj_elem predicting markedness in relative adj}
+model <- glm(marked ~ Adj_elem, family="binomial",
+             data = data_relative)
+summary(model)
+```
+
+
+
+```{r read in nonrelative data}
+data_nonrelative = data_in[ which(data_in$relative == '0'), ]
+summary(data_nonrelative)
+```
+
+
+```{r stats logsitic regression N_of_components predicting markedness in non-relative adj}
+model <- glm(marked ~ N_of_components, family="binomial",
+             data = data_nonrelative)
+summary(model)
+```
+
+
+```{r stats logsitic regression Neg_comp predicting markedness in non-relative adj}
+model <- glm(marked ~ Neg_comp, family="binomial",
+             data = data_nonrelative)
+summary(model)
+```
+
+
+```{r stats logsitic regression Neg_elem predicting markedness in non-relative adj}
+model <- glm(marked ~ Neg_elem, family="binomial",
+             data = data_nonrelative)
+summary(model)
+```
+
+
+```{r stats logsitic regression Noun_comp predicting markedness in non-relative adj}
+model <- glm(marked ~ Noun_comp, family="binomial",
+             data = data_nonrelative)
+summary(model)
+```
+
+
+```{r stats logsitic regression Noun_elem predicting markedness in non-relative adj}
+model <- glm(marked ~ Noun_elem, family="binomial",
+             data = data_nonrelative)
+summary(model)
+```
+
+```{r stats logsitic regression Verb_comp predicting markedness in non-relative adj}
+model <- glm(marked ~ Verb_comp, family="binomial",
+             data = data_nonrelative)
+summary(model)
+```
+
+
+
+```{r stats logsitic regression Verb_elem predicting markedness in non-relative adj}
+model <- glm(marked ~ Verb_elem, family="binomial",
+             data = data_nonrelative)
+summary(model)
+```
+
+
+```{r stats logsitic regression Adj_comp predicting markedness in non-relative adj}
+model <- glm(marked ~ Adj_comp, family="binomial",
+             data = data_nonrelative)
+summary(model)
+```
+
+
+```{r stats logsitic regression Adj_elem predicting markedness in non-relative adj}
+model <- glm(marked ~ Adj_elem, family="binomial",
+             data = data_nonrelative)
+summary(model)
+```
+
+
+```{r plot predicting factors spearman correlation for all the adj}
+corr_plot <- data_in[
+        c('marked', 'relative', 'N_of_components', 'Neg_comp',
+       'Neg_elem', 'Noun_comp', 'Noun_elem', 'Verb_comp', 'Verb_elem',
+       'Adj_comp', 'Adj_elem'
+       )]
+
+corr_plot = scale(corr_plot)
+
+#create Spearman correlation matrix
+cor_5 <- rcorr(as.matrix(corr_plot), type = "spearman")
+M <- cor_5$r
+p_mat <- cor_5$P
+
+colnames(M) = rep(c('marked', 'relative', 'N_of_components', 'Neg_comp',
+       'Neg_elem', 'Noun_comp', 'Noun_elem', 'Verb_comp', 'Verb_elem',
+       'Adj_comp', 'Adj_elem'
+       ))
+
+rownames(M) = rep(c('markedness', 'relativeness', 'N_of_components', 'Neg_comp',
+       'Neg_elem', 'Noun_comp', 'Noun_elem', 'Verb_comp', 'Verb_elem',
+       'Adj_comp', 'Adj_elem'))
+
+png(
+  "correlation_cmb.png",
+  width     = 2200,
+  height    = 2200,
+  res       = 150
+)
+
+p1 <- {corrplot(M, method = 'circle', tl.col = 'black', 
+        # Combine with significance level
+        # number.cex Change font size of correlation coefficients
+        # tl.cex Change font size of text labels
+        # cl.cex Change font size of number-labels in color-legend
+         p.mat = p_mat, sig.level = 0.05, 
+        cl.cex = 1.2,
+         tl.srt = 45, 
+         tl.cex=1.2,
+         addCoef.col = 1,
+         number.cex = 1.2)}
+mtext("Spearman Correlation All ADJ", at=-0.1, line=-0.25, cex=1.5)
+dev.off()
+```
+
+
+
+
+```{r plot predicting factors spearman correlation for relative adj}
+corr_plot <- data_relative[
+        c('marked', 'N_of_components', 'Neg_comp',
+       'Neg_elem', 'Noun_comp', 'Noun_elem', 'Verb_comp', 'Verb_elem',
+       'Adj_comp', 'Adj_elem'
+       )]
+
+corr_plot = scale(corr_plot)
+
+#create Spearman correlation matrix
+cor_5 <- rcorr(as.matrix(corr_plot), type = "spearman")
+M <- cor_5$r
+p_mat <- cor_5$P
+
+colnames(M) = rep(c('marked', 'N_of_components', 'Neg_comp',
+       'Neg_elem', 'Noun_comp', 'Noun_elem', 'Verb_comp', 'Verb_elem',
+       'Adj_comp', 'Adj_elem'
+       ))
+
+rownames(M) = rep(c('markedness', 'N_of_components', 'Neg_comp',
+       'Neg_elem', 'Noun_comp', 'Noun_elem', 'Verb_comp', 'Verb_elem',
+       'Adj_comp', 'Adj_elem'))
+
+png(
+  "correlation_relative.png",
+  width     = 2200,
+  height    = 2200,
+  res       = 150
+)
+
+p1 <- {corrplot(M, method = 'circle', tl.col = 'black', 
+        # Combine with significance level
+        # number.cex Change font size of correlation coefficients
+        # tl.cex Change font size of text labels
+        # cl.cex Change font size of number-labels in color-legend
+         p.mat = p_mat, sig.level = 0.05, 
+        cl.cex = 1.2,
+         tl.srt = 45, 
+         tl.cex=1.2,
+         addCoef.col = 1,
+         number.cex = 1.2)}
+mtext("Spearman Correlation Relative ADJ", at=-0.1, line=-0.25, cex=1.5)
+dev.off()
+```
+
+
+```{r plot predicting factors spearman correlation for non-relative adj}
+corr_plot <- data_nonrelative[
+        c('marked', 'N_of_components', 'Neg_comp',
+       'Neg_elem', 'Noun_comp', 'Noun_elem', 'Verb_comp', 'Verb_elem',
+       'Adj_comp', 'Adj_elem'
+       )]
+
+corr_plot = scale(corr_plot)
+
+#create Spearman correlation matrix
+cor_5 <- rcorr(as.matrix(corr_plot), type = "spearman")
+M <- cor_5$r
+p_mat <- cor_5$P
+
+colnames(M) = rep(c('marked', 'N_of_components', 'Neg_comp',
+       'Neg_elem', 'Noun_comp', 'Noun_elem', 'Verb_comp', 'Verb_elem',
+       'Adj_comp', 'Adj_elem'
+       ))
+
+rownames(M) = rep(c('markedness', 'N_of_components', 'Neg_comp',
+       'Neg_elem', 'Noun_comp', 'Noun_elem', 'Verb_comp', 'Verb_elem',
+       'Adj_comp', 'Adj_elem'))
+
+png(
+  "correlation_nonrelative.png",
+  width     = 2200,
+  height    = 2200,
+  res       = 150
+)
+
+p1 <- {corrplot(M, method = 'circle', tl.col = 'black', 
+        # Combine with significance level
+        # number.cex Change font size of correlation coefficients
+        # tl.cex Change font size of text labels
+        # cl.cex Change font size of number-labels in color-legend
+         p.mat = p_mat, sig.level = 0.05, 
+        cl.cex = 1.2,
+         tl.srt = 45, 
+         tl.cex=1.2,
+         addCoef.col = 1,
+         number.cex = 1.2)}
+
+mtext("Spearman Correlation Non-Relative ADJ", at=-0.1, line=-0.25, cex=1.5)
+
+dev.off()
+```
+
+```{r wide to long format}
+library(tidyr)
+wide = read.csv('/Users/yancong/Desktop/2 decomp/MDS/cluster_comp_definitions_adj_accuracy.csv', header = TRUE)
+
+wide[is.na(wide)] <- 0
+
+keycol <- "POS_factor"
+valuecol <- "accuracy"
+gathercols <- c('N_of_components_accuracy', 'Neg_comp_accuracy',
+       'Neg_elem_accuracy', 'Noun_comp_accuracy', 'Noun_elem_accuracy',
+       'Verb_comp_accuracy', 'Verb_elem_accuracy', 'Adj_comp_accuracy',
+       'Adj_elem_accuracy')
+
+longdata = gather_(wide, keycol, valuecol, gathercols)
+
+write.csv(longdata,"/Users/yancong/Desktop/2 decomp/MDS/cluster_comp_definitions_adj_accuracy_long.csv", row.names = TRUE)
+```
+
+
+
+```{r plot error bar}
+library(RColorBrewer)
+
+clrs_spec <- colorRampPalette(rev(brewer.pal(11, "Spectral")))
+clrs_hcl <- function(n) {
+  hcl(h = seq(230, 0, length.out = n), 
+      c = 60, l = seq(10, 90, length.out = n), 
+      fixup = TRUE)
+}
+
+data=group_by(longdata, relative, POS_factor)%>% 
+  summarise(mean=mean(accuracy),se=se(accuracy))
+head(data)
+
+p=ggplot(data = data, aes(x = relative, y = mean)) + 
+  geom_bar(fill = rep(clrs_hcl(18), 1), position = "dodge", stat = "identity") + 
+  geom_errorbar(aes(ymin=mean-se,ymax=mean+se),width = 0.3,position = "dodge",alpha = 0.7) +
+  facet_wrap(~ POS_factor) 
+
+
+p + scale_x_discrete(name ="Non-Relative VS. Relative") +
+  scale_y_continuous(name="Accuracy Mean") + 
+  theme(axis.text.x = element_text(face="bold", color="#993333", 
+                                   size=9, angle=70))
+
+
+path = '/Users/yancong/Desktop/2 decomp/MDS/'
+filename = 'accuracy_errorbar.png'
+ggsave(path = path, width = 7, height = 5, device='png', filename = filename, dpi=550)
+ 
+```
+
+
