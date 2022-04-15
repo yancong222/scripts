@@ -1,6 +1,6 @@
 # Scripts and modified code 
 
--- Yan Cong, 2018-present [strategy tree here: https://github.com/yancong222/SSD-LM-STanglab]
+by Yan Cong, 2018-present [strategy tree here: https://github.com/yancong222/SSD-LM-STanglab]
 
 This folder contains various scripts and modified code (Python, R, javascript, Matlab, html) written and/or modified by Yan Cong starting in 2018 at Michigan State University (MSU).
 
