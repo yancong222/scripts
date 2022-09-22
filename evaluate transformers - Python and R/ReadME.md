@@ -31,4 +31,4 @@ loss_scalar_implicature.py generates cross-entropy loss for scalar implicature
 
 Data Analysis:
 
-accuracy_stats.R is used to conduct descriptive/exploratory statistics, to visualize data, to run Shapiro-Wilk normality test (among others) to make sure a parametric test is valid, and to run ANOVA. 
+[accuracy_stats.R] is used to conduct descriptive/exploratory statistics, to visualize data, to run Shapiro-Wilk normality test (among others) to make sure a parametric test is valid, and to run ANOVA. 
