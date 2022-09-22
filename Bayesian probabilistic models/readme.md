@@ -1,5 +1,5 @@
 This folder contains two python files and a txt file. 
 
-The python files implement the rational speech act models (parameters: intention; cost). They are adapted from Chris Potts' program. 
+1. The python files implement the rational speech act models (parameters: intention; cost), adapted from Chris Potts' program. 
 
-The txt file illustrates the outputs matrices. 
+2. The txt file illustrates the outputs matrices. 
