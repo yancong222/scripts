@@ -1,1 +1,1 @@
-using LM to decompose natural language meanings
+Multidimensional Scaling (MDS) Optics Clusters Analysis of (Non-)Relative Adjectives
