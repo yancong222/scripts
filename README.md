@@ -9,30 +9,22 @@ There are five subfolders, each representing a different study. Each subfolder c
 
 -------------------------------------------------------
 
-Overview: 
+## [PsychoPy3 expepriments] subfolder: 
+both web-based and lab-based experiments implemented in PsychoPy (participants: neurotypical; Chinese speakers; English speakers).
 
-the "PsychoPy3 expepriments" subfolder: both web-based and lab-based experiments implemented in PsychoPy (participants: neurotypical; Chinese speakers; English speakers).
+## [artificial language learning] subfolder: 
+general cognition tasks such as rule learning and testing (participants: neurotypical; English speakers).
 
--------------------------------------------------------
+## [behavioral experiments] subfolder: 
+characterize linguistic features through measuring human participants' reaction times, reading times, and language decisions  (participants: neurotypical and neuroatypical; Chinese speakers; English speakers).
 
-the "artificial language learning" subfolder: general cognition tasks such as rule learning and testing (participants: neurotypical; English speakers).
+## [confusion matrix] subfolder: 
+acoustic analysis of speech data (participants: neurotypical; Chinese speakers; English speakers).
 
--------------------------------------------------------
+## [evaluate transformers] subfolder: 
+natural language processing (NLP) and natural language inference (NLI).
 
-the "behavioral experiments" subfolder: characterize linguistic features through measuring human participants' reaction times, reading times, and language decisions  (participants: neurotypical and neuroatypical; Chinese speakers; English speakers).
-
--------------------------------------------------------
-
-the "confusion matrix" subfolder: acoustic analysis of speech data (participants: neurotypical; Chinese speakers; English speakers).
-
--------------------------------------------------------
-
-the "evaluate transformers" subfolder: natural language processing (NLP) and natural language inference (NLI).
-
--------------------------------------------------------
-
-the "Bayesian probabilistic models" subfolder: rational speech act (RSA) framework and its implementation.
-
--------------------------------------------------------
+## ["Bayesian probabilistic models] subfolder: 
+rational speech act (RSA) framework and its implementation.
 
 
