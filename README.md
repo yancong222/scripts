@@ -1,29 +1,37 @@
-# Scripts and modified code 
+# Scripts and modified code for experiments in linguistic meaning
 
 by Yan Cong, 2018-present [ongoing work - strategy tree here: https://github.com/yancong222/SSD-LM-STanglab]
 
 This folder contains scripts and modified code (Python, R, javascript, Matlab, html) written or modified by Yan Cong during the PhD degree at Michigan State University.
 
-There are five subfolders, each representing a different study. Each subfolder contains its own Readme file with a summary of the contents of that folder.
+There are eight subfolders, each representing a different study. Each subfolder contains its own Readme file with a summary of the contents of that folder.
 
 -------------------------------------------------------
 
 ## [PsychoPy3 expepriments] subfolder: 
-both web-based and lab-based experiments implemented in PsychoPy (participants: neurotypical; Chinese speakers; English speakers).
+Web-based and lab-based experiments implemented in PsychoPy (participants: neurotypical; Chinese speakers; English speakers).
 
 ## [artificial language learning] subfolder: 
-general cognition tasks such as rule learning and testing (participants: neurotypical; English speakers).
+General cognition tasks such as rule learning and testing (participants: neurotypical; English speakers).
 
 ## [behavioral experiments] subfolder: 
-characterize linguistic features through measuring human participants' reaction times, reading times, and language decisions  (participants: neurotypical and neuroatypical; Chinese speakers; English speakers).
+Characterize linguistic universals through measuring human participants' reaction times, reading times, and language decisions  (participants: neurotypical and neuroatypical; Chinese speakers; English speakers).
 
 ## [confusion matrix] subfolder: 
-acoustic analysis of speech data (participants: neurotypical; Chinese speakers; English speakers).
+Acoustic analysis of speech data (participants: neurotypical; Chinese speakers; English speakers).
 
 ## [evaluate transformers] subfolder: 
-natural language processing (NLP) and natural language inference (NLI).
+Natural language processing (NLP) and natural language inference (NLI).
 
-## ["Bayesian probabilistic models] subfolder: 
-rational speech act (RSA) framework and its implementation.
+## [Bayesian probabilistic models] subfolder: 
+Rational Speech Act (RSA) framework and its implementation.
+
+## [LMs and implicit meaning] subfolder:
+Analyzing implicit meanings using transformer based representations of language (BERT, MACAW, GPT-3)
+
+## [decomposition] subfolder:
+Multidimensional Scaling (MDS) Optics Clusters Analysis of (Non-)Relative Adjectives
+
+
 
 
