@@ -1,4 +1,4 @@
-# Scripts and modified code for experiments in linguistic meaning
+# Scripts and modified code for experiments in linguistic meaning and beyond
 
 by Yan Cong, 2018-present [ongoing work - strategy tree here: https://github.com/yancong222/SSD-LM-STanglab]
 
