@@ -1,6 +1,6 @@
-# Scripts and modified code for experiments in linguistic meaning and beyond
+# Scripts and modified code for experiments in linguistic meaning and beyond [ongoing work on transformers: https://github.com/yancong222/SSD-LM-STanglab]
 
-by Yan Cong, 2018-present [ongoing work - strategy tree here: https://github.com/yancong222/SSD-LM-STanglab]
+by Yan Cong, 2018-present 
 
 This folder contains scripts and modified code (Python, R, javascript, Matlab, html) written or modified by Yan Cong during the PhD degree at Michigan State University.
 
