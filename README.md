@@ -1,4 +1,4 @@
-# Scripts and modified code for experiments in linguistic meaning and beyond [ongoing work on transformers: https://github.com/yancong222/SSD-LM-STanglab] 
+## Scripts and modified code for experiments in linguistic meaning and beyond [ongoing work on transformers: https://github.com/yancong222/SSD-LM-STanglab] 
 
 by Yan Cong, 2018-present 
 
