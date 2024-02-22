@@ -1,7 +1,7 @@
 #####################################################################################
-##    Sample analysis script for linguistic surveys run on Mechanical Turk         ##
-##    For surveys cosntructed using the tools described in Erlewine&Kotek (2013)   ##
-##    May 2013 Hadas Kotek, licensed under the MIT license                         ##
+##    Inspired by        ##
+##    Erlewine&Kotek (2013)   ##
+##    May 2013 Hadas Kotek, licensed under the MIT license  ##
 #####################################################################################
 #install.packages("plyr") # you don't need to install pkg every single time
 library(plyr)
@@ -21,7 +21,6 @@ library(viridis)
 results <- read.csv("cmb_v3.csv",header=TRUE) 
 
 # so here is my way to show me my accuracy
-
 fillers <- subset(results, results$true_how == 'necessarily')
 #fillers
 
