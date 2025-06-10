@@ -1,6 +1,6 @@
 
 #####################################################################################
-##    Sample analysis script for linguistic surveys run on Mechanical Turk         ##
+##    Source: Sample analysis script for linguistic surveys run on Mechanical Turk         ##
 ##    For surveys cosntructed using the tools described in Erlewine&Kotek (2013)   ##
 ##    May 2013 Hadas Kotek, licensed under the MIT license                         ##
 #####################################################################################
@@ -41,7 +41,7 @@ results
 results$true_can_not <- ifelse(results$true_can_1.response == 0, "cannot", "can")
 results
 
-# data visualization ----
+# data visualization Modified by Yan Cong----
 
 # link: https://mgimond.github.io/ES218/Week04b.html
 # Define an array of colors. The first array generates unique hues while the 
